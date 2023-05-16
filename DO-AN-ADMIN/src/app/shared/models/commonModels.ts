@@ -1,4 +1,4 @@
-// import { KieuCauHinhBuoc, NhanThongBao, HoSoSearchType, BuocXuLySearchType, ChuyenBuocXuLyNguoiXuLyCommand, FileDinhKem } from './../../api-lpm-client';
+import { KieuCauHinhBuoc, NhanThongBao, HoSoSearchType, BuocXuLySearchType, ChuyenBuocXuLyNguoiXuLyCommand, FileDinhKem } from './../../api-lpm-client';
 import { PipeTransform, TemplateRef } from '@angular/core';
 import { ValidatorFn } from '@angular/forms';
 import { TableColumn, ColumnMode, SelectionType } from '@swimlane/ngx-datatable';
@@ -227,55 +227,55 @@ export interface IHoSoLoaiGiayToViewModel {
   tenLoaiGiayTo?: string | undefined;
 }
 
-// export interface IHoSoDoiTuongKhaiThacViewModel {
-//   id?: string | undefined;
-//   idHoSo?: string | undefined;
-//   IdDoiTuongKhaiThac?: string | undefined;
-//   hoTen?: string | undefined;
-//   soDienThoai?: string | undefined;
-//   email?: string | undefined;
-//   diaChi?: string | undefined;
-//   NhanSMS?: NhanThongBao;
-//   NhanEmail?: NhanThongBao;
-// }
+export interface IHoSoDoiTuongKhaiThacViewModel {
+  id?: string | undefined;
+  idHoSo?: string | undefined;
+  IdDoiTuongKhaiThac?: string | undefined;
+  hoTen?: string | undefined;
+  soDienThoai?: string | undefined;
+  email?: string | undefined;
+  diaChi?: string | undefined;
+  NhanSMS?: NhanThongBao;
+  NhanEmail?: NhanThongBao;
+}
 
-// export class IFilterHoSoModel {
-//   idLinhVuc?: string | undefined;
-//   idThuTuc?: string | undefined;
-//   idQuyTrinh?: string | undefined;
-//   idTrangThaiHoSo?: number | undefined;
-//   idTrangThaiThucHienHoSo?: number | undefined;
-//   idTrangThaiXuLy?: number | undefined;
-//   idLoaiHoSo?: number | undefined;
-//   hoSoSearchType?: HoSoSearchType;
-//   tuNgay?: Date | undefined;
-//   denNgay?: Date | undefined;
-//   ngayHenTraTuNgay?: Date | undefined;
-//   ngayHenTraDenNgay?: Date | undefined;
-//   ngayThucTraDenNgay?: Date | undefined;
-//   ngayThucTraTuNgay?: Date | undefined;
-//   idHuyen?: string | undefined;
-//   idPhuongXa?: string | undefined;
-//   dsIdCanBoXuLy?: string[] | undefined;
-//   isTonKyTruoc?: boolean | undefined;
-//   isChiTietGiaoDich?: boolean | undefined;
-// }
+export class IFilterHoSoModel {
+  idLinhVuc?: string | undefined;
+  idThuTuc?: string | undefined;
+  idQuyTrinh?: string | undefined;
+  idTrangThaiHoSo?: number | undefined;
+  idTrangThaiThucHienHoSo?: number | undefined;
+  idTrangThaiXuLy?: number | undefined;
+  idLoaiHoSo?: number | undefined;
+  hoSoSearchType?: HoSoSearchType;
+  tuNgay?: Date | undefined;
+  denNgay?: Date | undefined;
+  ngayHenTraTuNgay?: Date | undefined;
+  ngayHenTraDenNgay?: Date | undefined;
+  ngayThucTraDenNgay?: Date | undefined;
+  ngayThucTraTuNgay?: Date | undefined;
+  idHuyen?: string | undefined;
+  idPhuongXa?: string | undefined;
+  dsIdCanBoXuLy?: string[] | undefined;
+  isTonKyTruoc?: boolean | undefined;
+  isChiTietGiaoDich?: boolean | undefined;
+}
 
-// export class IFilterCongViecModel {
-//   idLinhVuc?: string | undefined;
-//   idThuTuc?: string | undefined;
-//   idQuyTrinh?: string | undefined;
-//   idTrangThaiThucHien?: string | undefined;
-//   idTrangThaiXuLy?: number | undefined;
-//   idLoaiHoSo?: string | undefined;
-//   searchType?: BuocXuLySearchType;
-//   tuNgay?: Date | undefined;
-//   denNgay?: Date | undefined;
-//   idHuyen?: string | undefined;
-//   idPhuongXa?: string | undefined;
-//   dsIdCanBoXuLy?: string[] | undefined;
-//   isTonKyTruoc?: boolean | undefined;
-// }
+export class IFilterCongViecModel {
+  idLinhVuc?: string | undefined;
+  idThuTuc?: string | undefined;
+  idQuyTrinh?: string | undefined;
+  idTrangThaiThucHien?: string | undefined;
+  idTrangThaiXuLy?: number | undefined;
+  idLoaiHoSo?: string | undefined;
+  searchType?: BuocXuLySearchType;
+  tuNgay?: Date | undefined;
+  denNgay?: Date | undefined;
+  idHuyen?: string | undefined;
+  idPhuongXa?: string | undefined;
+  dsIdCanBoXuLy?: string[] | undefined;
+  isTonKyTruoc?: boolean | undefined;
+}
 
 export class ButtonXuLy {
   icon: string;
@@ -304,41 +304,41 @@ export const NghiepVuButtons: Array<ButtonXuLy> = [
   { icon: 'fa fa-play-circle-o', class: 'btn-primary', text: 'Thu hồi y/c nội bộ', value: 'XU_LY_YEU_CAU_NOI_BO', id: 13, orderNumber: 13, isRequireLyDo: false },
 ];
 
-// export class ThaoTacCauHinhBuoc {
-//   icon: string;
-//   class: string;
-//   text: string;
-//   value: string;
-//   onClick?: any;
-//   orderNumber: number;
-//   kieuCauHinhBuoc: KieuCauHinhBuoc;
-//   giatri?: any;
-// }
+export class ThaoTacCauHinhBuoc {
+  icon: string;
+  class: string;
+  text: string;
+  value: string;
+  onClick?: any;
+  orderNumber: number;
+  kieuCauHinhBuoc: KieuCauHinhBuoc;
+  giatri?: any;
+}
 
-// export const ThaoTacCauHinhBuocControls: Array<ThaoTacCauHinhBuoc> = [
-//   { icon: 'fa fa-book', class: 'btn-outline-info', text: 'Thông tin đăng ký', value: 'TIM_KIEM_DANG_KY', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Button },
-//   { icon: 'ft-rotate-ccw', class: 'btn-outline-info', text: 'Chuyển lại', value: 'CHUYEN_LAI', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Button },
-//   { icon: 'fa fa-info', class: 'btn-outline-info', text: 'Ràng buộc thông tin đăng ký', value: 'RANG_BUOC_DANG_KY', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Validation },
-//   { icon: 'fa fa-print', class: 'btn-outline-info', text: 'HS quét', value: 'TRA_CUU_HSQ', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Button },
-//   { icon: 'ft-map', class: 'btn-outline-info', text: 'Bản đồ', value: 'TRA_CUU_BAN_DO', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Button },
-//   { icon: 'ft-activity', class: 'btn-outline-info', text: 'Thông tin biến động', value: 'TRA_CUU_TT_BIEN_DONG', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Button },
-//   { icon: 'fa fa-info', class: 'btn-outline-info', text: 'T.Tra TT thực địa', value: 'THAM_TRA_TT_THUC_DIA', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Checkbox },
-//   { icon: 'fa fa-info', class: 'btn-outline-info', text: 'Ràng buộc Thẩm tra thông tin thực địa', value: 'RANG_BUOC_THAM_TRA_TT_THUC_DIA', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Validation },
-//   { icon: 'fa fa-inbox', class: 'btn-outline-info', text: 'In GCN', value: 'IN_GIAY_CHUNG_NHAN', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Button },
-//   { icon: 'fa fa-road', class: 'btn-outline-info', text: 'Xử lý HS Cadas', value: 'XU_LY_HO_SO_CADAS', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Button },
-//   { icon: 'fa fa-info', class: 'btn-outline-info', text: 'Thông tin GCN', value: 'LAY_TT_GCN_CADAS', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Button },
-//   { icon: 'fa fa-info', class: 'btn-outline-info', text: 'Ràng buộc thông tin GCN, hồ sơ', value: 'RANG_BUOC_TT_GCN_CADAS', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Validation },
-//   { icon: 'ft-shopping-bag', class: 'btn-outline-info', text: 'Phiếu chuyển nghĩa vụ', value: 'LAY_PHIEU_CHUYEN_NV', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Button },
-//   { icon: 'fa fa-info', class: 'btn-outline-info', text: 'Ràng buộc thanh toán', value: 'RANG_BUOC_THANH_TOAN', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Validation },
-//   { icon: 'fa fa-print', class: 'btn-outline-info', text: 'Cập nhật HS quét', value: 'CAP_NHAT_HSQ', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Button },
-//   { icon: 'fa fa-road', class: 'btn-outline-danger', text: 'Yêu cầu bổ sung hồ sơ (DVC)', value: 'TRA_LAI_DICH_VU_CONG', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Button },
-//   { icon: 'fa fa-inbox', class: 'btn-outline-info', text: 'In phiếu tiếp nhận hồ sơ', value: 'IN_PHIEU_TIEP_NHAN_HO_SO', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Button },
-//   { icon: 'fa fa-info', class: 'btn-outline-info', text: 'Đánh dấu hs đã thầm định', value: 'DANH_DAU_HS_THAM_DINH', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Checkbox },
-//   { icon: 'fa fa-road', class: 'btn-outline-danger', text: 'Gửi thông báo thuế (DVC)', value: 'GUI_THONG_BAO_THUE_CHO_DVC', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Button },
-//   { icon: 'fa fa-inbox', class: 'btn-outline-info', text: 'In phiếu kiểm soát', value: 'IN_PHIEU_KIEM_SOAT', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Button },
-//   { icon: 'fa fa-info', class: 'btn-outline-info', text: 'Đánh dấu hs đã xem', value: 'DANH_DAU_HS_DA_XEM', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Checkbox },
-//   { icon: 'fa fa-info', class: 'btn-outline-info', text: 'Đánh dấu hs đã thầm tra', value: 'DANH_DAU_HS_THAM_TRA', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Checkbox },
-// ];
+export const ThaoTacCauHinhBuocControls: Array<ThaoTacCauHinhBuoc> = [
+  { icon: 'fa fa-book', class: 'btn-outline-info', text: 'Thông tin đăng ký', value: 'TIM_KIEM_DANG_KY', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Button },
+  { icon: 'ft-rotate-ccw', class: 'btn-outline-info', text: 'Chuyển lại', value: 'CHUYEN_LAI', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Button },
+  { icon: 'fa fa-info', class: 'btn-outline-info', text: 'Ràng buộc thông tin đăng ký', value: 'RANG_BUOC_DANG_KY', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Validation },
+  { icon: 'fa fa-print', class: 'btn-outline-info', text: 'HS quét', value: 'TRA_CUU_HSQ', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Button },
+  { icon: 'ft-map', class: 'btn-outline-info', text: 'Bản đồ', value: 'TRA_CUU_BAN_DO', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Button },
+  { icon: 'ft-activity', class: 'btn-outline-info', text: 'Thông tin biến động', value: 'TRA_CUU_TT_BIEN_DONG', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Button },
+  { icon: 'fa fa-info', class: 'btn-outline-info', text: 'T.Tra TT thực địa', value: 'THAM_TRA_TT_THUC_DIA', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Checkbox },
+  { icon: 'fa fa-info', class: 'btn-outline-info', text: 'Ràng buộc Thẩm tra thông tin thực địa', value: 'RANG_BUOC_THAM_TRA_TT_THUC_DIA', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Validation },
+  { icon: 'fa fa-inbox', class: 'btn-outline-info', text: 'In GCN', value: 'IN_GIAY_CHUNG_NHAN', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Button },
+  { icon: 'fa fa-road', class: 'btn-outline-info', text: 'Xử lý HS Cadas', value: 'XU_LY_HO_SO_CADAS', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Button },
+  { icon: 'fa fa-info', class: 'btn-outline-info', text: 'Thông tin GCN', value: 'LAY_TT_GCN_CADAS', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Button },
+  { icon: 'fa fa-info', class: 'btn-outline-info', text: 'Ràng buộc thông tin GCN, hồ sơ', value: 'RANG_BUOC_TT_GCN_CADAS', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Validation },
+  { icon: 'ft-shopping-bag', class: 'btn-outline-info', text: 'Phiếu chuyển nghĩa vụ', value: 'LAY_PHIEU_CHUYEN_NV', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Button },
+  { icon: 'fa fa-info', class: 'btn-outline-info', text: 'Ràng buộc thanh toán', value: 'RANG_BUOC_THANH_TOAN', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Validation },
+  { icon: 'fa fa-print', class: 'btn-outline-info', text: 'Cập nhật HS quét', value: 'CAP_NHAT_HSQ', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Button },
+  { icon: 'fa fa-road', class: 'btn-outline-danger', text: 'Yêu cầu bổ sung hồ sơ (DVC)', value: 'TRA_LAI_DICH_VU_CONG', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Button },
+  { icon: 'fa fa-inbox', class: 'btn-outline-info', text: 'In phiếu tiếp nhận hồ sơ', value: 'IN_PHIEU_TIEP_NHAN_HO_SO', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Button },
+  { icon: 'fa fa-info', class: 'btn-outline-info', text: 'Đánh dấu hs đã thầm định', value: 'DANH_DAU_HS_THAM_DINH', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Checkbox },
+  { icon: 'fa fa-road', class: 'btn-outline-danger', text: 'Gửi thông báo thuế (DVC)', value: 'GUI_THONG_BAO_THUE_CHO_DVC', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Button },
+  { icon: 'fa fa-inbox', class: 'btn-outline-info', text: 'In phiếu kiểm soát', value: 'IN_PHIEU_KIEM_SOAT', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Button },
+  { icon: 'fa fa-info', class: 'btn-outline-info', text: 'Đánh dấu hs đã xem', value: 'DANH_DAU_HS_DA_XEM', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Checkbox },
+  { icon: 'fa fa-info', class: 'btn-outline-info', text: 'Đánh dấu hs đã thầm tra', value: 'DANH_DAU_HS_THAM_TRA', orderNumber: 1, kieuCauHinhBuoc: KieuCauHinhBuoc.Checkbox },
+];
 
 export class LanguageTranslationRoutingPath {
   public static DefaultButtonLable = "COMMON.defaultButtonLabel.";
@@ -428,11 +428,11 @@ export enum TrangThaiXuLyEnum {
   ChoHoanThanhNVTC = 12
 }
 
-// export class ChuyenBuocXulyPopupModel {
-//   flows: string[];
-//   dsNguoiXuLyKemTask: ChuyenBuocXuLyNguoiXuLyCommand[];
-//   dsFiles: FileDinhKem[];
-// }
+export class ChuyenBuocXulyPopupModel {
+  flows: string[];
+  dsNguoiXuLyKemTask: ChuyenBuocXuLyNguoiXuLyCommand[];
+  dsFiles: FileDinhKem[];
+}
 
 export enum XuLyHangLoatActionEnum {
   ChuyenHangLoatNhanh = 1

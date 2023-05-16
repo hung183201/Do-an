@@ -6,10 +6,5 @@ export const CONTENT_ROUTES: Routes = [
      {
         path: 'pages',
         loadChildren: () => import('../../pages/content-pages/content-pages.module').then(m => m.ContentPagesModule)
-        
-    },
-    {
-        path: 'danh-muc',
-        loadChildren: () => import('../../danh-muc/danh-muc.module').then(m => m.DanhMucModule)
-      },
+    }
 ];
