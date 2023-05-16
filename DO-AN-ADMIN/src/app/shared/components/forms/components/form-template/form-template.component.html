@@ -1,0 +1,17 @@
+<div [formGroup]="formGroup" class="form-group">
+    <label for="{{config.name}}">
+        {{ config.label }}
+        <ng-container *ngIf="showAsterisk(config)">
+            <span class="field-required-asterisk">(*)</span>
+        </ng-container>
+    </label>
+    <ng-container #viewContainer *ngTemplateOutlet="this.config.templateReference">
+
+    </ng-container>
+    <!-- <ng-container #viewContainer *ngTemplateOutlet="this.config.templateReference">
+
+    </ng-container> -->
+
+    <div appFormFieldError class="invalid-feedback" [fieldConfig]="config"></div>
+
+</div>

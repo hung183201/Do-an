@@ -1,0 +1,172 @@
+Filter Datatables
+<section id="ngx-datatable-filter">
+    <div class="row">
+      <div class="col-12 col-sm-7">
+        <div class="media d-flex align-items-center">
+          <i class="fa ft-list fa-2x" aria-hidden="true"></i>
+          <div class="media-body ml-3">
+            <h4>
+              <span class="users-view-name mr-1">{{'DANH-MUC.linhVuc.title' | translate }}</span>
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  <section>
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header form-title">
+            <div><span>{{'COMMON.defaultLabel.filter' | translate }}</span></div>
+          </div>
+          <div class="card-content">
+            <div class="card-body">
+              <div class="row" >
+                <div class="col-10 col-sm-9">
+                  <input type="text" class="form-control form-control-sm" placeholder="{{'COMMON.defaultPlaceholder.searchingInputKey' | translate}}"
+                    (input)="onSearchChange($event.target.value)">
+                </div>
+                <div class="col-2 col-sm-3 d-flex flex-sm-row flex-column justify-content-end align-items-center">
+                    <button appDebounceClick (debounceClick)="getData(searchKeyword)" class="btn btn-sm btn-primary mb-2 mr-sm-2">
+                        <i class="fa fa-search mr-1"></i>{{'COMMON.defaultButtonLabel.search' | translate }}</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header form-title">
+            <div><span>{{'COMMON.defaultLabel.list' | translate }}</span></div>
+          </div>
+          <div class="card-content">
+            <div class="card-body">
+              <!-- ngx-datatable-filter -->
+              <fieldset class="form-group">
+                <label>{{'COMMON.defaultGridPageTitle.show' | translate }}
+                  <select class="form-control form-control-sm d-inline-block width-100 p-right-25 pl-4 mx-1"
+                    (change)="updateLimit($event)" [(ngModel)]="tableFormOptions.pagingOption.pageSize">
+                    <option *ngFor="let c of pageSizeOptions" [Value]="c">{{c}}</option>
+                  </select>/ {{tableFormOptions.pagingOption.totalCount}} {{'COMMON.defaultGridPageTitle.record' | translate }}</label>
+                <label class="float-right">
+                  <button type="button" class="btn btn-sm btn-success mr-1 mb-1" (click)="create()" ><i class="fa ft-plus-circle mr-1"></i>{{'COMMON.defaultButtonLabel.add' | translate }}</button>
+                </label>
+              </fieldset>
+              <ngx-datatable #tableRowDetails class="bootstrap core-bootstrap" [columnMode]="tableFormOptions.columnMode"
+                [headerHeight]="50" [footerHeight]="50" [limit]="tableFormOptions.pagingOption.pageSize"
+                [externalPaging]="true" rowHeight="auto" [rows]="tableFormOptions.rows"
+                [columns]="tableColumnsShowOnGrid" [count]="tableFormOptions.pagingOption.totalCount"
+                [messages]="{emptyMessage: 'Không có dữ liệu để hiển thị'}"
+                [offset]="tableFormOptions.pagingOption.pageIndex - 1" [limit]="tableFormOptions.pagingOption.pageSize"
+                (page)="getData(searchKeyword, $event.offset + 1)">
+  
+                <ngx-datatable-row-detail [rowHeight]="'canAutoResize'">
+                  <ng-template let-row="row" let-expanded="expanded" ngx-datatable-row-detail-template>
+                    <div class="ml-5 my-1">
+                      <div><strong>Lĩnh vực: </strong> {{row.tenLinhVuc? row.tenLinhVuc: ''}}</div>
+                      <div><strong>{{ (mappingLanguage.LinhVuc + 'moTa') | translate}}:</strong> {{row.moTa}}</div>
+                      <div><strong>Ngày/Người tạo:</strong> {{row.ngayTao| dateFormatPipe:ngayGioPhutGiayFormat}} - <strong>{{row.nguoiTao}}</strong></div>
+                      <div><strong>Ngày/Người Cập nhật:</strong> {{row.ngayCapNhat| dateFormatPipe:ngayGioPhutGiayFormat}} - <strong>{{row.nguoiCapNhat}}</strong></div>
+                    </div>
+                  </ng-template>
+                </ngx-datatable-row-detail>
+  
+                <ngx-datatable-column [width]="50" [resizeable]="false" [sortable]="false" [draggable]="false"
+                              [canAutoResize]="false">
+                              <ng-template let-row="row" let-expanded="expanded" ngx-datatable-cell-template>
+                                  <a href="javascript:void(0)" [class.datatable-icon-right]="!expanded"
+                                      [class.datatable-icon-down]="expanded" title="Ẩn/hiện chi tiết"
+                                      (click)="rowDetailsToggleExpand(row)">
+                                  </a>
+                              </ng-template>
+                  </ngx-datatable-column>
+  
+                <ngx-datatable-column *ngIf="!tableFormOptions?.disableIndex" name="{{tableFormOptions?.isIndex}}"
+                  width="80" [maxWidth]="80">
+                  <ng-template ngx-datatable-header-template>
+                    <strong>{{'COMMON.defaultGridcolumnTitle.orderNumber' | translate}}</strong>
+                  </ng-template>
+                  <ng-template let-rowIndex="rowIndex" let-row="row" ngx-datatable-cell-template>
+                    <span>{{(tableFormOptions.pagingOption.pageIndex -1) * tableFormOptions.pagingOption.pageSize + rowIndex + 1}}</span>
+                  </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column *ngFor="let column of tableColumnsShowOnGrid" [name]="column.name"
+                  [sortable]="true" [draggable]="true" [prop]="column.prop" [width]="column.width">
+                  <ng-template ngx-datatable-header-template>
+                    <strong>{{ (mappingLanguage.LinhVuc + column.headerTemplate) | translate }}</strong>
+                  </ng-template>
+                  <ng-template let-row="row" let-column="column" let-value="value" ngx-datatable-cell-template>
+                    <div *ngIf="column.prop != 'ngayTao' && column.prop != 'ngayCapNhat'" title={{value}} [ngClass]="getCustomClassByColumn(column.name, row.trangThai)">
+                      {{ value }}
+                    </div>
+                    <div  *ngIf="column.prop == 'ngayTao' || column.prop == 'ngayCapNhat'">
+                      {{ value | dateFormatPipe:ngayGioPhutGiayFormat}}
+                    </div>
+                  </ng-template>
+                </ngx-datatable-column>
+  
+                <ngx-datatable-column [width]="50">
+                  <ng-template ngx-datatable-header-template>
+                    <strong>{{'COMMON.defaultGridcolumnTitle.action' | translate}}</strong>
+                  </ng-template>
+                  <ng-template let-row="row" let-name="value" let-rowIndex="rowIndex" ngx-datatable-cell-template>
+                    <a (click)="edit(row, rowIndex, $event)">
+                      <i class="ft-edit text-primary cursor-pointer bigIcon"></i>
+                    </a>
+                    <a (click)="delete(row, $event)">
+                      <i class="ft-trash-2 text-primary cursor-pointer bigIcon"></i>
+                    </a>
+                  </ng-template>
+                </ngx-datatable-column>
+  
+                <!-- <ngx-datatable-footer>
+                  <ng-template
+                    ngx-datatable-footer-template
+                    let-rowCount="rowCount"
+                    let-pageSize="pageSize"
+                    let-selectedCount="selectedCount"
+                    let-curPage="curPage"
+                    let-offset="offset"
+                    let-isVisible="isVisible">
+                      <div class="page-count">
+                        <span *ngIf="selectedMessage">
+                          {{selectedCount.toLocaleString()}} {{selectedMessage}} /
+                        </span>
+                        Tổng số {{rowCount.toLocaleString()}}
+                      </div>
+                      <datatable-pager
+                          [pagerLeftArrowIcon]="'datatable-icon-left'"
+                          [pagerRightArrowIcon]="'datatable-icon-right'"
+                          [pagerPreviousIcon]="'datatable-icon-prev'"
+                          [pagerNextIcon]="'datatable-icon-skip'"
+                          [page]="curPage"
+                          [size]="pageSize"
+                          [count]="rowCount"
+                          [hidden]="!((rowCount / pageSize) > 1)"
+                          (change)="table.onFooterPage($event)">
+                      </datatable-pager>
+                  </ng-template>
+                </ngx-datatable-footer> -->
+  
+              </ngx-datatable>
+              <!-- ngx-datatable-filter -->
+  
+              <ng-template #formTemplate let-formConfig="formConfig" let-formModel="formModel">
+                <app-form [config]="formConfig" [model]="formModel" #form="appForm"></app-form>
+              </ng-template>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  </section>
+  <!--/ Filter Datatables -->
+  

@@ -1,0 +1,20 @@
+<div [formGroup]="formGroup" class="form-group">
+    <label for="{{config.name}}">
+        {{ config.label }}
+        
+        <ng-container *ngIf="showAsterisk(config)">
+            <span class="field-required-asterisk">(*)</span>
+        </ng-container>
+    </label>
+    <input customFormControl type="file" [formControlName]="config.name"  (change)="fileChangeEvent($event)" class="form-control-file" [id]="config.name">
+    <div class="img-space">
+
+    <ng-container *ngIf="isImageSaved">
+            <img [name]="'img' + config.name" [src]="cardImageBase64" width="370px" height="200px" />
+        </ng-container>
+
+    </div>
+
+    <div appFormFieldError class="invalid-feedback" [fieldConfig]="config"></div>
+
+</div>
