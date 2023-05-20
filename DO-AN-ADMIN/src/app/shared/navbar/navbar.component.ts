@@ -3,11 +3,12 @@ import { TranslateService } from '@ngx-translate/core';
 import { LayoutService } from '../services/layout.service';
 import { Subscription } from 'rxjs';
 import { ConfigService } from '../services/config.service';
-import { DOCUMENT } from '@angular/common';
-import { CustomizerService } from '../services/customizer.service';
+//import { DOCUMENT } from '@angular/common';
+//import { CustomizerService } from '../services/customizer.service';
 import { FormControl } from '@angular/forms';
-import { LISTITEMS } from '../data/template-search';
 import { Router } from '@angular/router';
+
+import { AuthService } from 'app/shared/auth/auth.service';
 
 @Component({
   selector: "app-navbar",
@@ -30,6 +31,7 @@ export class NavbarComponent implements OnInit, AfterViewInit, OnDestroy {
   public isCollapsed = true;
   layoutSub: Subscription;
   configSub: Subscription;
+  userName: string = "John Doe";
 
   @ViewChild('search') searchElement: ElementRef;
   @ViewChildren('searchResults') searchResults: QueryList<any>;
@@ -47,6 +49,7 @@ export class NavbarComponent implements OnInit, AfterViewInit, OnDestroy {
 
   constructor(public translate: TranslateService,
     private layoutService: LayoutService,
+    private authService: AuthService,
     private router: Router,
     private configService: ConfigService, private cdr: ChangeDetectorRef) {
 
@@ -63,7 +66,6 @@ export class NavbarComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.listItems = LISTITEMS;
 
     if (this.innerWidth < 1200) {
       this.isSmallScreen = true;
@@ -71,6 +73,9 @@ export class NavbarComponent implements OnInit, AfterViewInit, OnDestroy {
     else {
       this.isSmallScreen = false;
     }
+
+    
+    this.userName = this.authService.userValue.id_token_claims_obj.tenDangNhap;
   }
 
   ngAfterViewInit() {
@@ -224,5 +229,10 @@ export class NavbarComponent implements OnInit, AfterViewInit, OnDestroy {
 
   toggleSidebar() {
     this.layoutService.toggleSidebarSmallScreen(this.hideSidebar);
+  }
+
+  logout() {
+    
+    this.authService.logout();
   }
 }

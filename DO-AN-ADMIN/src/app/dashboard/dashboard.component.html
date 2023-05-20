@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">Biểu đồ thống kê số lượng hồ sơ trên địa bàn: <span
+            class="text-info">{{this.tenTinhThongKe}}</span> </h4>
+      </div>
+      <div class="col-md-12 col-12 div-outside-select">
+        <div class="form-group form-inline div-inside-select">
+          <span> Địa bàn thống kê theo: </span>
+          <ng-select [items]="donViHanhChinh" placeholder="-Chọn đơn vị hành chính-" class="width-form-select" bindLabel="name"
+            [(ngModel)]="selectedCity" (change)="chonDiaBanTinh()">
+          </ng-select>
+          <span *ngIf="this.showDanhSachHuyen">Danh sách Quận/Huyện:</span>
+          <ng-select [items]="listQuanHuyen" placeholder="-Chọn Quận/Huyện-" class="width-form-select"
+            bindLabel="tenHuyen" [(ngModel)]="selectedDistrict" *ngIf="this.showDanhSachHuyen"
+            (change)="chonDiaBanHuyen(selectedDistrict)">
+          </ng-select>
+        </div>
+      </div>
+      <!-- Vertical Bar Chart Starts -->
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="card">
+            <div class="card-content">
+              <div class="card-body">
+                <div id="vartical-bar-chart" class="height-400">
+                  <ngx-charts-bar-vertical-2d [scheme]="barChartColorScheme" [results]="barChartmulti"
+                    [gradient]="barChartGradient" [xAxis]="barChartShowXAxis" [yAxis]="barChartShowYAxis"
+                    [legend]="barChartShowLegend" [showXAxisLabel]="barChartShowXAxisLabel"
+                    [showYAxisLabel]="barChartShowYAxisLabel" [xAxisLabel]="barChartXAxisLabel"
+                    [yAxisLabel]="barChartYAxisLabel" (select)="onSelect($event)">
+                  </ngx-charts-bar-vertical-2d>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

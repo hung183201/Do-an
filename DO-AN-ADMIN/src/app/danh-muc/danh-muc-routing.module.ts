@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-// import { LinhVucComponent } from './utilitys/utilitys.component';
+import { UtilitysComponent } from './utilitys/utilitys.component';
 
 const routes: Routes = [
-  // { path: 'linh-vuc', component: LinhVucComponent, data: { title: 'Lĩnh vực' } },
+  { path: 'tien-ich', component: UtilitysComponent, data: { title: 'Lĩnh vực' } },
+  // { path: 'nguoi-dung', component: CmsUserModule, data: { title: 'Người dùng' } },
 ];
 
 @NgModule({

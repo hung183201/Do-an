@@ -1,0 +1,233 @@
+<div class="header-info">
+  <div class="header-info-icon">
+    <img class="avatar" src="assets/img/portrait/small/avatar-s-1.png" alt="avatar" height="35" width="45" />
+  </div>
+  <div class="header-info-text">
+    <p>Thông tin người dùng</p>
+  </div>
+</div>
+
+<form [formGroup]="myForm" novalidate>
+  <section id="input-group-checkbox-radio">
+    <div class="row match-height">
+      <div class="col-md-6 col-12">
+        <div class="card">
+          <div class="card-header">
+            <h4 class="card-title">Thông tin cơ bản</h4>
+          </div>
+          <div class="card-content">
+            <div class="card-body height-form">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row align-items-center">
+                    <div class="col-md-3">
+                      <label for="first-name" class="col-form-label">tên đăng nhập</label>
+                    </div>
+                    <div class="col-md-9">
+                      <input type="text" id="first-name" class="form-control" name="fname" placeholder=""
+                        formControlName="tenDangNhap">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group row align-items-center">
+                    <div class="col-md-3">
+                      <label for="first-name" class="col-form-label">tên đầy đủ</label>
+                    </div>
+                    <div class="col-md-9">
+                      <input type="text" id="first-name" class="form-control"
+                        (input)="onChangeTenDayDu($event.target.value)" formControlName="hoTenNguoiDung">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group row align-items-center">
+                    <div class="col-md-3">
+                      <label for="first-name" class="col-form-label">thuộc phòng</label>
+                    </div>
+                    <div class="col-md-9">
+                      <input type="text" id="first-name" class="form-control" name="fname" placeholder=""
+                        formControlName="tenPhongBan">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group row align-items-center">
+                    <div class="col-md-3">
+                      <label for="first-name" class="col-form-label">chức vụ</label>
+                    </div>
+                    <div class="col-md-9">
+                      <input type="text" id="first-name" class="form-control" name="fname" placeholder=""
+                        formControlName="chucVu">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12" *ngIf="showButtonSuaTenDayDu">
+                  <div class="d-flex justify-content-between flex-sm-row flex-column style-button">
+                    <a class="btn btn-primary disabled"><i class="ft-edit" style="padding-right: 5px;"></i>Cập nhật tên
+                      đầy
+                      đủ</a>
+                  </div>
+                </div>
+                <div class="col-md-12" *ngIf="!showButtonSuaTenDayDu">
+                  <div class="d-flex justify-content-between flex-sm-row flex-column style-button"
+                    (click)="updateTenDayDu()">
+                    <a class="btn btn-primary"><i class="ft-edit" style="padding-right: 5px;"></i>Cập nhật tên đầy
+                      đủ</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-12">
+        <div class="card">
+          <div class="card-header">
+            <h4 class="card-title">Thông tin bảo mật</h4>
+          </div>
+          <div class="card-content">
+            <div class="card-body height-form">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group row align-items-center">
+                    <div class="col-md-3">
+                      <label for="first-name" class="col-form-label">mật khẩu cũ <span *ngIf="!showButtonDoiMatKhau"
+                          style="color: red;">*</span></label>
+                    </div>
+                    <div class="col-md-9">
+                      <input type="password" id="first-name" class="form-control" formControlName="oldPassword">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group row align-items-center">
+                    <div class="col-md-3">
+                      <label for="first-name" class="col-form-label">mật khẩu mới<span *ngIf="!showButtonDoiMatKhau"
+                          style="color: red;">*</span></label>
+                    </div>
+                    <div class="col-md-9">
+                      <input type="password" id="first-name" class="form-control" formControlName="newPassword">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group row align-items-center">
+                    <div class="col-md-3">
+                      <label for="first-name" class="col-form-label">nhắc lại mật khẩu<span
+                          *ngIf="!showButtonDoiMatKhau" style="color: red;">*</span></label>
+                    </div>
+                    <div class="col-md-9">
+                      <input type="password" id="first-name" class="form-control" formControlName="confirmPassword">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="d-flex justify-content-between flex-sm-row flex-column style-button"
+                    (click)="showButtonMatKhau()" *ngIf="showButtonDoiMatKhau">
+                    <a class="btn btn-primary"><i class="ft-edit" style="padding-right: 5px;"></i>Đổi
+                      mật khẩu</a>
+                  </div>
+                </div>
+                <div class="div-outside-buttons" *ngIf="!showButtonDoiMatKhau">
+                  <div class="div-inside-buttons">
+                    <!-- <div class="style-button-cancle-padding">
+                      <div class="d-flex justify-content-between flex-sm-row flex-column"
+                        (click)="setFormDoiMatKhauVeMacdinh()">
+                        <a class="btn btn-warning"><i class="ft-edit" style="padding-right: 5px;"></i>Hủy</a>
+                      </div>
+                    </div> -->
+                    <div class="style-button-cancle-padding">
+                      <div class="d-flex justify-content-between flex-sm-row flex-column" (click)="open(content)">
+                        <a class="btn btn-warning"><i class="ft-edit" style="padding-right: 5px;"></i>Hủy</a>
+                      </div>
+                    </div>
+                    <ng-template #content let-c="close" let-d="dismiss">
+                      <div class="modal-header">
+                        <h4 class="modal-title color-title-danger">Cảnh báo <i
+                            class="ft-alert-octagon color-title-danger"></i></h4>
+                        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <p>Dữ liệu bạn nhập sẽ không được lưu lại, bạn có chắc chắn muốn hủy bỏ không ?</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-info"
+                          (click)="c('Close click');setFormDoiMatKhauVeMacdinh()">Xác nhận</button>
+                        <button type="button" class="btn btn-secondary" (click)="c('Close click')">Đóng</button>
+                      </div>
+                    </ng-template>
+                    <div class="style-button-accept-padding">
+                      <div class="d-flex justify-content-between flex-sm-row flex-column style-button"
+                        (click)="buttonDoiMatKhau()">
+                        <a class="btn btn-primary"><i class="ft-edit" style="padding-right: 5px;"></i>Xác nhận đổi
+                          mật khẩu</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="input-group-checkbox-radio-s">
+    <div class="row match-height">
+      <div class="col-md-12 col-12">
+        <div class="card">
+          <div class="card-header">
+            <h4 class="card-title">Quyền dữ liệu</h4>
+          </div>
+          <div class="card-content">
+            <div class="card-body">
+              <p>Tên Tỉnh/Thành Phố: <b>{{this.tenTinh}}</b> </p>
+              <ngb-accordion [closeOthers]="true" [activeIds]="">
+                <ngb-panel *ngFor="let acc of listDonVi" id="acc-{{acc.ma}}" title="{{acc.ten}}">
+                  <ng-template ngbPanelContent>
+                    <!-- {{acc.donViTrucThuocs}} -->
+                    <ul class="list-group" *ngFor="let item of acc.donViTrucThuocs">
+                      <li class="list-group-item  border-bottom-for-list">
+                        {{item.ten}}
+                      </li>
+                    </ul>
+                  </ng-template>
+                </ngb-panel>
+              </ngb-accordion>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</form>
+
+<section id="input-group-checkbox-radio-ss">
+  <div class="row match-height">
+    <div class="col-md-12 col-12">
+      <div class="card style-show-croll">
+        <div class="card-header">
+          <h4 class="card-title">Có quyền</h4>
+        </div>
+        <div class="card-content">
+          <div class="card-body">
+            <div class="form-group form-inline">
+              Tìm kiếm quyền: <input class="form-control ml-2" style="width: 400px;" type="text"
+                placeholder="Nhập mã hoặc tên quyền để tìm kiếm ..." name="searchTerm" [(ngModel)]="searchText"
+                autocomplete="off" />
+            </div>
+            <ul class="list-group" *ngFor="let item of listQuyenUser | filter:searchText">
+              <li class="list-group-item">
+                <span class="badge badge-primary mr-2 style-ma-quyen">{{item.ma}}</span>- {{item.ten}}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

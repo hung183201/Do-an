@@ -9,11 +9,11 @@
         <i class="ft-menu font-medium-3"></i>
       </div>
       <ul class="navbar-nav" (clickOutside)="toggleSearchOpenClass(false)">
-        <li class="nav-item mr-2 d-none d-lg-block">
+        <!-- <li class="nav-item mr-2 d-none d-lg-block">
           <a class="nav-link apptogglefullscreen" id="navbar-fullscreen" href="javascript:;" appToggleFullscreen
             (click)="ToggleClass()"><i class=" {{toggleClass}} font-medium-3"></i></a>
-        </li>
-        <li class="nav-item nav-search">
+        </li> -->
+        <!-- <li class="nav-item nav-search">
           <a class="nav-link nav-link-search" id="navbar-search" href="javascript:" (click)="toggleSearchOpenClass(true)"><i
               class="ft-search font-medium-3"></i></a>
           <div class="search-input {{searchOpenClass}}">
@@ -21,28 +21,12 @@
               <i class="ft-search font-medium-3"></i>
             </div>
             <input [formControl]="control" #search class="input" type="text" placeholder="Explore Apex..." tabindex="0"
-              autofocus data-search="template-search" [appAutocomplete]="autocomplete" (keyup.enter)="onEnter()" (keydown.esc)="onEscEvent()" (keyup)="onSearchKey($event)" />
+              autofocus data-search="template-search" (keyup.enter)="onEnter()" (keydown.esc)="onEscEvent()" (keyup)="onSearchKey($event)" />
             <div class="search-input-close" (click)="toggleSearchOpenClass(false)">
               <i class="ft-x font-medium-3"></i>
             </div>
-
-            <app-autocomplete #autocomplete="appAutocomplete">
-              <ng-template appAutocompleteContent >
-                <ng-container *ngIf="(listItems | filter: control.value) as result">
-                  <app-option #searchResults *ngFor="let option of result" [url]="option.url" [value]="option.name" (click)="redirectTo(option.url);" (mouseenter)="removeActiveClass()"  >
-                    <div class="d-flex align-items-center justify-content-between w-100">
-                      <div class="d-flex align-items-center justify-content-start">
-                        <i class="{{option.icon}} mr-2"></i>
-                        <span>{{ option.name }}</span>
-                      </div>
-                    </div>
-                  </app-option>
-                  <app-option class="no-result" *ngIf="!result.length">No results found.</app-option>
-                </ng-container>
-              </ng-template>
-            </app-autocomplete>
           </div>
-        </li>
+        </li> -->
       </ul>
       <div class="navbar-brand-center">
         <div class="navbar-header">
@@ -50,7 +34,7 @@
             <li class="nav-item">
               <div class="logo"><a class="logo-text" [routerLink]="['/']" *ngIf="config?.layout.menuPosition === 'Top'">
                   <div class="logo-img"><img class="logo-img" alt="Apex logo" [src]="logoUrl"></div><span
-                    class="text">APEX</span>
+                    class="text">SFM BNH</span>
                 </a></div>
             </li>
           </ul>
@@ -60,7 +44,7 @@
     <div class="navbar-container">
       <div class="collapse navbar-collapse d-block" id="navbarSupportedContent">
         <ul class="navbar-nav">
-          <li class="i18n-dropdown dropdown nav-item mr-2" display="dynamic" ngbDropdown >
+          <!-- <li class="i18n-dropdown dropdown nav-item mr-2" display="dynamic" ngbDropdown >
             <a class="nav-link d-flex align-items-center dropdown-toggle dropdown-language" id="dropdown-flag"
               href="javascript:;" data-toggle="dropdown" ngbDropdownToggle><img class="langimg selected-flag"
                 [src]="selectedLanguageFlag" alt="flag" /><span
@@ -77,8 +61,8 @@
                   class="langimg mr-2" src="./assets/img/flags/de.png" alt="flag" /><span
                   class="font-small-3">German</span></a>
             </div>
-          </li>
-          <li class="dropdown nav-item" placement="bottom-left" display="static" ngbDropdown >
+          </li> -->
+          <!-- <li class="dropdown nav-item" placement="bottom-left" display="static" ngbDropdown >
             <a class="nav-link dropdown-toggle dropdown-notification p-0 mt-2" id="drp-notification" href="javascript:;"
               data-toggle="dropdown" ngbDropdownToggle><i class="ft-bell font-medium-3"></i><span
                 class="notification badge badge-pill badge-danger">4</span></a>
@@ -262,45 +246,48 @@
                 </div>
               </li>
             </ul>
-          </li>
+          </li> -->
+          <!-- <li class="nav-item nav-search">
+            <a class="nav-link nav-link-search" id="navbar-search1" href="javascript:" (click)="toggleSearchOpenClass(true)"><i
+              class="ft-shopping-bag font-medium-3"></i></a>
+          </li> -->
           <li class="dropdown nav-item mr-1" placement="bottom-left" display="static" ngbDropdown >
             <a class="nav-link dropdown-toggle user-dropdown d-flex align-items-end" id="dropdownBasic2"
               href="javascript:;" data-toggle="dropdown" ngbDropdownToggle>
               <div class="user d-md-flex d-none mr-2">
-                <span class="text-right">John Doe</span><span
-                  class="text-right text-muted font-small-3">Available</span>
+                <span class="text-right">{{userName}}</span>
               </div>
-              <img class="avatar" src="assets/img/portrait/small/avatar-s-1.png" alt="avatar" height="35" width="35" />
+              <img class="avatar" src="assets/img/portrait/small/avatar-s-1.png" alt="avatar" height="35" width="45" />
             </a>
             <div class="dropdown-menu text-left dropdown-menu-right m-0 pb-0" aria-labelledby="dropdownBasic2"
               ngbDropdownMenu>
-              <a class="dropdown-item" routerLink="/chat">
+              <!-- <a class="dropdown-item" routerLink="/chat">
                 <div class="d-flex align-items-center">
                   <i class="ft-message-square mr-2"></i><span>Chat</span>
                 </div>
-              </a>
-              <a class="dropdown-item" routerLink="/pages/profile">
+              </a> -->
+              <a class="dropdown-item" routerLink="/profile/profile">
                 <div class="d-flex align-items-center">
                   <i class="ft-edit mr-2"></i><span>Edit Profile</span>
                 </div>
               </a>
-              <a class="dropdown-item" routerLink="/inbox">
+              <!-- <a class="dropdown-item" routerLink="/inbox">
                 <div class="d-flex align-items-center">
                   <i class="ft-mail mr-2"></i><span>My Inbox</span>
                 </div>
-              </a>
+              </a> -->
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" routerLink="/pages/login">
+              <a class="dropdown-item"  (click)="logout();">
                 <div class="d-flex align-items-center">
-                  <i class="ft-power mr-2"></i><span>Logout</span>
+                  <i class="ft-power mr-2"></i><span>Đăng xuất</span>
                 </div>
               </a>
             </div>
           </li>
-          <li class="nav-item d-none d-lg-block mr-2 mt-1">
+          <!-- <li class="nav-item d-none d-lg-block mr-2 mt-1">
             <a class="nav-link notification-sidebar-toggle" (click)="toggleNotificationSidebar();"><i
                 class="ft-align-right font-medium-3"></i></a>
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>

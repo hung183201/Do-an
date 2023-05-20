@@ -1,0 +1,66 @@
+.header-info {
+  display: flex;
+
+  .header-info-text {
+    font-size: 25px;
+    padding-left: 10px;
+  }
+}
+
+.content-info {
+  .form-info-user {
+    .outside {
+      background-color: #FFF;
+      border-radius: 0.35rem;
+      box-shadow: -8px 8px 14px rgba(25, 42, 70, .11);
+      // box-shadow: 0px 20px 5px rgba(0,0,0,0.7);
+    }
+  }
+}
+
+.style-button {
+  float: right;
+}
+
+.style-button-cancle-padding {
+  padding-right: 15px;
+}
+
+.style-button-accept-padding {
+  padding-left: 0px;
+}
+
+.height-form {
+  height: 360px;
+}
+
+.style-ma-quyen {
+  width: 75px;
+}
+
+.text-center-in-form {
+  text-align: center;
+}
+
+.padding-alert {
+  padding-top: 15px;
+}
+
+.border-bottom-for-list {
+  border-bottom: 1px solid #E0E0E0 !important;
+  border: none;
+}
+
+.div-outside-buttons {
+  width: 100%;
+}
+
+.div-inside-buttons {
+  display: flex;
+  float: right;
+  padding-right: 15px;
+}
+
+.color-title-danger {
+  color: red;
+}

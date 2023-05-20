@@ -1,0 +1,180 @@
+.btn-xoa-bai-viet {
+  float: left;
+}
+
+.form-margin-left-18 {
+  margin-left: 18px;
+}
+
+.form-padding-left-15 {
+  padding-left: 15px;
+}
+
+.form-padding-top-0 {
+  padding-top: 0px;
+}
+
+.color-title-danger {
+  color: red;
+}
+
+.width-form-select {
+  width: 100%;
+}
+
+.hideButton {
+  display: none;
+}
+
+.float-right {
+  float: right;
+}
+
+.style-button-cancle-padding {
+  padding-right: 15px;
+}
+
+.style-button-accept-padding {
+  padding-left: 0px;
+}
+
+.div-outside-buttons {
+  width: 100%;
+}
+
+.div-inside-buttons {
+  display: flex;
+  float: right;
+  padding-right: 15px;
+}
+
+.height-274 {
+  height: 274px;
+}
+
+
+* { margin: 0; padding: 0; }
+
+#page-wrap {
+  margin: auto 0;
+}
+
+.treeview {
+  margin: 10px 0 0 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+.treeview li {
+  background: url(http://jquery.bassistance.de/treeview/images/treeview-default-line.gif) 0 0 no-repeat;
+  padding: 2px 0 2px 16px;
+}
+
+.treeview li.last {
+  background-position: 0 -1766px;
+}
+
+.treeview li > input {
+  height: 16px;
+  width: 16px;
+  /* hide the inputs but keep them in the layout with events (use opacity) */
+  opacity: 0;
+  filter: alpha(opacity=0); /* internet explorer */
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=0)"; /*IE8*/
+}
+
+.treeview li > label {
+  background: url(https://www.thecssninja.com/demo/css_custom-forms/gr_custom-inputs.png) 0 -1px no-repeat;
+  /* move left to cover the original checkbox area */
+  margin-left: -20px;
+  /* pad the text to make room for image */
+  padding-left: 20px;
+}
+
+/* Unchecked styles */
+
+.treeview .custom-unchecked {
+  background-position: 0 -1px;
+}
+.treeview .custom-unchecked:hover {
+  background-position: 0 -21px;
+}
+
+/* Checked styles */
+
+.treeview .custom-checked {
+  background-position: 0 -81px;
+}
+.treeview .custom-checked:hover {
+  background-position: 0 -101px;
+}
+
+/* Indeterminate styles */
+
+.treeview .custom-indeterminate {
+  background-position: 0 -141px;
+}
+.treeview .custom-indeterminate:hover {
+  background-position: 0 -121px;
+}
+
+.example-tree-invisible {
+  display: none;
+}
+
+.example-tree ul,
+.example-tree li {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+}
+
+.basic-container {
+  padding: 30px;
+}
+
+.version-info {
+  font-size: 8pt;
+  float: right;
+}
+
+.example-tree-invisible {
+  display: none;
+}
+
+.example-tree ul,
+.example-tree li {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}

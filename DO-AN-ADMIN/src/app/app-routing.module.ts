@@ -8,15 +8,23 @@ import { Full_ROUTES } from "./shared/routes/full-layout.routes";
 import { CONTENT_ROUTES } from "./shared/routes/content-layout.routes";
 
 import { AuthGuard } from './shared/auth/auth-guard.service';
+import { ProfileComponent } from './profile/profile.component';
+//import { RequestPrintDocumentComponent } from './pages/back-office/request-form-document/request-print-document/request-print-document.component';
 
 const appRoutes: Routes = [
   {
     path: '',
-    redirectTo: 'pages/login',
+    redirectTo: 'dashboard/dashboard',
     pathMatch: 'full',
   },
+  // {
+  //   path: 'cms-post',
+  //   loadChildren: () => import('../app/pages/admin/admin-routing-module').then(m => m.AdminRoutingModule)
+  // },
   { path: '', component: FullLayoutComponent, data: { title: 'full Views' }, children: Full_ROUTES, canActivate: [AuthGuard] },
+  { path: '', component: ProfileComponent, data: { title: 'full Views' }, children: Full_ROUTES, canActivate: [AuthGuard] },
   { path: '', component: ContentLayoutComponent, data: { title: 'content Views' }, children: CONTENT_ROUTES },
+ // {path: 'External/PrintHoSoKhaiThac/:id',canActivate: [AuthGuard] ,component: RequestPrintDocumentComponent, data: { title: 'In hồ sơ khai thác' }},
   {
     path: '**',
     redirectTo: 'pages/error'

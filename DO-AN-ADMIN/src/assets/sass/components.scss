@@ -28,10 +28,10 @@
 @import "components/bootstrap-social";
 @import "components/responsive";
 @import "components/demo";
-@import "components/ex-component-avatar";
+// @import "components/ex-component-avatar";
 
-@import "core/mixins/chartist";
-@import "plugins/chartist";
+// @import "core/mixins/chartist";
+// @import "plugins/chartist";
 
 @import "~perfect-scrollbar/css/perfect-scrollbar.css";
 @import "~prismjs/plugins/toolbar/prism-toolbar.css";
@@ -39,8 +39,8 @@
 @import "~ngx-ui-switch/ui-switch.component.scss";
 @import "~@ng-select/ng-select/themes/default.theme.css";
 @import '~@angular/cdk/overlay-prebuilt.css';
-@import '~angular-archwizard/archwizard.css';
-@import '~swiper/swiper-bundle.min.css';
+// @import '~angular-archwizard/archwizard.css';
+// @import '~swiper/swiper-bundle.min.css';
 
 //------------------- below are the files where _palette-variables.scss is included and map-get() is used -------------------
 // Layouts
@@ -48,23 +48,23 @@
 @import "components/notification-sidebar";
 // Pages
 @import "pages/authentication";
-@import "pages/page-faq";
-@import "pages/page-gallery";
-@import "pages/page-search";
-@import "pages/page-knowledge";
-@import "pages/page-user-profile";
-@import "pages/page-coming-soon";
-@import "components/timeline-horizontal";
-@import "components/timeline-vertical";
+// @import "pages/page-faq";
+// @import "pages/page-gallery";
+// @import "pages/page-search";
+// @import "pages/page-knowledge";
+// @import "pages/page-user-profile";
+// @import "pages/page-coming-soon";
+// @import "components/timeline-horizontal";
+// @import "components/timeline-vertical";
 
-@import "pages/app-email";
-@import "pages/app-chat";
-@import "pages/app-taskboard";
-@import "pages/app-calendar";
-@import "pages/charts-apex";
+// @import "pages/app-email";
+// @import "pages/app-chat";
+// @import "pages/app-taskboard";
+// @import "pages/app-calendar";
+// @import "pages/charts-apex";
 
-@import "pages/ex-component-sweet-alerts";
+// @import "pages/ex-component-sweet-alerts";
 @import "pages/ex-component-toastr";
 @import "pages/ex-component-nouislider";
-@import "pages/ex-component-dragndrop";
-@import "pages/ex-component-swiper";
+// @import "pages/ex-component-dragndrop";
+// @import "pages/ex-component-swiper";

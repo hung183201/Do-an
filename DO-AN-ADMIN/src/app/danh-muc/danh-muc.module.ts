@@ -1,42 +1,59 @@
-
-import { SharedModule } from './../shared/shared.module';
 import { NgModule } from '@angular/core';
-import { CommonModule, DatePipe, registerLocaleData } from "@angular/common";
-import { FormsModule } from '@angular/forms';
-import { DanhMucRoutingModule } from "./danh-muc-routing.module";
+import { CommonModule } from "@angular/common";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
-import { CalendarModule, DateAdapter } from 'angular-calendar';
-import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
-
-import { NgbActiveModal, NgbDatepickerModule, NgbModalModule, NgbTimepickerModule } from '@ng-bootstrap/ng-bootstrap';
-import localeVi from '@angular/common/locales/vi';
-import { NgSelectModule } from '@ng-select/ng-select';
-// import { LinhVucComponent } from './utilitys/utilitys.component';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { PipeModule } from 'app/shared/pipes/pipe.module';
+import { QuillModule } from 'ngx-quill';
 
-registerLocaleData(localeVi);
+import { ArchwizardModule } from 'angular-archwizard';
+import { UiSwitchModule } from 'ngx-ui-switch';
+import { TagInputModule } from 'ngx-chips';
+import { MatchHeightModule } from 'app/shared/directives/match-height.directive';
+import { NgSelectModule } from '@ng-select/ng-select';
+
+import { DanhMucRoutingModule } from './danh-muc-routing.module';
+import { UtilitysComponent } from './utilitys/utilitys.component';
+
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
+}
+
 @NgModule({
-    imports: [
-        CommonModule,
-        DanhMucRoutingModule,
-        SharedModule,
-        NgSelectModule,
-        FormsModule,
-        CalendarModule.forRoot({
-            provide: DateAdapter,
-            useFactory: adapterFactory
-        }),
-        NgbModalModule,
-        NgbDatepickerModule,
-        NgbTimepickerModule,
-        NgxDatatableModule 
-        // NgMultiSelectDropDownModule.forRoot()
-    ],
-    exports: [],
-    declarations: [
-        // LinhVucComponent,
-      
-    ],
-    providers: [DatePipe, NgbActiveModal]
+  imports: [
+    CommonModule,
+    NgxDatatableModule,
+    PipeModule,
+    DanhMucRoutingModule,
+    QuillModule.forRoot(),
+    FormsModule,
+    ReactiveFormsModule,
+    NgbModule,
+    TranslateModule.forChild({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: createTranslateLoader,
+        deps: [HttpClient]
+      }
+    }),
+    NgxSpinnerModule,
+    HttpClientModule,
+    ArchwizardModule,
+    MatchHeightModule,
+    UiSwitchModule,
+    NgSelectModule,
+    TagInputModule,
+  ],
+  declarations: [
+    UtilitysComponent
+  ],
+  providers: [
+    NgbModal
+  ]
 })
 export class DanhMucModule { }

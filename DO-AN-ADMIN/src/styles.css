@@ -1,1 +1,36 @@
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-icons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-richtexteditor/styles/material.css';
+
 /* You can add global styles to this file, and also import other style files */
+datatable-header.datatable-header.ng-star-inserted {
+  width: 100% !important;
+}
+
+.actions-custom i {
+  padding-right: 5px;
+}
+
+.margin-right-10 {
+  margin-right: 10px;
+}
+
+.margin-left-10 {
+  margin-left: 10px;
+}
+
+.icon-larger {
+  border: 2px solid #E0E0E0;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.text-xuong-dong {
+  word-break: break-word;
+}

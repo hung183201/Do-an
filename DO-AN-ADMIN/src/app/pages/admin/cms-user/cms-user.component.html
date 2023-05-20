@@ -1,0 +1,127 @@
+<div class="row">
+  <div class="col-12">
+    <div class="content-header">Danh sách người dùng</div>
+  </div>
+</div>
+<!-- Custom Checkbox Datatables -->
+<section id="ngx-datatable-custom-checkbox">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-content">
+          <div class="card-body">
+            <div class="form-thao-tac">
+              <div class="row">
+                <div class="col-md-12">
+                  <fieldset class="form-group">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="">
+                          <button type="button" id="btntimkiem" class="btn btn-primary mr-1 mb-1" (click)="addUser()">
+                            <i class="ft-plus-circle"></i> Thêm người dùng
+                          </button>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-search-bai-viet">
+                          <div class="form-input-bai-viet">
+                            <ng-select [items]="optionsFilterUser" placeholder="-Chọn loại người dùng-"
+                              class="width-form-select" bindLabel="name" [(ngModel)]="selectedFilterUser">
+                            </ng-select>
+                          </div>
+                          <div class="button-search-bai-viet">
+                            <button type="button" id="btntimkiem" class="btn btn-info mr-1 mb-1"
+                              (click)="getDanhSachUser()">
+                              <i class="ft-search"></i> Tìm kiếm
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <section id="ngx-datatable-custom-checkbox">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="card remove-margin-top">
+                        <div class="card-content">
+                          <div class="card-body">
+                            <div class="row">
+                              <div class="col-md-12">
+                                <ngx-datatable class="bootstrap core-bootstrap" [rows]="listOfData"
+                                  [columnMode]="ColumnMode.force" [headerHeight]="50" [footerHeight]="50"
+                                  rowHeight="auto" [scrollbarH]="false">
+                                  <ngx-datatable-column name="STT" prop="STT" [width]="80" [canAutoResize]="false">
+                                  </ngx-datatable-column>
+                                  <ngx-datatable-column name="Tên đăng nhập" prop="tenDangNhap">
+                                  </ngx-datatable-column>
+                                  <ngx-datatable-column name="Tên đầy đủ" prop="hoTenNguoiDung" [width]="300"
+                                    [canAutoResize]="false">
+                                  </ngx-datatable-column>
+                                  <ngx-datatable-column name="Loại người dùng" prop="appModuleText" [width]="200"
+                                    [canAutoResize]="false">
+                                  </ngx-datatable-column>
+                                  <ngx-datatable-column name="Hành động" prop="hd" [width]="200"
+                                    [canAutoResize]="false">
+                                    <ng-template ngx-datatable-cell-template let-row="row">
+                                      <div class="actions-custom">
+                                        <i class="ft-edit text-info cursor-pointer mr-2 icon-larger"
+                                          ngbTooltip="Sửa thông tin người dùng" (click)="updateInfoUser(row)"></i>
+                                        <i class="ft-airplay text-success cursor-pointer mr-2 icon-larger"
+                                          ngbTooltip="Sửa quyền chức năng người dùng"
+                                          (click)="updateQuyenUser(row)"></i>
+                                        <i class="ft-file-text text-primary cursor-pointer mr-2 icon-larger"
+                                          ngbTooltip="Sửa quyền dữ liệu người dùng"
+                                          (click)="updateQuyenDuLieuUser(row)"></i>
+                                        <i class="ft-trash-2 text-warning cursor-pointer mr-2 icon-larger"
+                                          ngbTooltip="Xóa người dùng" (click)="open(content, row)"></i>
+                                      </div>
+                                    </ng-template>
+                                  </ngx-datatable-column>
+                                  <ng-template #content let-c="close" let-d="dismiss">
+                                    <div class="modal-header">
+                                      <h4 class="modal-title color-title-danger">
+                                        Cảnh báo
+                                        <i class="ft-alert-octagon color-title-danger"></i>
+                                      </h4>
+                                      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <p>Bạn có chắc chắn muốn xóa không ?</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-info" (click)="
+                                          c('Close click');
+                                          deleteUser(this.dataUserXoa)
+                                        ">
+                                        Xác nhận
+                                      </button>
+                                      <button type="button" class="btn btn-secondary" (click)="c('Close click')">
+                                        Đóng
+                                      </button>
+                                    </div>
+                                  </ng-template>
+                                </ngx-datatable>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/ Custom Checkbox Datatables -->

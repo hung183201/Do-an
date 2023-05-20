@@ -1,0 +1,130 @@
+<div class="row">
+  <div class="col-12">
+    <div class="content-header" *ngIf="showFormAdd ">Thêm mới người
+      dùng</div>
+    <div class="content-header" *ngIf="!showFormAdd">Chỉnh sửa thông
+      tin người dùng</div>
+  </div>
+</div>
+
+<!-- Form Action Form Layout starts -->
+<section id="action-form-layout">
+  <div class="row match-height">
+    <!-- Form thông tin cơ bản -->
+    <div class="col-md-12 col-12">
+      <form [formGroup]="myForm">
+        <div class="row match-height">
+          <div class="col-md-6 col-12">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Thông tin cơ bản</h4>
+              </div>
+              <div class="card-content">
+                <div class="card-body height-form">
+                  <div class="form-group">
+                    <label>Tên đăng nhập</label>
+                    <input type="text" class="form-control is-invalid" placeholder="Nhập tên đăng nhập ..."
+                      [ngClass]="{ 'is-invalid': this.errorTenDangNhap }" formControlName="tenDangNhap" required>
+                    <div class="invalid-feedback">
+                      <i class="ft-circle"></i>
+                      <span>{{this.messErrorTenDangNhap}}</span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="invalid-state">Email</label>
+                    <input type="email" formControlName="email" class="form-control mb-2 is-invalid"
+                      placeholder="Nhập email ..." [ngClass]="{ 'is-invalid': this.errorEmail }" required>
+                    <div class="invalid-feedback">
+                      <i class="ft-circle"></i>
+                      <span>{{this.messErrorEmail}}</span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label>Họ tên</label>
+                    <input type="text" class="form-control is-invalid" placeholder="Nhập họ và tên ..."
+                      [ngClass]="{ 'is-invalid': this.errorTenDayDu }" formControlName="tenDayDu" required>
+                    <div class="invalid-feedback">
+                      <i class="ft-circle"></i>
+                      <span>{{this.messErrorTenDayDu}}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-12">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Thông tin bảo mật</h4>
+              </div>
+              <div class="card-content height-274">
+                <div class="card-body height-form">
+                  <div class="form-group">
+                    <label>Mật khẩu mới</label>
+                    <input type="password" class="form-control is-invalid" placeholder="Nhập mật khẩu..."
+                      [ngClass]="{ 'is-invalid': this.errorMatKhau }" formControlName="matKhau" required>
+                    <div class="invalid-feedback">
+                      <i class="ft-circle"></i>
+                      <span>{{this.messErrorMatKhau}}</span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label>Nhắc lại mật khẩu</label>
+                    <input type="password" class="form-control is-invalid" placeholder="Nhập lại mật khẩu ..."
+                      [ngClass]="{ 'is-invalid': this.errorNhacLaiMatKhau }" formControlName="nhacLaiMatKhau" required>
+                    <div class="invalid-feedback">
+                      <i class="ft-circle"></i>
+                      <span>{{this.messErrorNhacLaiMatKhau}}</span>
+                    </div>
+                  </div>
+                  <div class="row" *ngIf="!showFormAdd">
+                    <div class="col-md-12">
+                      <div class="d-flex justify-content-between flex-sm-row flex-column float-right"
+                        (click)="showButtonMatKhau()" *ngIf="showButtonDoiMatKhau">
+                        <a class="btn btn-primary"><i class="ft-edit" style="padding-right: 5px;"></i>Đổi
+                          mật khẩu</a>
+                      </div>
+                    </div>
+                    <div class="div-outside-buttons" *ngIf="!showButtonDoiMatKhau">
+                      <div class="div-inside-buttons">
+                        <div class="style-button-cancle-padding">
+                          <div class="d-flex justify-content-between flex-sm-row flex-column" (click)="open(content)">
+                            <a class="btn btn-warning"><i class="ft-edit" style="padding-right: 5px;"></i>Hủy</a>
+                          </div>
+                        </div>
+                        <ng-template #content let-c="close" let-d="dismiss">
+                          <div class="modal-header">
+                            <h4 class="modal-title color-title-danger">Cảnh báo <i
+                                class="ft-alert-octagon color-title-danger"></i></h4>
+                            <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <p>Dữ liệu bạn nhập sẽ không được lưu lại, bạn có chắc chắn muốn hủy bỏ không ?</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-info"
+                              (click)="c('Close click');setFormDoiMatKhauVeMacdinh()">Xác nhận</button>
+                            <button type="button" class="btn btn-secondary" (click)="c('Close click')">Đóng</button>
+                          </div>
+                        </ng-template>
+                        <div class="style-button-accept-padding">
+                          <div class="d-flex justify-content-between flex-sm-row flex-column float-right"
+                            (click)="buttonDoiMatKhau()">
+                            <a class="btn btn-primary"><i class="ft-edit" style="padding-right: 5px;"></i>Xác nhận đổi
+                              mật khẩu</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

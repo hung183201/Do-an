@@ -12,6 +12,8 @@ import { DeviceDetectorService } from 'ngx-device-detector';
 import { ConfigService } from '../services/config.service';
 import { Subscription } from 'rxjs';
 import { LayoutService } from '../services/layout.service';
+import { forEach } from "core-js/core/array";
+import { AuthService } from "../auth/auth.service";
 
 @Component({
   selector: "app-sidebar",
@@ -31,11 +33,13 @@ export class VerticalMenuComponent implements OnInit, AfterViewInit, OnDestroy {
   perfectScrollbarEnable = true;
   collapseSidebar = false;
   resizeTimeout;
+  quyen = this.authService.userValue.id_token_claims_obj.quyens;
 
   constructor(
     private router: Router,
     public translate: TranslateService,
     private layoutService: LayoutService,
+    private authService: AuthService,
     private configService: ConfigService,
     private cdr: ChangeDetectorRef,
     private deviceService: DeviceDetectorService
@@ -47,7 +51,24 @@ export class VerticalMenuComponent implements OnInit, AfterViewInit, OnDestroy {
 
 
   ngOnInit() {
-    this.menuItems = ROUTES;
+
+    this.menuItems = this.showHideMenuByRight(ROUTES);
+
+  }
+
+  showHideMenuByRight(array ){
+    let a = [];
+    let me = this;
+    array.forEach(function (value) {
+      if (me.quyen.includes(value.code)) {
+        if (value.submenu.length > 0) {
+          let b = me.showHideMenuByRight(value.submenu);
+          value.submenu = b;
+        }
+        a.push(value);
+      }
+      });
+      return a;
   }
 
   ngAfterViewInit() {
@@ -90,7 +111,8 @@ export class VerticalMenuComponent implements OnInit, AfterViewInit, OnDestroy {
       }
     }
     else if (this.config.layout.menuPosition === "Side") { // Vertical Menu{
-      this.menuItems = ROUTES;
+      this.menuItems = this.showHideMenuByRight(ROUTES);
+
     }
 
 
@@ -147,6 +169,7 @@ export class VerticalMenuComponent implements OnInit, AfterViewInit, OnDestroy {
 
 
   ngOnDestroy() {
+
     if (this.layoutSub) {
       this.layoutSub.unsubscribe();
     }
