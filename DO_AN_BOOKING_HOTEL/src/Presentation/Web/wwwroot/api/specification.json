@@ -1,0 +1,2284 @@
+{
+  "x-generator": "NSwag v13.19.0.0 (NJsonSchema v10.9.0.0 (Newtonsoft.Json v13.0.0.0))",
+  "openapi": "3.0.0",
+  "info": {
+    "title": "BOOKING HOTEL API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/HotelDetails/Search": {
+      "get": {
+        "tags": [
+          "HotelDetails"
+        ],
+        "operationId": "HotelDetails_Search",
+        "parameters": [
+          {
+            "name": "Idhotel",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResultOfIListOfHotelDetailDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/HotelManage/Add": {
+      "post": {
+        "tags": [
+          "HotelManage"
+        ],
+        "operationId": "HotelManage_Add",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HotelViewModel"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResultOfString"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResultOfString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/HotelManage/Edit": {
+      "put": {
+        "tags": [
+          "HotelManage"
+        ],
+        "operationId": "HotelManage_Edit",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HotelViewModel"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResultOfString"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResultOfString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/HotelManage/Delete": {
+      "delete": {
+        "tags": [
+          "HotelManage"
+        ],
+        "operationId": "HotelManage_Delete",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResultOfBoolean"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResultOfString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/HotelManage/GetById": {
+      "get": {
+        "tags": [
+          "HotelManage"
+        ],
+        "operationId": "HotelManage_GetById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResultOfHotel"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResultOfString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/HotelManage/GetAll": {
+      "get": {
+        "tags": [
+          "HotelManage"
+        ],
+        "operationId": "HotelManage_GetAll",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResultOfIListOfHotel"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/HotelManage/Search": {
+      "post": {
+        "tags": [
+          "HotelManage"
+        ],
+        "operationId": "HotelManage_Search",
+        "requestBody": {
+          "x-name": "request",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HotelRequest"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResultOfPagedListOfHotel"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/HotelUtilityGroup/SearchUtilityByGroup": {
+      "get": {
+        "tags": [
+          "HotelUtilityGroup"
+        ],
+        "operationId": "HotelUtilityGroup_SearchUtilityByGroup",
+        "parameters": [
+          {
+            "name": "hotelId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "utilityId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 2
+          },
+          {
+            "name": "isInGroup",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 3
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 4
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/HotelUtilityGroup/InsertUtilityIntoGroup/{hotelId}": {
+      "put": {
+        "tags": [
+          "HotelUtilityGroup"
+        ],
+        "operationId": "HotelUtilityGroup_InsertUtilityIntoGroup",
+        "parameters": [
+          {
+            "name": "hotelId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "UtilityIds",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/HotelUtilityGroup/DeleteUtilityFromGroup/{hotelId}": {
+      "put": {
+        "tags": [
+          "HotelUtilityGroup"
+        ],
+        "operationId": "HotelUtilityGroup_DeleteUtilityFromGroup",
+        "parameters": [
+          {
+            "name": "hotelId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "Utility",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/RoomType/Add": {
+      "post": {
+        "tags": [
+          "RoomType"
+        ],
+        "operationId": "RoomType_Add",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoomTypeViewModel"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResultOfString"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResultOfString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/RoomType/Edit": {
+      "put": {
+        "tags": [
+          "RoomType"
+        ],
+        "operationId": "RoomType_Edit",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoomTypeViewModel"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResultOfString"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResultOfString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/RoomType/Delete": {
+      "delete": {
+        "tags": [
+          "RoomType"
+        ],
+        "operationId": "RoomType_Delete",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResultOfBoolean"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResultOfString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/RoomType/Search": {
+      "post": {
+        "tags": [
+          "RoomType"
+        ],
+        "operationId": "RoomType_Search",
+        "requestBody": {
+          "x-name": "request",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoomtypeRequest"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResultOfPagedListOfRoomType"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/RoomType/GetById": {
+      "get": {
+        "tags": [
+          "RoomType"
+        ],
+        "operationId": "RoomType_GetById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResultOfRoomType"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResultOfString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/UtilityManage/Add": {
+      "post": {
+        "tags": [
+          "UtilityManage"
+        ],
+        "operationId": "UtilityManage_Add",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UtilityViewModel"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResultOfString"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResultOfString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/UtilityManage/Edit": {
+      "put": {
+        "tags": [
+          "UtilityManage"
+        ],
+        "operationId": "UtilityManage_Edit",
+        "requestBody": {
+          "x-name": "command",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UtilityViewModel"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResultOfString"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResultOfString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/UtilityManage/Delete": {
+      "delete": {
+        "tags": [
+          "UtilityManage"
+        ],
+        "operationId": "UtilityManage_Delete",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResultOfBoolean"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResultOfString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/UtilityManage/Search": {
+      "post": {
+        "tags": [
+          "UtilityManage"
+        ],
+        "operationId": "UtilityManage_Search",
+        "requestBody": {
+          "x-name": "request",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UtilityRequest"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResultOfPagedListOfUtility"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/UtilityManage/GetById": {
+      "get": {
+        "tags": [
+          "UtilityManage"
+        ],
+        "operationId": "UtilityManage_GetById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResultOfUtility"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResultOfString"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ApiResultOfIListOfHotelDetailDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "isError": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/HotelDetailDto"
+            }
+          },
+          "code": {
+            "$ref": "#/components/schemas/ApiCode"
+          },
+          "errors": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            }
+          }
+        }
+      },
+      "HotelDetailDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "nameHotel": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "note": {
+            "type": "string",
+            "nullable": true
+          },
+          "nameUtility": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "ApiCode": {
+        "type": "integer",
+        "description": "",
+        "x-enumNames": [
+          "Success",
+          "GeneralError",
+          "ExistingData",
+          "InvalidArgument",
+          "BusinessError",
+          "UnAuthorizedAccess",
+          "NotFoundError",
+          "InternalError",
+          "ValidationError",
+          "BuocXuLyNotExistOrProcessed"
+        ],
+        "enum": [
+          0,
+          100,
+          102,
+          105,
+          400,
+          401,
+          404,
+          500,
+          600,
+          801
+        ]
+      },
+      "ValidationError": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "field": {
+            "type": "string",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "ApiResultOfString": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "isError": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "string",
+            "nullable": true
+          },
+          "code": {
+            "$ref": "#/components/schemas/ApiCode"
+          },
+          "errors": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            }
+          }
+        }
+      },
+      "HotelViewModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nameHotel": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "note": {
+            "type": "string",
+            "nullable": true
+          },
+          "categoryHotel": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/TrangThai"
+          }
+        }
+      },
+      "TrangThai": {
+        "type": "integer",
+        "description": "",
+        "x-enumNames": [
+          "DeActive",
+          "Active"
+        ],
+        "enum": [
+          0,
+          1
+        ]
+      },
+      "ApiResultOfBoolean": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "isError": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "boolean"
+          },
+          "code": {
+            "$ref": "#/components/schemas/ApiCode"
+          },
+          "errors": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            }
+          }
+        }
+      },
+      "ApiResultOfHotel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "isError": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Hotel"
+              }
+            ]
+          },
+          "code": {
+            "$ref": "#/components/schemas/ApiCode"
+          },
+          "errors": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            }
+          }
+        }
+      },
+      "Hotel": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseEntityOfInteger"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "nameHotel": {
+                "type": "string",
+                "nullable": true
+              },
+              "address": {
+                "type": "string",
+                "nullable": true
+              },
+              "note": {
+                "type": "string",
+                "nullable": true
+              },
+              "categoryHotel": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/LoaiKhachSan"
+                  }
+                ]
+              },
+              "status": {
+                "$ref": "#/components/schemas/TrangThai"
+              },
+              "statusName": {
+                "type": "string",
+                "nullable": true
+              },
+              "imageHotelRooms": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/ImageHotelRoom"
+                }
+              },
+              "roomTypes": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/RoomType"
+                }
+              },
+              "hotelUtilities": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/HotelUtility"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "LoaiKhachSan": {
+        "type": "integer",
+        "description": "",
+        "x-enumNames": [
+          "CanHo",
+          "HotelRoom"
+        ],
+        "enum": [
+          0,
+          1
+        ]
+      },
+      "ImageHotelRoom": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseEntityOfInteger"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "idHotelOrRoom": {
+                "type": "integer",
+                "format": "int32",
+                "nullable": true
+              },
+              "idImage": {
+                "type": "integer",
+                "format": "int32",
+                "nullable": true
+              },
+              "idHotelOrRoomNavigation": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/Hotel"
+                  }
+                ]
+              },
+              "idImageNavigation": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/Image"
+                  }
+                ]
+              },
+              "roomType": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/RoomType"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "Image": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseEntityOfInteger"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "imageName": {
+                "type": "string",
+                "nullable": true
+              },
+              "url": {
+                "type": "string",
+                "nullable": true
+              },
+              "status": {
+                "$ref": "#/components/schemas/TrangThai"
+              },
+              "statusName": {
+                "type": "string",
+                "nullable": true
+              },
+              "imageHotelRooms": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/ImageHotelRoom"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "BaseEntityOfInteger": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AuditableEntity"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          }
+        ]
+      },
+      "AuditableEntity": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "ngayTao": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "nguoiTao": {
+            "type": "string",
+            "nullable": true
+          },
+          "idNguoiTao": {
+            "type": "string",
+            "nullable": true
+          },
+          "ngayCapNhat": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "nguoiCapNhat": {
+            "type": "string",
+            "nullable": true
+          },
+          "idNguoiCapNhat": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "RoomType": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseEntityOfInteger"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "nameRoomType": {
+                "type": "string",
+                "nullable": true
+              },
+              "price": {
+                "type": "number",
+                "format": "decimal",
+                "nullable": true
+              },
+              "totalRoom": {
+                "type": "integer",
+                "format": "int32",
+                "nullable": true
+              },
+              "size": {
+                "type": "string",
+                "nullable": true
+              },
+              "maxPeople": {
+                "type": "integer",
+                "format": "int32",
+                "nullable": true
+              },
+              "totalBed": {
+                "type": "integer",
+                "format": "int32",
+                "nullable": true
+              },
+              "extraBed": {
+                "type": "string",
+                "nullable": true
+              },
+              "idHotel": {
+                "type": "integer",
+                "format": "int32",
+                "nullable": true
+              },
+              "status": {
+                "$ref": "#/components/schemas/TrangThai"
+              },
+              "statusName": {
+                "type": "string",
+                "nullable": true
+              },
+              "idHotelNavigation": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/Hotel"
+                  }
+                ]
+              },
+              "idRoomTypeNavigation": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/ImageHotelRoom"
+                  }
+                ]
+              },
+              "roomBookings": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/RoomBooking"
+                }
+              },
+              "roomUtilities": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/RoomUtility"
+                }
+              },
+              "rooms": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/Room"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "RoomBooking": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseEntityOfInteger"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "idRoomType": {
+                "type": "integer",
+                "format": "int32",
+                "nullable": true
+              },
+              "idBooking": {
+                "type": "integer",
+                "format": "int32",
+                "nullable": true
+              },
+              "price": {
+                "type": "number",
+                "format": "decimal",
+                "nullable": true
+              },
+              "idBookingNavigation": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/Booking"
+                  }
+                ]
+              },
+              "idRoomTypeNavigation": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/RoomType"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "Booking": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseEntityOfInteger"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "idUser": {
+                "type": "integer",
+                "format": "int32",
+                "nullable": true
+              },
+              "userId": {
+                "type": "string",
+                "format": "guid"
+              },
+              "checkIn": {
+                "type": "string",
+                "format": "date-time",
+                "nullable": true
+              },
+              "checkOut": {
+                "type": "string",
+                "nullable": true
+              },
+              "totalPrice": {
+                "type": "number",
+                "format": "decimal",
+                "nullable": true
+              },
+              "note": {
+                "type": "string",
+                "nullable": true
+              },
+              "status": {
+                "$ref": "#/components/schemas/TrangThai"
+              },
+              "statusName": {
+                "type": "string",
+                "nullable": true
+              },
+              "appUser": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/AppUser"
+                  }
+                ]
+              },
+              "idUserNavigation": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/UserClient"
+                  }
+                ]
+              },
+              "roomBookings": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/RoomBooking"
+                }
+              },
+              "booKingServices": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/BooKingServices"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "AppUser": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/IdentityUserOfGuid"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "fullName": {
+                "type": "string",
+                "nullable": true
+              },
+              "dob": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "bookings": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/Booking"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "IdentityUserOfGuid": {
+        "type": "object",
+        "description": "Represents a user in the identity system",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Gets or sets the primary key for this user.",
+            "format": "guid"
+          },
+          "userName": {
+            "type": "string",
+            "description": "Gets or sets the user name for this user.",
+            "nullable": true
+          },
+          "normalizedUserName": {
+            "type": "string",
+            "description": "Gets or sets the normalized user name for this user.",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "description": "Gets or sets the email address for this user.",
+            "nullable": true
+          },
+          "normalizedEmail": {
+            "type": "string",
+            "description": "Gets or sets the normalized email address for this user.",
+            "nullable": true
+          },
+          "emailConfirmed": {
+            "type": "boolean",
+            "description": "Gets or sets a flag indicating if a user has confirmed their email address."
+          },
+          "passwordHash": {
+            "type": "string",
+            "description": "Gets or sets a salted and hashed representation of the password for this user.",
+            "nullable": true
+          },
+          "securityStamp": {
+            "type": "string",
+            "description": "A random value that must change whenever a users credentials change (password changed, login removed)",
+            "nullable": true
+          },
+          "concurrencyStamp": {
+            "type": "string",
+            "description": "A random value that must change whenever a user is persisted to the store",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "description": "Gets or sets a telephone number for the user.",
+            "nullable": true
+          },
+          "phoneNumberConfirmed": {
+            "type": "boolean",
+            "description": "Gets or sets a flag indicating if a user has confirmed their telephone address."
+          },
+          "twoFactorEnabled": {
+            "type": "boolean",
+            "description": "Gets or sets a flag indicating if two factor authentication is enabled for this user."
+          },
+          "lockoutEnd": {
+            "type": "string",
+            "description": "Gets or sets the date and time, in UTC, when any user lockout ends.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "lockoutEnabled": {
+            "type": "boolean",
+            "description": "Gets or sets a flag indicating if the user could be locked out."
+          },
+          "accessFailedCount": {
+            "type": "integer",
+            "description": "Gets or sets the number of failed login attempts for the current user.",
+            "format": "int32"
+          }
+        }
+      },
+      "UserClient": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseEntityOfInteger"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "nameClient": {
+                "type": "string",
+                "nullable": true
+              },
+              "password": {
+                "type": "string",
+                "nullable": true
+              },
+              "email": {
+                "type": "string",
+                "nullable": true
+              },
+              "status": {
+                "$ref": "#/components/schemas/TrangThai"
+              },
+              "statusName": {
+                "type": "string",
+                "nullable": true
+              },
+              "bookings": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/Booking"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "BooKingServices": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseEntityOfInteger"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "idBooking": {
+                "type": "integer",
+                "format": "int32",
+                "nullable": true
+              },
+              "idServices": {
+                "type": "integer",
+                "format": "int32",
+                "nullable": true
+              },
+              "quantity": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "idBookingNavigation": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/Booking"
+                  }
+                ]
+              },
+              "idServicesNavigation": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/Servicess"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "Servicess": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseEntityOfInteger"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "nameService": {
+                "type": "string",
+                "nullable": true
+              },
+              "price": {
+                "type": "number",
+                "format": "decimal"
+              },
+              "status": {
+                "$ref": "#/components/schemas/TrangThai"
+              },
+              "statusName": {
+                "type": "string",
+                "nullable": true
+              },
+              "booKingServices": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/BooKingServices"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "RoomUtility": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseEntityOfInteger"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "idUtilities": {
+                "type": "integer",
+                "format": "int32",
+                "nullable": true
+              },
+              "idRoomTypes": {
+                "type": "integer",
+                "format": "int32",
+                "nullable": true
+              },
+              "idRoomTypesNavigation": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/RoomType"
+                  }
+                ]
+              },
+              "idUtilitiesNavigation": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/Utility"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "Utility": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseEntityOfInteger"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "nameUtilities": {
+                "type": "string",
+                "nullable": true
+              },
+              "icon": {
+                "type": "string",
+                "nullable": true
+              },
+              "utilitiesType": {
+                "type": "integer",
+                "format": "int32",
+                "nullable": true
+              },
+              "status": {
+                "$ref": "#/components/schemas/TrangThai"
+              },
+              "statusName": {
+                "type": "string",
+                "nullable": true
+              },
+              "roomUtilities": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/RoomUtility"
+                }
+              },
+              "hotelUtilities": {
+                "type": "array",
+                "nullable": true,
+                "items": {
+                  "$ref": "#/components/schemas/HotelUtility"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "HotelUtility": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseEntityOfInteger"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "idUtilities": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "idHotels": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "idHotelsNavigation": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/Hotel"
+                  }
+                ]
+              },
+              "idUtilitiesNavigation": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/Utility"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "Room": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/BaseEntityOfInteger"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "image": {
+                "type": "string",
+                "nullable": true
+              },
+              "idRoomType": {
+                "type": "integer",
+                "format": "int32",
+                "nullable": true
+              },
+              "status": {
+                "$ref": "#/components/schemas/TrangThai"
+              },
+              "tenTrangThai": {
+                "type": "string",
+                "nullable": true
+              },
+              "idRoomTypeNavigation": {
+                "nullable": true,
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/RoomType"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "ApiResultOfIListOfHotel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "isError": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/Hotel"
+            }
+          },
+          "code": {
+            "$ref": "#/components/schemas/ApiCode"
+          },
+          "errors": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            }
+          }
+        }
+      },
+      "ApiResultOfPagedListOfHotel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "isError": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/PagedListOfHotel"
+              }
+            ]
+          },
+          "code": {
+            "$ref": "#/components/schemas/ApiCode"
+          },
+          "errors": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            }
+          }
+        }
+      },
+      "PagedListOfHotel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "pageIndex": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "rowModify": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalPages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "items": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/Hotel"
+            }
+          },
+          "hasPreviousPage": {
+            "type": "boolean"
+          },
+          "hasNextPage": {
+            "type": "boolean"
+          }
+        }
+      },
+      "HotelRequest": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/PagingRequest"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "PagingRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "fullTextSearch": {
+            "type": "string",
+            "nullable": true
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "rowModify": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "RoomTypeViewModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nameRoomType": {
+            "type": "string",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "decimal",
+            "nullable": true
+          },
+          "totalRoom": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "size": {
+            "type": "string",
+            "nullable": true
+          },
+          "maxPeople": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "totalBed": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "extraBed": {
+            "type": "string",
+            "nullable": true
+          },
+          "idHotel": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/TrangThai"
+          }
+        }
+      },
+      "ApiResultOfPagedListOfRoomType": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "isError": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/PagedListOfRoomType"
+              }
+            ]
+          },
+          "code": {
+            "$ref": "#/components/schemas/ApiCode"
+          },
+          "errors": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            }
+          }
+        }
+      },
+      "PagedListOfRoomType": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "pageIndex": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "rowModify": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalPages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "items": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/RoomType"
+            }
+          },
+          "hasPreviousPage": {
+            "type": "boolean"
+          },
+          "hasNextPage": {
+            "type": "boolean"
+          }
+        }
+      },
+      "RoomtypeRequest": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/PagingRequest"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
+      "ApiResultOfRoomType": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "isError": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/RoomType"
+              }
+            ]
+          },
+          "code": {
+            "$ref": "#/components/schemas/ApiCode"
+          },
+          "errors": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            }
+          }
+        }
+      },
+      "UtilityViewModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nameUtilities": {
+            "type": "string",
+            "nullable": true
+          },
+          "icon": {
+            "type": "string",
+            "nullable": true
+          },
+          "utilitiesType": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "ApiResultOfPagedListOfUtility": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "isError": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/PagedListOfUtility"
+              }
+            ]
+          },
+          "code": {
+            "$ref": "#/components/schemas/ApiCode"
+          },
+          "errors": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            }
+          }
+        }
+      },
+      "PagedListOfUtility": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "pageIndex": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "rowModify": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalPages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "items": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/Utility"
+            }
+          },
+          "hasPreviousPage": {
+            "type": "boolean"
+          },
+          "hasNextPage": {
+            "type": "boolean"
+          }
+        }
+      },
+      "UtilityRequest": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/PagingRequest"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "utilitiesType": {
+                "type": "integer",
+                "format": "int32",
+                "nullable": true
+              }
+            }
+          }
+        ]
+      },
+      "ApiResultOfUtility": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "isError": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Utility"
+              }
+            ]
+          },
+          "code": {
+            "$ref": "#/components/schemas/ApiCode"
+          },
+          "errors": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "JWT": {
+        "type": "apiKey",
+        "description": "Type into the textbox: Bearer {your JWT token}.",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "security": [
+    {
+      "JWT": []
+    }
+  ]
+}

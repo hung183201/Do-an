@@ -1,0 +1,496 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\UTC_CNTT\\nam4_cntt\\cntt_4.2\\Do-An\\DO_AN_BOOKING_HOTEL\\src\\Presentation\\Web\\Web.csproj": {}
+  },
+  "projects": {
+    "E:\\UTC_CNTT\\nam4_cntt\\cntt_4.2\\Do-An\\DO_AN_BOOKING_HOTEL\\src\\Core\\Application\\Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\UTC_CNTT\\nam4_cntt\\cntt_4.2\\Do-An\\DO_AN_BOOKING_HOTEL\\src\\Core\\Application\\Application.csproj",
+        "projectName": "Application",
+        "projectPath": "E:\\UTC_CNTT\\nam4_cntt\\cntt_4.2\\Do-An\\DO_AN_BOOKING_HOTEL\\src\\Core\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "E:\\UTC_CNTT\\nam4_cntt\\cntt_4.2\\Do-An\\DO_AN_BOOKING_HOTEL\\src\\Core\\Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "E:\\UTC_CNTT\\nam4_cntt\\cntt_4.2\\Do-An\\DO_AN_BOOKING_HOTEL\\src\\Infrastructure\\Domain\\Domain.csproj": {
+                "projectPath": "E:\\UTC_CNTT\\nam4_cntt\\cntt_4.2\\Do-An\\DO_AN_BOOKING_HOTEL\\src\\Infrastructure\\Domain\\Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[10.2.0, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[10.2.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.15, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[5.0.15, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\UTC_CNTT\\nam4_cntt\\cntt_4.2\\Do-An\\DO_AN_BOOKING_HOTEL\\src\\Core\\Common\\Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\UTC_CNTT\\nam4_cntt\\cntt_4.2\\Do-An\\DO_AN_BOOKING_HOTEL\\src\\Core\\Common\\Common.csproj",
+        "projectName": "Common",
+        "projectPath": "E:\\UTC_CNTT\\nam4_cntt\\cntt_4.2\\Do-An\\DO_AN_BOOKING_HOTEL\\src\\Core\\Common\\Common.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "E:\\UTC_CNTT\\nam4_cntt\\cntt_4.2\\Do-An\\DO_AN_BOOKING_HOTEL\\src\\Core\\Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\UTC_CNTT\\nam4_cntt\\cntt_4.2\\Do-An\\DO_AN_BOOKING_HOTEL\\src\\Infrastructure\\Domain\\Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\UTC_CNTT\\nam4_cntt\\cntt_4.2\\Do-An\\DO_AN_BOOKING_HOTEL\\src\\Infrastructure\\Domain\\Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "E:\\UTC_CNTT\\nam4_cntt\\cntt_4.2\\Do-An\\DO_AN_BOOKING_HOTEL\\src\\Infrastructure\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "E:\\UTC_CNTT\\nam4_cntt\\cntt_4.2\\Do-An\\DO_AN_BOOKING_HOTEL\\src\\Infrastructure\\Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNet.Identity.EntityFramework": {
+              "target": "Package",
+              "version": "[2.2.3, )"
+            },
+            "Microsoft.Extensions.Identity.Stores": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\UTC_CNTT\\nam4_cntt\\cntt_4.2\\Do-An\\DO_AN_BOOKING_HOTEL\\src\\Infrastructure\\Infrastructure\\Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\UTC_CNTT\\nam4_cntt\\cntt_4.2\\Do-An\\DO_AN_BOOKING_HOTEL\\src\\Infrastructure\\Infrastructure\\Infrastructure.csproj",
+        "projectName": "Infrastructure",
+        "projectPath": "E:\\UTC_CNTT\\nam4_cntt\\cntt_4.2\\Do-An\\DO_AN_BOOKING_HOTEL\\src\\Infrastructure\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "E:\\UTC_CNTT\\nam4_cntt\\cntt_4.2\\Do-An\\DO_AN_BOOKING_HOTEL\\src\\Infrastructure\\Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "E:\\UTC_CNTT\\nam4_cntt\\cntt_4.2\\Do-An\\DO_AN_BOOKING_HOTEL\\src\\Core\\Application\\Application.csproj": {
+                "projectPath": "E:\\UTC_CNTT\\nam4_cntt\\cntt_4.2\\Do-An\\DO_AN_BOOKING_HOTEL\\src\\Core\\Application\\Application.csproj"
+              },
+              "E:\\UTC_CNTT\\nam4_cntt\\cntt_4.2\\Do-An\\DO_AN_BOOKING_HOTEL\\src\\Core\\Common\\Common.csproj": {
+                "projectPath": "E:\\UTC_CNTT\\nam4_cntt\\cntt_4.2\\Do-An\\DO_AN_BOOKING_HOTEL\\src\\Core\\Common\\Common.csproj"
+              },
+              "E:\\UTC_CNTT\\nam4_cntt\\cntt_4.2\\Do-An\\DO_AN_BOOKING_HOTEL\\src\\Infrastructure\\Domain\\Domain.csproj": {
+                "projectPath": "E:\\UTC_CNTT\\nam4_cntt\\cntt_4.2\\Do-An\\DO_AN_BOOKING_HOTEL\\src\\Infrastructure\\Domain\\Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.ApiAuthorization.IdentityServer": {
+              "target": "Package",
+              "version": "[5.0.15, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[5.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.AutoHistory": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[5.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite.NetTopologySuite": {
+              "target": "Package",
+              "version": "[5.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.15, )"
+            },
+            "NSwag.AspNetCore": {
+              "target": "Package",
+              "version": "[13.2.0, )"
+            },
+            "NSwag.Core": {
+              "target": "Package",
+              "version": "[13.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\UTC_CNTT\\nam4_cntt\\cntt_4.2\\Do-An\\DO_AN_BOOKING_HOTEL\\src\\Presentation\\Web\\Web.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\UTC_CNTT\\nam4_cntt\\cntt_4.2\\Do-An\\DO_AN_BOOKING_HOTEL\\src\\Presentation\\Web\\Web.csproj",
+        "projectName": "Web",
+        "projectPath": "E:\\UTC_CNTT\\nam4_cntt\\cntt_4.2\\Do-An\\DO_AN_BOOKING_HOTEL\\src\\Presentation\\Web\\Web.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "E:\\UTC_CNTT\\nam4_cntt\\cntt_4.2\\Do-An\\DO_AN_BOOKING_HOTEL\\src\\Presentation\\Web\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "E:\\UTC_CNTT\\nam4_cntt\\cntt_4.2\\Do-An\\DO_AN_BOOKING_HOTEL\\src\\Core\\Application\\Application.csproj": {
+                "projectPath": "E:\\UTC_CNTT\\nam4_cntt\\cntt_4.2\\Do-An\\DO_AN_BOOKING_HOTEL\\src\\Core\\Application\\Application.csproj"
+              },
+              "E:\\UTC_CNTT\\nam4_cntt\\cntt_4.2\\Do-An\\DO_AN_BOOKING_HOTEL\\src\\Core\\Common\\Common.csproj": {
+                "projectPath": "E:\\UTC_CNTT\\nam4_cntt\\cntt_4.2\\Do-An\\DO_AN_BOOKING_HOTEL\\src\\Core\\Common\\Common.csproj"
+              },
+              "E:\\UTC_CNTT\\nam4_cntt\\cntt_4.2\\Do-An\\DO_AN_BOOKING_HOTEL\\src\\Infrastructure\\Domain\\Domain.csproj": {
+                "projectPath": "E:\\UTC_CNTT\\nam4_cntt\\cntt_4.2\\Do-An\\DO_AN_BOOKING_HOTEL\\src\\Infrastructure\\Domain\\Domain.csproj"
+              },
+              "E:\\UTC_CNTT\\nam4_cntt\\cntt_4.2\\Do-An\\DO_AN_BOOKING_HOTEL\\src\\Infrastructure\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "E:\\UTC_CNTT\\nam4_cntt\\cntt_4.2\\Do-An\\DO_AN_BOOKING_HOTEL\\src\\Infrastructure\\Infrastructure\\Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Hangfire.AspNetCore": {
+              "target": "Package",
+              "version": "[1.8.0, )"
+            },
+            "Hangfire.Core": {
+              "target": "Package",
+              "version": "[1.8.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.15, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[5.0.15, )"
+            },
+            "Microsoft.AspNetCore.SignalR": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Microsoft.AspNetCore.SpaServices.Extensions": {
+              "target": "Package",
+              "version": "[5.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.15, )"
+            },
+            "Microsoft.Extensions.Caching.StackExchangeRedis": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "NSwag.AspNetCore": {
+              "target": "Package",
+              "version": "[13.19.0, )"
+            },
+            "NSwag.CodeGeneration.CSharp": {
+              "target": "Package",
+              "version": "[13.19.0, )"
+            },
+            "NSwag.Core": {
+              "target": "Package",
+              "version": "[13.19.0, )"
+            },
+            "NSwag.MSBuild": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[13.19.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

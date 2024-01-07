@@ -1,0 +1,15 @@
+E:\UTC_CNTT\nam4_cntt\cntt_4.2\Do-An\DO_AN_BOOKING_HOTEL\src\Core\Application\bin\Debug\net5.0\Application.deps.json
+E:\UTC_CNTT\nam4_cntt\cntt_4.2\Do-An\DO_AN_BOOKING_HOTEL\src\Core\Application\bin\Debug\net5.0\Application.dll
+E:\UTC_CNTT\nam4_cntt\cntt_4.2\Do-An\DO_AN_BOOKING_HOTEL\src\Core\Application\bin\Debug\net5.0\ref\Application.dll
+E:\UTC_CNTT\nam4_cntt\cntt_4.2\Do-An\DO_AN_BOOKING_HOTEL\src\Core\Application\bin\Debug\net5.0\Application.pdb
+E:\UTC_CNTT\nam4_cntt\cntt_4.2\Do-An\DO_AN_BOOKING_HOTEL\src\Core\Application\obj\Debug\net5.0\Application.csproj.AssemblyReference.cache
+E:\UTC_CNTT\nam4_cntt\cntt_4.2\Do-An\DO_AN_BOOKING_HOTEL\src\Core\Application\obj\Debug\net5.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+E:\UTC_CNTT\nam4_cntt\cntt_4.2\Do-An\DO_AN_BOOKING_HOTEL\src\Core\Application\obj\Debug\net5.0\Application.AssemblyInfoInputs.cache
+E:\UTC_CNTT\nam4_cntt\cntt_4.2\Do-An\DO_AN_BOOKING_HOTEL\src\Core\Application\obj\Debug\net5.0\Application.AssemblyInfo.cs
+E:\UTC_CNTT\nam4_cntt\cntt_4.2\Do-An\DO_AN_BOOKING_HOTEL\src\Core\Application\obj\Debug\net5.0\Application.csproj.CoreCompileInputs.cache
+E:\UTC_CNTT\nam4_cntt\cntt_4.2\Do-An\DO_AN_BOOKING_HOTEL\src\Core\Application\obj\Debug\net5.0\Application.dll
+E:\UTC_CNTT\nam4_cntt\cntt_4.2\Do-An\DO_AN_BOOKING_HOTEL\src\Core\Application\obj\Debug\net5.0\ref\Application.dll
+E:\UTC_CNTT\nam4_cntt\cntt_4.2\Do-An\DO_AN_BOOKING_HOTEL\src\Core\Application\obj\Debug\net5.0\Application.pdb
+E:\UTC_CNTT\nam4_cntt\cntt_4.2\Do-An\DO_AN_BOOKING_HOTEL\src\Core\Application\bin\Debug\net5.0\Domain.dll
+E:\UTC_CNTT\nam4_cntt\cntt_4.2\Do-An\DO_AN_BOOKING_HOTEL\src\Core\Application\bin\Debug\net5.0\Domain.pdb
+E:\UTC_CNTT\nam4_cntt\cntt_4.2\Do-An\DO_AN_BOOKING_HOTEL\src\Core\Application\obj\Debug\net5.0\Application.csproj.CopyComplete
