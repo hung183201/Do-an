@@ -11,12 +11,21 @@ export const ROUTES: RouteInfo[] = [
   {
     path: 'danh-muc', title: 'Danh Mục', icon: 'ft-command', code: '21082', class: 'has-sub', badge: '', badgeClass: 'badge badge-pill badge-danger float-right mr-1 mt-1', isExternalLink: false,
     submenu: [
+      { path: '/danh-muc/khach-san', title: 'Khách sạn', icon: 'ft-arrow-right submenu-icon', code: '21082', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
       { path: '/danh-muc/tien-ich', title: 'Tiện ích', icon: 'ft-arrow-right submenu-icon', code: '21082', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/danh-muc/cms-user', title: 'Tiện ích2', icon: 'ft-arrow-right submenu-icon', code: '22086', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/admin/cms-post', title: 'Danh mục bài viết', icon: 'ft-arrow-right submenu-icon', code: '22087', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/admin/cms-setting', title: 'Nội dung khác', icon: 'ft-arrow-right submenu-icon', code: '22088', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/admin/cms-user', title: 'Quản trị người dùng', icon: 'ft-arrow-right submenu-icon', code: '11003', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
-      { path: '/admin/cms-config', title: 'Cấu hình hệ thống', icon: 'ft-arrow-right submenu-icon', code: '22088', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/danh-muc/loai-phong', title: 'Loại phòng', icon: 'ft-arrow-right submenu-icon', code: '21082', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+      { path: '/danh-muc/tien-ich2', title: 'Dịch vụ', icon: 'ft-arrow-right submenu-icon', code: '21082', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
     ]
-  }
+  },
+  {   
+    path: 'back-office', title: 'Trang nghiệp vụ', icon: 'ft-git-pull-request', code: '14070', class: 'has-sub', badge: '', badgeClass: 'badge badge-pill badge-danger float-right mr-1 mt-1', isExternalLink: false,
+    submenu: [
+    ]
+  },
+  {   
+    path: 'back-office', title: 'Thống kê', icon: 'ft-git-pull-request', code: '14070', class: 'has-sub', badge: '', badgeClass: 'badge badge-pill badge-danger float-right mr-1 mt-1', isExternalLink: false,
+    submenu: [
+      //{ path: '/back-office/reg-form-statistic', title: 'Thống kê phiếu', icon: 'ft-arrow-right submenu-icon', code: '22089', class: '', badge: '', badgeClass: '', isExternalLink: false, submenu: [] },
+    ]
+  },
 ];

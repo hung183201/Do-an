@@ -1,0 +1,111 @@
+<!-- Default Feedback Section -->
+<div
+    class="feedback-area ptb-100 bg-fbf8ff"
+    [ngClass]="{'d-none': router.url === '/index-2' || router.url === '/index-3' || router.url === '/about' || router.url === '/cruises'}"
+>
+    <div class="container">
+        <div class="section-title text-center">
+            <h2>Some of our guests love us about our services</h2>
+        </div>
+        <div class="feedback-slides">
+            <owl-carousel-o [options]="feedbackSlides">
+                <ng-template carouselSlide>
+                    <div class="single-feedback-item">
+                        <div class="user-image">
+                            <img src="assets/images/users/user1.jpg" alt="user-image">
+                            <h3>Riley Mercedes</h3>
+                            <span>Orlando</span>
+                        </div>
+                        <p>“Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Sed porttitor lectus nibh.  Donec rutrum congue leo eget malesuada. Nulla porttitor accumsan tincidunt. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.”</p>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div class="single-feedback-item">
+                        <div class="user-image">
+                            <img src="assets/images/users/user2.jpg" alt="user-image">
+                            <h3>Odessa Nolette</h3>
+                            <span>Los Angeles</span>
+                        </div>
+                        <p>“Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Sed porttitor lectus nibh.  Donec rutrum congue leo eget malesuada. Nulla porttitor accumsan tincidunt. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.”</p>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div class="single-feedback-item">
+                        <div class="user-image">
+                            <img src="assets/images/users/user3.jpg" alt="user-image">
+                            <h3>Charles Betances</h3>
+                            <span>Atlanta</span>
+                        </div>
+                        <p>“Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Sed porttitor lectus nibh.  Donec rutrum congue leo eget malesuada. Nulla porttitor accumsan tincidunt. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.”</p>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div class="single-feedback-item">
+                        <div class="user-image">
+                            <img src="assets/images/users/user4.jpg" alt="user-image">
+                            <h3>Riley Mercedes</h3>
+                            <span>Orlando</span>
+                        </div>
+                        <p>“Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Sed porttitor lectus nibh.  Donec rutrum congue leo eget malesuada. Nulla porttitor accumsan tincidunt. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.”</p>
+                    </div>
+                </ng-template>
+            </owl-carousel-o>
+        </div>
+    </div>
+</div>
+
+<!-- Feedback Section for Home Demo 2 & 3 & About Page & Cruises Page -->
+<div
+    class="feedback-area pb-100 d-none"
+    [ngClass]="{'d-block': router.url === '/index-2' || router.url === '/index-3' || router.url === '/about' || router.url === '/cruises'}"
+>
+    <div class="container">
+        <div class="section-title text-center">
+            <h2>Some of our guests love us about our services</h2>
+        </div>
+        <div class="feedback-slides">
+            <owl-carousel-o [options]="feedbackSlides">
+                <ng-template carouselSlide>
+                    <div class="single-feedback-item bg-faf1ed">
+                        <div class="user-image">
+                            <img src="assets/images/users/user1.jpg" alt="user-image">
+                            <h3>Riley Mercedes</h3>
+                            <span>Orlando</span>
+                        </div>
+                        <p>“Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Sed porttitor lectus nibh.  Donec rutrum congue leo eget malesuada. Nulla porttitor accumsan tincidunt. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.”</p>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div class="single-feedback-item bg-f2f7fa">
+                        <div class="user-image">
+                            <img src="assets/images/users/user2.jpg" alt="user-image">
+                            <h3>Odessa Nolette</h3>
+                            <span>Los Angeles</span>
+                        </div>
+                        <p>“Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Sed porttitor lectus nibh.  Donec rutrum congue leo eget malesuada. Nulla porttitor accumsan tincidunt. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.”</p>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div class="single-feedback-item bg-faf1ed">
+                        <div class="user-image">
+                            <img src="assets/images/users/user3.jpg" alt="user-image">
+                            <h3>Charles Betances</h3>
+                            <span>Atlanta</span>
+                        </div>
+                        <p>“Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Sed porttitor lectus nibh.  Donec rutrum congue leo eget malesuada. Nulla porttitor accumsan tincidunt. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.”</p>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div class="single-feedback-item bg-f2f7fa">
+                        <div class="user-image">
+                            <img src="assets/images/users/user4.jpg" alt="user-image">
+                            <h3>Riley Mercedes</h3>
+                            <span>Orlando</span>
+                        </div>
+                        <p>“Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Sed porttitor lectus nibh.  Donec rutrum congue leo eget malesuada. Nulla porttitor accumsan tincidunt. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.”</p>
+                    </div>
+                </ng-template>
+            </owl-carousel-o>
+        </div>
+    </div>
+</div>

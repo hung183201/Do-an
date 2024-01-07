@@ -1,0 +1,65 @@
+<div
+    class="properties-area pt-100 pb-75 bg-fbf8ff"
+    [ngClass]="{'bg-f2f7fa': router.url === '/index-2' || router.url === '/index-3'}"
+>
+    <div class="container">
+        <div class="section-title">
+            <h2>Property booking for vacation</h2>
+            <p>Find the best property for your next booking</p>
+        </div>
+        <div class="properties-slides">
+            <owl-carousel-o [options]="propertiesSlides">
+                <ng-template carouselSlide>
+                    <div class="single-properties-item">
+                        <img src="assets/images/bookings/booking1.jpg" alt="Image">
+                        <div class="content">
+                            <h3>Hotels</h3>
+                            <span>15,935 properties</span>
+                        </div>
+                        <a routerLink="/hotels-listing" class="link-btn"></a>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div class="single-properties-item">
+                        <img src="assets/images/bookings/booking2.jpg" alt="Image">
+                        <div class="content">
+                            <h3>Resorts</h3>
+                            <span>6,431 properties</span>
+                        </div>
+                        <a routerLink="/hotels-listing" class="link-btn"></a>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div class="single-properties-item">
+                        <img src="assets/images/bookings/booking3.jpg" alt="Image">
+                        <div class="content">
+                            <h3>Cabins</h3>
+                            <span>951 properties</span>
+                        </div>
+                        <a routerLink="/hotels-listing" class="link-btn"></a>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div class="single-properties-item">
+                        <img src="assets/images/bookings/booking4.jpg" alt="Image">
+                        <div class="content">
+                            <h3>Cottages</h3>
+                            <span>7591 properties</span>
+                        </div>
+                        <a routerLink="/hotels-listing" class="link-btn"></a>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div class="single-properties-item">
+                        <img src="assets/images/bookings/booking5.jpg" alt="Image">
+                        <div class="content">
+                            <h3>Hotels</h3>
+                            <span>15,935 properties</span>
+                        </div>
+                        <a routerLink="/hotels-listing" class="link-btn"></a>
+                    </div>
+                </ng-template>
+            </owl-carousel-o>
+        </div>
+    </div>
+</div>

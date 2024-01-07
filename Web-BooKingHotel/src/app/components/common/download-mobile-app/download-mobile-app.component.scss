@@ -1,0 +1,218 @@
+.app-download-area {
+    &.bg-f2f7fa {
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            top: 0;
+            left: 0;
+            right: 0;
+            content: '';
+            height: 125px;
+            position: absolute;
+            background-color: var(--whiteColor);
+        }
+    }
+}
+.app-download-content {
+	margin-right: 55px;
+
+	h2 {
+		font-size: 35px;
+		margin-bottom: 20px;
+	}
+	.store-play-btn {
+		margin-top: 30px;
+
+		a {
+			margin-right: 30px;
+            display: inline-block;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+    &.style-two {
+        top: 60px;
+        position: relative;
+        margin: {
+            right: 0;
+            left: 55px;
+        };
+    }
+}
+.app-download-image {
+	background-color: #f3f7ff;
+	border-radius: 50%;
+
+	img {
+		position: relative;
+		left: 60px;
+	}
+    &.two {
+        background-color: transparent;
+        border-radius: 0;
+
+        img {
+            left: 0;
+        }
+    }
+}
+.d-none {
+    &.d-block {
+        display: block !important;
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .app-download-area {
+        &.bg-f2f7fa {
+            padding-top: 60px;
+
+            &::before {
+                display: none;
+            }
+            .col-lg-4 {
+                order: 2;
+            }
+        }
+    }
+    .app-download-content {
+        margin-right: 0;
+    
+        h2 {
+            font-size: 23px;
+            margin-bottom: 10px;
+        }
+        .store-play-btn {
+            margin-top: 20px;
+    
+            a {
+                margin-right: 15px;
+
+                img {
+                    width: 130px;
+                }
+                &:nth-child(2) {
+                    img {
+                        width: 140px;
+                    }
+                }
+            }
+        }
+        &.style-two {
+            top: 0;
+            margin-left: 0;
+        }
+    }
+    .app-download-image {
+        margin-top: 30px;
+    
+        img {
+            left: 0;
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .app-download-area {
+        &.bg-f2f7fa {
+            padding-top: 80px;
+
+            &::before {
+                display: none;
+            }
+            .col-lg-4 {
+                order: 2;
+            }
+        }
+    }
+    .app-download-content {
+        margin-right: 0;
+    
+        h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        .store-play-btn {
+            margin-top: 20px;
+    
+            a {
+                margin-right: 20px;
+            }
+        }
+        &.style-two {
+            top: 0;
+            margin-left: 0;
+        }
+    }
+    .app-download-image {
+        text-align: center;
+        margin-top: 30px;
+    
+        img {
+            left: 0;
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .app-download-area {
+        &.bg-f2f7fa {
+            padding-top: 100px;
+
+            &::before {
+                display: none;
+            }
+        }
+    }
+    .app-download-content {
+        margin-right: 0;
+    
+        .store-play-btn {
+            margin-top: 25px;
+        }
+        &.style-two {
+            top: -40px;
+        }
+    }
+    .app-download-image {
+        text-align: center;
+    
+        img {
+            left: 0;
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .app-download-image {
+        text-align: center;
+    
+        img {
+            left: 0;
+        }
+    }
+
+}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

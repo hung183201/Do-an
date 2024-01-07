@@ -1,0 +1,960 @@
+<!-- Page Title -->
+<div class="page-title-area ptb-100 bg-2">
+    <div class="container">
+        <div class="page-title-content">
+            <h2>Đặt phòng theo nhu cầu một cách dễ dàng</h2>
+            <p>Nếu bạn sử dụng bất kỳ dịch vụ đặt phòng nào của chúng tôi tại đây, bạn sẽ nhận được tất cả các loại lợi ích từ chúng tôi</p>
+            <form class="banner-form-style">
+                <div class="row align-items-center">
+                    <div class="col-xl-3 col-lg-6 col-sm-5">
+                        <div class="form-group">
+                            <label>Location</label>
+                            <input type="text" class="form-control" placeholder="Where are you going?">
+                            <img src="assets/images/icon/search.svg" alt="search">
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-sm-5">
+                        <div class="form-group">
+                            <label>Check in</label>
+                            <dp-date-picker theme="dp-material" placeholder="Add dates" [config]="datePickerConfig" required="true"></dp-date-picker>
+                            <img src="assets/images/icon/calendar.svg" alt="calendar">
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-sm-5">
+                        <div class="form-group">
+                            <label>Check out</label>
+                            <dp-date-picker theme="dp-material" placeholder="Add dates" [config]="datePickerConfig" required="true"></dp-date-picker>
+                            <img src="assets/images/icon/calendar.svg" alt="calendar">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <div class="form-group">
+                            <label>Guests</label>
+                            <input type="text" class="form-control" placeholder="Add guests">
+                            <img src="assets/images/icon/user-check.svg" alt="user-check">
+                        </div>
+                    </div>
+                    <div class="col-lg-1 col-md-112">
+                        <div class="form-group ps-0 pe-0">
+                            <button type="submit" class="src-btn">
+                                <i class="ri-search-line"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Flights -->
+<div class="flights-area ptb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-12">
+                <div class="left-sidebar">
+                    <div class="single-widget">
+                        <h3>Search here</h3>
+                        <form>
+                            <input type="text" class="form-control" placeholder="Search">
+                            <button type="submit" class="src-btn"><i class="ri-search-line"></i></button>
+                        </form>
+                    </div>
+                    <div class="single-widget">
+                        <h3>Popular Filters</h3>
+                        <ul class="custom-filters">
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Hotels
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-2">
+                                    <label class="form-check-label" for="flexCheckDefault-2">
+                                        Country house
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-3">
+                                    <label class="form-check-label" for="flexCheckDefault-3">
+                                        Hot tub
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-4">
+                                    <label class="form-check-label" for="flexCheckDefault-4">
+                                        The Colosseum
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-5">
+                                    <label class="form-check-label" for="flexCheckDefault-5">
+                                        Parking
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-6">
+                                    <label class="form-check-label" for="flexCheckDefault-6">
+                                        Bed and Breakfasts
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-7">
+                                    <label class="form-check-label" for="flexCheckDefault-7">
+                                        Accessible bathroom
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="single-widget">
+                        <h3>Price</h3>
+                        <select class="form-select">
+                            <option selected>$200</option>
+                            <option value="1">$300</option>
+                            <option value="2">$400</option>
+                            <option value="3">$500 evening</option>
+                        </select>
+                    </div>
+                    <div class="single-widget">
+                        <h3>Star rating</h3>
+                        <ul class="custom-rating">
+                            <li>
+                                <span>1</span>
+                                <i class="ri-star-fill"></i>
+                            </li>
+                            <li>
+                                <span>2</span>
+                                <i class="ri-star-fill"></i>
+                            </li>
+                            <li>
+                                <span>3</span>
+                                <i class="ri-star-fill"></i>
+                            </li>
+                            <li>
+                                <span>4</span>
+                                <i class="ri-star-fill"></i>
+                            </li>
+                            <li>
+                                <span>5</span>
+                                <i class="ri-star-fill"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="single-widget">
+                        <h3>Guest rating</h3>
+                        <ul class="custom-filters">
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-8">
+                                    <label class="form-check-label" for="flexCheckDefault-8">
+                                        Any
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-9">
+                                    <label class="form-check-label" for="flexCheckDefault-9">
+                                        Wonderful 4.5+
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-10">
+                                    <label class="form-check-label" for="flexCheckDefault-10">
+                                        Very good 4+
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-11">
+                                    <label class="form-check-label" for="flexCheckDefault-11">
+                                        Good 3.5+
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="single-widget">
+                        <h3>Hotel class</h3>
+                        <ul class="custom-filters">
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-12">
+                                    <label class="form-check-label" for="flexCheckDefault-12">
+                                        5 stars
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-13">
+                                    <label class="form-check-label" for="flexCheckDefault-13">
+                                        4 stars
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-14">
+                                    <label class="form-check-label" for="flexCheckDefault-14">
+                                        3 stars
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-15">
+                                    <label class="form-check-label" for="flexCheckDefault-15">
+                                        2 stars
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="single-widget">
+                        <h3>Property type</h3>
+                        <ul class="custom-filters">
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-16">
+                                    <label class="form-check-label" for="flexCheckDefault-16">
+                                        Hotel
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-17">
+                                    <label class="form-check-label" for="flexCheckDefault-17">
+                                        Cabin
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-18">
+                                    <label class="form-check-label" for="flexCheckDefault-18">
+                                        Country house
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-19">
+                                    <label class="form-check-label" for="flexCheckDefault-19">
+                                        Bed & breakfast
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-20">
+                                    <label class="form-check-label" for="flexCheckDefault-20">
+                                        Apartment
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-21">
+                                    <label class="form-check-label" for="flexCheckDefault-21">
+                                        Tree house
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-22">
+                                    <label class="form-check-label" for="flexCheckDefault-22">
+                                        Cruise
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-23">
+                                    <label class="form-check-label" for="flexCheckDefault-23">
+                                        Castle
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="single-widget">
+                        <h3>Amenities</h3>
+                        <ul class="custom-filters">
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-24">
+                                    <label class="form-check-label" for="flexCheckDefault-24">
+                                        Free WiFi
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-25">
+                                    <label class="form-check-label" for="flexCheckDefault-25">
+                                        Free parking
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-26">
+                                    <label class="form-check-label" for="flexCheckDefault-26">
+                                        Air conditioning
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-27">
+                                    <label class="form-check-label" for="flexCheckDefault-27">
+                                        Restaurant
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-28">
+                                    <label class="form-check-label" for="flexCheckDefault-28">
+                                        Gym
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-29">
+                                    <label class="form-check-label" for="flexCheckDefault-29">
+                                        Pool
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-30">
+                                    <label class="form-check-label" for="flexCheckDefault-30">
+                                        Breakfast included
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-31">
+                                    <label class="form-check-label" for="flexCheckDefault-31">
+                                        Bicycles available
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-32">
+                                    <label class="form-check-label" for="flexCheckDefault-32">
+                                        Coffee shop
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-33">
+                                    <label class="form-check-label" for="flexCheckDefault-33">
+                                        Conference facilities
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-34">
+                                    <label class="form-check-label" for="flexCheckDefault-34">
+                                        Hot Tub
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-35">
+                                    <label class="form-check-label" for="flexCheckDefault-35">
+                                        Ocean view
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-50">
+                                    <label class="form-check-label" for="flexCheckDefault-50">
+                                        Spa
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-36">
+                                    <label class="form-check-label" for="flexCheckDefault-36">
+                                        Casino
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-37">
+                                    <label class="form-check-label" for="flexCheckDefault-37">
+                                        Rooftop terrace
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-38">
+                                    <label class="form-check-label" for="flexCheckDefault-38">
+                                        Pet friendly
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="single-widget">
+                        <h3>Style</h3>
+                        <ul class="custom-filters">
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-39">
+                                    <label class="form-check-label" for="flexCheckDefault-39">
+                                        Budget
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-51">
+                                    <label class="form-check-label" for="flexCheckDefault-51">
+                                        Mid-range
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-40">
+                                    <label class="form-check-label" for="flexCheckDefault-40">
+                                        Family-friendly
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-41">
+                                    <label class="form-check-label" for="flexCheckDefault-41">
+                                        Business
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-42">
+                                    <label class="form-check-label" for="flexCheckDefault-42">
+                                        Modern
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-43">
+                                    <label class="form-check-label" for="flexCheckDefault-43">
+                                        Romantic
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="single-widget">
+                        <h3>Meal plans available</h3>
+                        <ul class="custom-filters">
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-44">
+                                    <label class="form-check-label" for="flexCheckDefault-44">
+                                        Breakfast included
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-45">
+                                    <label class="form-check-label" for="flexCheckDefault-45">
+                                        Lunch included
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-46">
+                                    <label class="form-check-label" for="flexCheckDefault-46">
+                                        Dinner included
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-47">
+                                    <label class="form-check-label" for="flexCheckDefault-47">
+                                        All inclusive
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="single-widget">
+                        <h3>Payment type</h3>
+                        <ul class="custom-filters">
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-48">
+                                    <label class="form-check-label" for="flexCheckDefault-48">
+                                        Fully refundable
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox"  id="flexCheckDefault-49">
+                                    <label class="form-check-label" for="flexCheckDefault-49">
+                                        Reserve now, pay later
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-12">
+                <div class="flights-listing">
+                    <ul class="d-flex justify-content-between sorting">
+                        <li>
+                            <span>15,935 flights</span>
+                        </li>
+                        <li>
+                            <select class="form-select">
+                                <option selected>Sorted by default</option>
+                                <option value="1">Price: high to low</option>
+                                <option value="2">Price: low to high</option>
+                            </select>
+                        </li>
+                    </ul>
+                    <ul class="flights-list">
+                        <li class="single-flights-box">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-lg-5 col-md-12 col-sm-12">
+                                    <a routerLink="/flight-details" class="d-block">
+                                        <img src="assets/images/flights/flights-1.jpg" alt="flights-image">
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-7 col-sm-7">
+                                    <div class="content">
+                                        <h3>
+                                            <a routerLink="/flight-details">
+                                                New York (NYC), USA
+                                            </a>
+                                        </h3>
+                                        <p>Atlanta (ATL) to  Brisbane (BNE)</p>
+                                        <p>1 Feb – 5 Feb • 5 days</p>
+                                        <p>Call our travel expert</p>
+                                        <a href="tel:+1-719-504-1984" class="number">+1 719-504-1984</a>
+                                        <span class="days">24 hours a day/7 days a week</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-5 col-sm-5">
+                                    <ul class="info">
+                                        <li>
+                                            <div class="price">$200</div>
+                                        </li>
+                                        <li>
+                                            Economy
+                                        </li>
+                                        <li>
+                                            <a routerLink="/book-now" class="default-btn">
+                                                Book Now
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="single-flights-box">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-lg-5 col-md-12 col-sm-12">
+                                    <a routerLink="/flight-details" class="d-block">
+                                        <img src="assets/images/flights/flights-2.jpg" alt="flights-image">
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-7 col-sm-7">
+                                    <div class="content">
+                                        <h3>
+                                            <a routerLink="/flight-details">
+                                                Sydney (SYD), Australia
+                                            </a>
+                                        </h3>
+                                        <p>Sydney (SYD) to  Dubai (DXB)</p> 
+                                        <p>1 Apr – 3 Feb • 3 days </p>
+                                        <p>Call our travel expert</p>
+                                        <a href="tel:+1-719-504-1984" class="number">+1 719-504-1984</a>
+                                        <span class="days">24 hours a day/7 days a week</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-5 col-sm-5">
+                                    <ul class="info">
+                                        <li>
+                                            <div class="price">$232</div>
+                                        </li>
+                                        <li>
+                                            Classic
+                                        </li>
+                                        <li>
+                                            <a routerLink="/book-now" class="default-btn">
+                                                Book Now
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="single-flights-box">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-lg-5 col-md-12 col-sm-12">
+                                    <a routerLink="/flight-details" class="d-block">
+                                        <img src="assets/images/flights/flights-3.jpg" alt="flights-image">
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-7 col-sm-7">
+                                    <div class="content">
+                                        <h3>
+                                            <a routerLink="/flight-details">
+                                                Queenstown (ZQN)
+                                            </a>
+                                        </h3>
+                                        <p>Queenstown (ZQN) to Panama City (PTY)</p>
+                                        <p>1 Feb – 5 Feb • 5 days</p>
+                                        <p>Call our travel expert</p>
+                                        <a href="tel:+1-719-504-1984" class="number">+1 719-504-1984</a>
+                                        <span class="days">24 hours a day/7 days a week</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-5 col-sm-5">
+                                    <ul class="info">
+                                        <li>
+                                            <div class="price">$999</div>
+                                        </li>
+                                        <li>
+                                            Business
+                                        </li>
+                                        <li>
+                                            <a routerLink="/book-now" class="default-btn">
+                                                Book Now
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="single-flights-box">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-lg-5 col-md-12 col-sm-12">
+                                    <a routerLink="/flight-details" class="d-block">
+                                        <img src="assets/images/flights/flights-4.jpg" alt="flights-image">
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-7 col-sm-7">
+                                    <div class="content">
+                                        <h3>
+                                            <a routerLink="/flight-details">
+                                                London heathrow(LHR)
+                                            </a>
+                                        </h3>
+                                        <p>London Heathrow(LHR)  San Francisco (SFO)</p>
+                                        <p>1 Feb – 5 Feb • 5 days</p>
+                                        <p>Call our travel expert</p>
+                                        <a href="tel:+1-719-504-1984" class="number">+1 719-504-1984</a>
+                                        <span class="days">24 hours a day/7 days a week</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-5 col-sm-5">
+                                    <ul class="info">
+                                        <li>
+                                            <div class="price">$898</div>
+                                        </li>
+                                        <li>
+                                            Advance
+                                        </li>
+                                        <li>
+                                            <a routerLink="/book-now" class="default-btn">
+                                                Book Now
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="single-flights-box">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-lg-5 col-md-12 col-sm-12">
+                                    <a routerLink="/flight-details" class="d-block">
+                                        <img src="assets/images/flights/flights-5.jpg" alt="flights-image">
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-7 col-sm-7">
+                                    <div class="content">
+                                        <h3>
+                                            <a routerLink="/flight-details">
+                                                Manchester (MAN)
+                                            </a>
+                                        </h3>
+                                        <p>Manchester(MAN)  Montreal (YMQ)</p>
+                                        <p>1 Feb – 5 Feb • 5 days</p>
+                                        <p>Call our travel expert</p>
+                                        <a href="tel:+1-719-504-1984" class="number">+1 719-504-1984</a>
+                                        <span class="days">24 hours a day/7 days a week</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-5 col-sm-5">
+                                    <ul class="info">
+                                        <li>
+                                            <div class="price">$400</div>
+                                        </li>
+                                        <li>
+                                            Economy
+                                        </li>
+                                        <li>
+                                            <a routerLink="/book-now" class="default-btn">
+                                                Book Now
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="single-flights-box">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-lg-5 col-md-12 col-sm-12">
+                                    <a routerLink="/flight-details" class="d-block">
+                                        <img src="assets/images/flights/flights-6.jpg" alt="flights-image">
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-7 col-sm-7">
+                                    <div class="content">
+                                        <h3>
+                                            <a routerLink="/flight-details">
+                                                New York (NYC), USA
+                                            </a>
+                                        </h3>
+                                        <p>Atlanta (ATL) to  Brisbane (BNE)</p>
+                                        <p>1 Feb – 5 Feb • 5 days</p>
+                                        <p>Call our travel expert</p>
+                                        <a href="tel:+1-719-504-1984" class="number">+1 719-504-1984</a>
+                                        <span class="days">24 hours a day/7 days a week</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-5 col-sm-5">
+                                    <ul class="info">
+                                        <li>
+                                            <div class="price">$320</div>
+                                        </li>
+                                        <li>
+                                            Classic
+                                        </li>
+                                        <li>
+                                            <a routerLink="/book-now" class="default-btn">
+                                                Book Now
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="single-flights-box">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-lg-5 col-md-12 col-sm-12">
+                                    <a routerLink="/flight-details" class="d-block">
+                                        <img src="assets/images/flights/flights-7.jpg" alt="flights-image">
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-7 col-sm-7">
+                                    <div class="content">
+                                        <h3>
+                                            <a routerLink="/flight-details">
+                                                New York (NYC), USA
+                                            </a>
+                                        </h3>
+                                        <p>Atlanta (ATL) to  Brisbane (BNE)</p>
+                                        <p>1 Feb – 5 Feb • 5 days</p>
+                                        <p>Call our travel expert</p>
+                                        <a href="tel:+1-719-504-1984" class="number">+1 719-504-1984</a>
+                                        <span class="days">24 hours a day/7 days a week</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-5 col-sm-5">
+                                    <ul class="info">
+                                        <li>
+                                            <div class="price">$150</div>
+                                        </li>
+                                        <li>
+                                            Business
+                                        </li>
+                                        <li>
+                                            <a routerLink="/book-now" class="default-btn">
+                                                Book Now
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="single-flights-box">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-lg-5 col-md-12 col-sm-12">
+                                    <a routerLink="/flight-details" class="d-block">
+                                        <img src="assets/images/flights/flights-8.jpg" alt="flights-image">
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-7 col-sm-7">
+                                    <div class="content">
+                                        <h3>
+                                            <a routerLink="/flight-details">
+                                                Glasgow (GLA)
+                                            </a>
+                                        </h3>
+                                        <p>Atlanta (ATL) to  Brisbane (BNE)</p>
+                                        <p>1 Feb – 5 Feb • 5 days</p>
+                                        <p>Call our travel expert</p>
+                                        <a href="tel:+1-719-504-1984" class="number">+1 719-504-1984</a>
+                                        <span class="days">24 hours a day/7 days a week</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-5 col-sm-5">
+                                    <ul class="info">
+                                        <li>
+                                            <div class="price">$400</div>
+                                        </li>
+                                        <li>
+                                            Advance
+                                        </li>
+                                        <li>
+                                            <a routerLink="/book-now" class="default-btn">
+                                                Book Now
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="single-flights-box">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-lg-5 col-md-12 col-sm-12">
+                                    <a routerLink="/flight-details" class="d-block">
+                                        <img src="assets/images/flights/flights-9.jpg" alt="flights-image">
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-7 col-sm-7">
+                                    <div class="content">
+                                        <h3>
+                                            <a routerLink="/flight-details">
+                                                Edinburgh (EDI)
+                                            </a>
+                                        </h3>
+                                        <p>Edinburgh(EDI)  Montreal (YMQ)</p>
+                                        <p>1 Feb – 5 Feb • 5 days</p>
+                                        <p>Call our travel expert</p>
+                                        <a href="tel:+1-719-504-1984" class="number">+1 719-504-1984</a>
+                                        <span class="days">24 hours a day/7 days a week</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-5 col-sm-5">
+                                    <ul class="info">
+                                        <li>
+                                            <div class="price">$250</div>
+                                        </li>
+                                        <li>
+                                            Economy
+                                        </li>
+                                        <li>
+                                            <a routerLink="/book-now" class="default-btn">
+                                                Book Now
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="single-flights-box">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-lg-5 col-md-12 col-sm-12">
+                                    <a routerLink="/flight-details" class="d-block">
+                                        <img src="assets/images/flights/flights-10.jpg" alt="flights-image">
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-7 col-sm-7">
+                                    <div class="content">
+                                        <h3>
+                                            <a routerLink="/flight-details">
+                                                New York (NYC), USA
+                                            </a>
+                                        </h3>
+                                        <p>Atlanta (ATL) to  Brisbane (BNE)</p>
+                                        <p>1 Feb – 5 Feb • 5 days</p>
+                                        <p>Call our travel expert</p>
+                                        <a href="tel:+1-719-504-1984" class="number">+1 719-504-1984</a>
+                                        <span class="days">24 hours a day/7 days a week</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-5 col-sm-5">
+                                    <ul class="info">
+                                        <li>
+                                            <div class="price">$300</div>
+                                        </li>
+                                        <li>
+                                            Classic
+                                        </li>
+                                        <li>
+                                            <a routerLink="/book-now" class="default-btn">
+                                                Book Now
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="pagination-area">
+                        <a routerLink="/hotels-listing" class="next page-numbers">
+                            <i class="ri-arrow-left-line"></i>
+                        </a>
+                        <span class="page-numbers current" aria-current="page">1</span>
+                        <a routerLink="/hotels-listing" class="page-numbers">2</a>
+                        <a routerLink="/hotels-listing" class="page-numbers">3</a>
+                        <a routerLink="/hotels-listing" class="next page-numbers">
+                            <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-subscribe></app-subscribe>

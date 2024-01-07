@@ -1,0 +1,104 @@
+.single-blog-item {
+	margin-bottom: 25px;
+    
+	img {
+		margin-bottom: 22px;
+	}
+	.content {
+		.meta {
+			padding-left: 0;
+			margin-bottom: 12px;
+			list-style-type: none;
+            
+			li {
+				color: var(--paragraphColor);
+				display: inline-block;
+				position: relative;
+				margin-right: 30px;
+
+				&::before {
+					top: 0;
+					width: 1px;
+					content: "";
+					right: -17px;
+					height: 100%;
+					position: absolute;
+					transform: rotate(25deg);
+					background-color: #eeeeee;
+				}
+				&:last-child {
+					margin-right: 0;
+                    
+					&::before {
+						display: none;
+					}
+				}
+			}
+		}
+		h3 {
+			font-size: 22px;
+			margin-bottom: 12px;
+		}
+		.read-more {
+            display: inline-block;
+		}
+	}
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .single-blog-item {
+        img {
+            margin-bottom: 18px;
+        }
+        .content {
+            .meta {
+                margin-bottom: 10px;
+            }
+            h3 {
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .single-blog-item {
+        img {
+            margin-bottom: 20px;
+        }
+        .content {
+            h3 {
+                font-size: 18px;
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .single-blog-item {
+        .content {
+            h3 {
+                font-size: 20px;
+            }
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

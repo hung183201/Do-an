@@ -41,6 +41,9 @@ import { NguoiDungService } from "./shared/services/nguoi-dung.service";
 import { PhieuYeuCauKhaiThacService } from "./shared/services/phieu-yeu-cau-khai-thac.service";
 //import { RequestPrintDocumentComponent, SafeHtmlPipe } from './pages/back-office/request-form-document/request-print-document/request-print-document.component';
 import { RichTextEditorAllModule } from '@syncfusion/ej2-angular-richtexteditor';
+import { environment } from 'environments/environment';
+import { API_BASE_URL } from './api-client';
+import { DataService } from './shared/services/data.service';
 
 
 //var firebaseConfig = {
@@ -100,9 +103,14 @@ export function createTranslateLoader(http: HttpClient) {
     DragulaService,
     MapboxglService,
     PhieuYeuCauKhaiThacService,
+    DataService,
     {
       provide: PERFECT_SCROLLBAR_CONFIG,
       useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
+    },
+    {
+      provide: API_BASE_URL,
+      useValue: environment.API_BASE_URL
     },
     //{ provide: APP_INITIALIZER, useFactory: initializeApp, multi: true, deps: [AuthService] },
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

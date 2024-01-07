@@ -1,0 +1,839 @@
+.gallery-image {
+	margin-bottom: 25px;
+    border-radius: 10px;
+
+	img {
+		border-radius: 10px;
+	}
+}
+.overview-content {
+    .info {
+        margin-top: 30px;
+
+        .author {
+            h3 {
+                font-size: 20px;
+                margin-bottom: 8px;
+            }
+            span {
+                display: block;
+                margin-bottom: 9px;
+                color: var(--primaryColor);
+            }
+        }
+        .facilities {
+            padding-left: 30px;
+
+            h3 {
+                font-size: 20px;
+                margin-bottom: 15px;
+            }
+            ul {
+                padding-left: 0;
+                margin-bottom: 0;
+                list-style-type: none;
+
+                li {
+                    margin-bottom: 10px;
+                    position: relative;
+                    padding-left: 25px;
+
+                    i {
+                        color: var(--primaryColor);
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    .content {
+        margin-bottom: 25px;
+
+        h3 {
+            font-size: 35px;
+            margin-bottom: 5px;
+        }
+        p {
+            margin-bottom: 10px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        .rating {
+            margin-bottom: 5px;
+
+            i {
+                line-height: 1;
+                font-size: 18px;
+                color: #ffc444;
+                margin-right: 3px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    .price-content {
+        float: right;
+        margin-bottom: 25px;
+
+        p {
+            margin-bottom: 8px;
+        }
+        .price {
+            color: var(--paragraphColor);
+
+            span {
+                color: var(--blackColor);
+                font: {
+                    size: 25px;
+                    weight: 700;
+                };
+            }
+        }
+        .default-btn {
+            margin-top: 15px;
+            padding: {
+                top: 12px;
+                bottom: 12px;
+            };
+        }
+    }
+}
+.rooms-content {
+	h3 {
+		font-size: 25px;
+		margin-bottom: 25px;
+	}
+	.rooms-wrap {
+		padding-left: 0;
+		margin-bottom: 0;
+		list-style-type: none;
+
+		.rooms-list {
+			padding: 20px;
+			border-radius: 5px;
+			margin-bottom: 25px;
+			background-color: #f9f9f9;
+
+			h4 {
+				font-size: 18px;
+				margin-bottom: 20px;
+			}
+			ul {
+				padding-left: 0;
+				margin-bottom: 0;
+				list-style-type: none;
+
+				li {
+					margin-bottom: 15px;
+					padding-left: 100px;
+					position: relative;
+
+					span {
+						top: 0;
+						left: 0;
+						font-weight: 700;
+						position: absolute;
+						color: var(--blackColor);
+					}
+					h2 {
+						display: inline-block;
+						margin-bottom: 0;
+						font-size: 20px;
+
+						del {
+							opacity: 0.5;
+						}
+					}
+					&.red {
+						color: #ff0000;
+					}
+					&.green {
+						color: #41A63F;
+					}
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+				&.listing {
+					border-left: 1px solid #eeeeee;
+					padding-left: 40px;
+
+					li {
+						padding-left: 0;
+						color: #68697D;
+					}
+				}
+				&.limited {
+					border-left: 1px solid #eeeeee;
+					margin-left: 30px;
+                    
+					li {
+						padding-left: 70px;
+						margin-bottom: 15px;
+					}
+				}
+			}
+		}
+	}
+	
+}
+.location-content {
+	iframe {
+		width: 100%;
+		border: none;
+		height: 500px;
+		margin-bottom: 25px;
+	}
+	.location-list {
+		h3 {
+			font-size: 20px;
+			margin-bottom: 20px;
+		}
+		ul {
+			padding-left: 0;
+			margin-bottom: 0;
+			list-style-type: none;
+
+			li {
+				margin-bottom: 15px;
+                color: var(--paragraphColor);
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+.amenities-content {
+	h3 {
+		font-size: 20px;
+		margin-bottom: 0;
+	}
+	.single-amenities {
+		margin-top: 25px;
+
+		h4 {
+			font-size: 18px;
+			position: relative;
+			padding-left: 30px;
+			margin-bottom: 15px;
+
+			i {
+				top: 0;
+				left: 0;
+				position: absolute;
+				color: var(--primaryColor);
+			}
+		}
+	}
+}
+.policies-content {
+    margin-bottom: -25px;
+
+	.single-policies {
+		margin-bottom: 25px;
+
+		h3 {
+			font-size: 20px;
+			margin-bottom: 12px;
+		}
+		ul {
+			padding-left: 0;
+			margin-bottom: 0;
+            list-style: none;
+
+            li {
+                margin-bottom: 12px;
+                color: var(--paragraphColor);
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+		}
+	}
+}
+.reviews-content {
+	.review-bar {
+		h3 {
+			font-size: 20px;
+            margin-bottom: 0;
+		}
+		h1 {
+			font-size: 50px;
+            margin-bottom: 0;
+		}
+		p {
+			font-size: 18px;
+			margin-bottom: 25px;
+		}
+		ul {
+			padding-left: 0;
+			margin-bottom: 0;
+            list-style-type: none;
+
+			li {
+				margin-bottom: 20px;
+
+				.progress {
+					position: relative;
+					border-radius: 0;
+					overflow: unset;
+                    margin: {
+                        left: 90px;
+                        right: 80px;
+                    };
+					span {
+						font-weight: 600;
+					}
+					.best {
+						top: -1px;
+						left: -90px;
+                        font-size: 14px;
+						position: absolute;
+						color: var(--blackColor);
+					}
+					.persent {
+						color: var(--blackColor);
+						position: absolute;
+						right: -50px;
+						top: -1px;
+					}
+					.progress-bar {
+						background-color: var(--primaryColor);
+					}
+				}
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+	.review-form {
+		padding-top: 50px;
+		margin-right: 50px;
+
+		h3 {
+			font-size: 20px;
+			margin-bottom: 12px;
+		}
+		.form-group {
+			margin-bottom: 25px;
+		}
+		label {
+			margin-bottom: 8px;
+            font: {
+                weight: 600;
+                size: 15px;
+            };
+		}
+		.star-rating {
+			direction: rtl;
+			cursor: default;
+			margin-bottom: 5px;
+			display: inline-block;
+
+			input[type="radio"] {
+			    display: none;
+			}
+			label {
+                padding: 0;
+                font-size: 18px;
+                cursor: pointer;
+                color: #dddddd;
+                margin-right: 5px;
+                transition: all 0.3s ease-in-out;
+			}
+			label:hover, label:hover ~ label, [type="radio"]:checked ~ label {
+			    color: #f2b600;
+			}
+		}
+		  
+	}
+	.review-list {
+		padding-left: 0;
+		margin-bottom: 0;
+		list-style-type: none;
+
+		li {
+			margin-bottom: 25px;
+			padding-bottom: 25px;
+			border-bottom: 1px solid #eeeeee;
+
+			h4 {
+				font-size: 20px;
+				margin-bottom: 10px;
+			}
+			span {
+				display: block;
+				margin-bottom: 12px;
+                color: var(--paragraphColor);
+			}
+			.rating {
+                margin-bottom: 8px;
+
+				i {
+                    margin-right: 3px;
+                    color: #f99e29;
+                    font-size: 18px;
+                    line-height: 1;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+				}
+			}
+			&:last-child {
+				margin-bottom: 0;
+				padding-bottom: 0;
+				border-bottom: none;
+			}
+		}
+	}
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .overview-content {
+        .info {
+            margin-top: 20px;
+    
+            .d-flex {
+                display: block !important;
+            }
+            .ms-4 {
+                margin: {
+                    left: 0 !important;
+                    top: 15px;
+                };
+            }
+            .author {
+                h3 {
+                    font-size: 16px;
+                    margin-bottom: 8px;
+                }
+            }
+            .facilities {
+                padding-left: 0;
+                margin-top: 25px;
+    
+                h3 {
+                    font-size: 16px;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        .content {
+            margin-bottom: 10px;
+    
+            h3 {
+                font-size: 23px;
+                margin-bottom: 8px;
+            }
+            p {
+                margin-bottom: 8px;
+    
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            .rating {
+                margin-bottom: 5px;
+    
+                i {
+                    font-size: 16px;
+                }
+            }
+        }
+        .price-content {
+            float: unset;
+            margin-bottom: 20px;
+    
+            .price {
+                span {
+                    font-size: 20px;
+                }
+            }
+            .default-btn {
+                margin-top: 15px;
+            }
+        }
+    }
+    .rooms-content {
+        h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .rooms-wrap {
+            .rooms-list {
+                padding: 15px;
+                margin-bottom: 20px;
+    
+                img {
+                    margin-bottom: 15px;
+                }
+                h4 {
+                    font-size: 16px;
+                    margin-bottom: 15px;
+                }
+                ul {
+                    li {
+                        h2 {
+                            font-size: 16px;
+                        }
+                    }
+                    &.listing {
+                        border-left: none;
+                        margin-top: 15px;
+                        padding-left: 0;
+                    }
+                    &.limited {
+                        border-left: none;
+                        margin: {
+                            left: 0;
+                            top: 15px;
+                        };
+                        li {
+                            padding-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    .location-content {
+        iframe {
+            margin-bottom: 0;
+        }
+        .location-list {
+            margin-top: 25px;
+
+            h3 {
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+    .amenities-content {
+        h3 {
+            font-size: 16px;
+        }
+        .single-amenities {
+            h4 {
+                font-size: 16px;
+                padding-left: 25px;
+                margin-bottom: 12px;
+            }
+        }
+    }
+    .policies-content {
+        .single-policies {
+            h3 {
+                font-size: 16px;
+            }
+        }
+    }
+    .reviews-content {
+        .review-bar {
+            h3 {
+                font-size: 16px;
+            }
+            h1 {
+                font-size: 30px;
+            }
+            p {
+                font-size: 14px;
+                margin-bottom: 15px;
+            }
+            ul {
+                li {
+                    margin-bottom: 15px;
+    
+                    .progress {
+                        .best {
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+        .review-form {
+            padding-top: 25px;
+            margin-right: 0;
+    
+            h3 {
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+            .form-group {
+                margin-bottom: 20px;
+            }
+            label {
+                margin-bottom: 8px;
+                font-size: 14px;
+            }
+              
+        }
+        .review-list {
+            margin-top: 25px;
+
+            li {
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+    
+                h4 {
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                }
+                span {
+                    margin-bottom: 10px;
+                }
+                .rating {
+                    i {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .overview-content {
+        .info {
+            margin-top: 25px;
+    
+            .author {
+                h3 {
+                    font-size: 18px;
+                }
+            }
+            .facilities {
+                padding-left: 0;
+                margin-top: 25px;
+    
+                h3 {
+                    font-size: 18px;
+                }
+            }
+        }
+        .content {
+            h3 {
+                font-size: 25px;
+            }
+        }
+        .price-content {
+            .price {
+                span {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    .rooms-content {
+        h3 {
+            font-size: 20px;
+        }
+        .rooms-wrap {
+            .rooms-list {
+                h4 {
+                    font-size: 17px;
+                    margin-bottom: 15px;
+                }
+                ul {
+                    li {
+                        h2 {
+                            font-size: 18px;
+                        }
+                    }
+                    &.listing {
+                        border-left: none;
+                        margin-top: 20px;
+                        padding-left: 0;
+                    }
+                    &.limited {
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+        
+    }
+    .location-content {
+        iframe {
+            margin-bottom: 0;
+        }
+        .location-list {
+            margin-top: 25px;
+
+            h3 {
+                font-size: 18px;
+            }
+        }
+    }
+    .amenities-content {
+        h3 {
+            font-size: 18px;
+        }
+        .single-amenities {
+            h4 {
+                font-size: 17px;
+            }
+        }
+    }
+    .policies-content {
+        .single-policies {
+            h3 {
+                font-size: 18px;
+            }
+        }
+    }
+    .reviews-content {
+        .review-bar {
+            h3 {
+                font-size: 18px;
+            }
+            h1 {
+                font-size: 40px;
+            }
+            p {
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+        }
+        .review-form {
+            padding-top: 30px;
+            margin-right: 0;
+    
+            h3 {
+                font-size: 18px;
+            }
+            .form-group {
+                margin-bottom: 20px;
+            }
+            label {
+                font-size: 14px;
+            }
+              
+        }
+        .review-list {
+            margin-top: 25px;
+    
+            li {
+                h4 {
+                    font-size: 18px;
+                }
+                .rating {
+                    i {
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .overview-content {
+        .info {
+            .facilities {
+                padding-left: 0;
+                margin-top: 30px;
+            }
+        }
+        .content {
+            h3 {
+                font-size: 30px;
+            }
+        }
+        .price-content {
+            .price {
+                span {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+    .rooms-content {
+        h3 {
+            font-size: 24px;
+        }
+        .rooms-wrap {
+            .rooms-list {
+                h4 {
+                    font-size: 17px;
+                }
+                ul {
+                    li {
+                        h2 {
+                            font-size: 20px;
+                        }
+                    }
+                    &.listing {
+                        border-left: none;
+                        padding-left: 0;
+                    }
+                    &.limited {
+                        border-left: none;
+                        margin-left: 0;
+                        
+                        li {
+                            padding-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    .reviews-content {
+        .review-form {
+            margin-right: 20px;
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .rooms-content {
+        .rooms-wrap {
+            .rooms-list {
+                ul {
+                    &.limited {
+                        li {
+                            padding-left: 50px;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

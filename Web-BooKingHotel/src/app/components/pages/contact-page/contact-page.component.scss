@@ -1,0 +1,295 @@
+.contact-info {
+	h2 {
+		font-size: 35px;
+		margin-bottom: 15px;
+	}
+	.address {
+		list-style-type: none;
+		padding-left: 0;
+        margin: {
+            bottom: 30px;
+            top: 30px;
+        };
+		li {
+			margin-bottom: 25px;
+
+			span {
+				display: block;
+				margin-bottom: 8px;
+                font: {
+                    size: 20px;
+                    weight: 700;
+                    family: var(--headingFontFamily);
+                };
+			}
+			a {
+				color: var(--paragraphColor);
+
+				&:hover {
+					color: var(--primaryColor);
+				}
+			}
+			ul {
+				padding-left: 0;
+				list-style-type: none;
+                margin: {
+                    top: 15px;
+                    bottom: 0;
+                };
+				li {
+					display: inline-block;
+                    margin: {
+                        right: 9px;
+                        bottom: 0;
+                    };
+					a {
+						width: 40px;
+						height: 40px;
+                        font-size: 20px;
+						line-height: 40px;
+						text-align: center;
+						border-radius: 50px;
+						display: inline-block;
+						color: var(--blackColor);
+						background-color: rgba(104, 105, 125, 0.08);
+
+						&:hover {
+                            color: var(--whiteColor);
+							background-color: var(--primaryColor);
+						}
+					}
+					&:last-child {
+						margin-right: 0;
+					}
+				}
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+    .maps {
+        iframe {
+            width: 100%;
+            border: none;
+            height: 400px;
+        }
+    }
+}
+.contact-form {
+	padding-left: 30px;
+
+	h2 {
+		font-size: 35px;
+		margin-bottom: 30px;
+	}
+	.form-group {
+		margin-bottom: 25px;
+
+		label {
+			margin-bottom: 8px;
+            font: {
+                size: 15px;
+                weight: 600;
+            };
+            span {
+                color: red;
+            }
+		}
+	}
+	.form-check {
+        color: var(--paragraphColor);
+        margin: {
+            top: 5px;
+            bottom: 25px;
+        };
+        a {
+            color: var(--primaryColor);
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        .form-check-input {
+            margin-top: 0.24em;
+            box-shadow: unset !important;
+
+            &[type=checkbox] {
+                border-radius: 0;
+            }
+            &:checked {
+                background-color: var(--primaryColor);
+                border-color: var(--primaryColor);
+            }
+            &:focus {
+                border-color: var(--primaryColor);
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .contact-info {
+        margin-bottom: 25px;
+
+        h2 {
+            font-size: 23px;
+            margin-bottom: 15px;
+        }
+        .address {
+            margin: {
+                bottom: 25px;
+                top: 20px;
+            };
+            li {
+                margin-bottom: 15px;
+    
+                span {
+                    font-size: 15px;
+                    margin-bottom: 5px;
+                }
+                a {
+                    color: var(--paragraphColor);
+    
+                    &:hover {
+                        color: var(--primaryColor);
+                    }
+                }
+                ul {
+                    margin-top: 10px;
+
+                    li {
+                        a {
+                            width: 35px;
+                            height: 35px;
+                            font-size: 18px;
+                            line-height: 35px;
+                        }
+                    }
+                }
+            }
+        }
+        .maps {
+            iframe {
+                height: 300px;
+            }
+        }
+    }
+    .contact-form {
+        padding-left: 0;
+    
+        h2 {
+            font-size: 23px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+    
+            label {
+                margin-bottom: 8px;
+                font-size: 14px;
+            }
+        }
+        .form-check {
+            margin: {
+                top: 5px;
+                bottom: 15px;
+            };
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .contact-info {
+        margin-bottom: 30px;
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        .address {
+            margin-top: 20px;
+
+            li {
+                margin-bottom: 25px;
+    
+                span {
+                    font-size: 17px;
+                    margin-bottom: 6px;
+                }
+                ul {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+    .contact-form {
+        padding-left: 0;
+    
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 25px;
+    
+            label {
+                font-size: 14px;
+            }
+        }
+        .form-check {
+            margin-bottom: 20px;
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .contact-info {
+        h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+        .address {
+            li {
+                margin-bottom: 20px;
+    
+                span {
+                    font-size: 18px;
+                }
+            }
+        }
+        .maps {
+            iframe {
+                width: 100%;
+                border: none;
+                height: 400px;
+            }
+        }
+    }
+    .contact-form {
+        padding-left: 15px;
+    
+        h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

@@ -1,0 +1,150 @@
+<div class="row">
+  <div class="col-12">
+    <div class="content-header">Tra cứu hồ sơ</div>
+  </div>
+</div>
+<!-- Custom Checkbox Datatables -->
+<section id="ngx-datatable-custom-checkbox">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-content">
+          <div class="card-body">
+            <form [formGroup]="myForm">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label class="form-control-label">Số thửa</label>
+                    <input id="ngx-filter-ref" formControlName="soThua" class="form-control  d-inline-block" type="text"
+                      placeholder="Nhập số thửa" />
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label class="form-control-label">Số tờ</label>
+                    <input id="ngx-filter-ref" formControlName="soTo" class="form-control  d-inline-block" type="text"
+                      placeholder="Nhập số tờ" />
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label class="form-control-label">Loại hồ sơ</label>
+                    <ng-select [items]="optionsLoaiHoSo" placeholder="-Chọn Loại Hồ Sơ-" bindLabel="giaTri"
+                      formControlName="infoLoaiHoSo">
+                    </ng-select>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label class="form-control-label">Tên hồ sơ</label>
+                    <input id="ngx-filter-ref" formControlName="tenHoSo" class="form-control  d-inline-block"
+                      type="text" placeholder="Tìm kiếm theo tên hồ sơ" />
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="col-md-12 padding-bot-15">
+              <div class="text-center">
+                <button type="button" class="btn btn-info mr-1 mb-1" (click)="timKiemHoSo()"> <i class="ft-search"></i>
+                  Tìm kiếm</button>
+                <button type="button" class="btn btn-warning mr-1 mb-1" (click)="clearTimKiem()"> <i
+                    class="ft-refresh-ccw"></i>
+                  Làm mới</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="padding-bot-15">
+                  <button type="button" id="btntimkiem" class="btn btn-primary mr-1 mb-1" (click)="themHoSoLuuTru()"
+                    *ngIf="showActionTheoQuyenAdd">
+                    <i class="ft-plus-circle"></i> Thêm mới hồ sơ
+                  </button>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <ngx-datatable class="bootstrap core-bootstrap" [rows]="rows" [columnMode]="ColumnMode.force"
+                  [headerHeight]="50" [footerHeight]="50" rowHeight="auto" [scrollbarH]="false" [externalPaging]="true"
+                  [(count)]="page.totalCount" [(offset)]="page.pageIndex" [(limit)]="page.pageSize"
+                  (page)="setPage($event)">
+                  <!-- <ngx-datatable-column name="ID" prop="id" [minWidth]="5" [width]="70" [canAutoResize]="false"></ngx-datatable-column> -->
+                  <ngx-datatable-column name="Mã hồ sơ" prop="maHoSo" [width]="250" [canAutoResize]="false">
+                    <ng-template ngx-datatable-cell-template let-row="row" let-maHoSo="value">
+                      <!-- <a (click)="viewDetailHoSo(row.id)"><span>{{maHoSo}}</span></a> -->
+                      <a class="data-link text-xuong-dong" href="javascript:;" (click)="viewDetailHoSo(row.id)">
+                        {{maHoSo}}
+                      </a>
+                    </ng-template>
+                  </ngx-datatable-column>
+                  <ngx-datatable-column name="Tên hồ sơ" prop="tenHoSo"></ngx-datatable-column>
+                  <ngx-datatable-column name="Loại hồ sơ" prop="tenLoaiHoSoLuuTru" [width]="120"
+                    [canAutoResize]="false"></ngx-datatable-column>
+                  <ngx-datatable-column name="Ngày bắt đầu" prop="thoiGianBatDau" [width]="120" [canAutoResize]="false">
+                    <ng-template ngx-datatable-cell-template let-thoiGianBatDau="value">
+                      <span>{{convertDateServerToString(thoiGianBatDau, 'DD/MM/YYYY')}}</span>
+                    </ng-template>
+                  </ngx-datatable-column>
+                  <ngx-datatable-column name="Ngày hết hạn" prop="thoiGianKetThuc" [width]="120"
+                    [canAutoResize]="false">
+                    <ng-template ngx-datatable-cell-template let-thoiGianKetThuc="value">
+                      <span>{{convertDateServerToString(thoiGianKetThuc, 'DD/MM/YYYY')}}</span>
+                    </ng-template>
+                  </ngx-datatable-column>
+                  <!-- <ngx-datatable-column name="Trạng thái" prop="status" [width]="150" [canAutoResize]="false">
+                                        <ng-template let-status="value" ngx-datatable-cell-template>
+                                            <div class="badge" [ngClass]="{
+                                              'bg-light-success': status == 'Còn hiệu lực',
+                                              'bg-light-danger': status == 'Banned',
+                                              'bg-light-warning': status == 'Close'
+                                            }">
+                                                {{ status }}
+                                            </div>
+                                        </ng-template>
+                                    </ngx-datatable-column> -->
+                  <ngx-datatable-column name="Hành động" prop="hd" [width]="180" [canAutoResize]="false">
+                    <ng-template let-row="row" ngx-datatable-cell-template>
+                      <div class="actions-custom">
+                        <i class="ft-eye text-primary cursor-pointer mr-2 icon-larger" (click)="viewDetailHoSo(row.id)"
+                          ngbTooltip="Xem hồ sơ"></i>
+                        <i class="ft-edit text-info cursor-pointer mr-2 icon-larger" (click)="editHoSo(row.id)"
+                          *ngIf="showActionTheoQuyenEdit" ngbTooltip="Sửa hồ sơ"></i>
+                       
+                        <i class="ft-trash-2 text-warning cursor-pointer mr-2 icon-larger"
+                          *ngIf="showActionTheoQuyenDelete" (click)="open(content, row.id)" ngbTooltip="Xóa hồ sơ"></i>
+                      </div>
+                    </ng-template>
+                    <ng-template #content let-c="close" let-d="dismiss">
+                      <div class="modal-header">
+                        <h4 class="modal-title text-danger">
+                          Cảnh báo
+                          <i class="ft-alert-octagon text-danger"></i>
+                        </h4>
+                        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <p>Bạn có chắc chắn muốn xóa không ?</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-info" (click)="
+                            c('Close click');
+                            xoaHoSoLuuTru(this.idHoSoLuuTru)
+                          ">
+                          Xác nhận
+                        </button>
+                        <button type="button" class="btn btn-secondary" (click)="c('Close click')">
+                          Đóng
+                        </button>
+                      </div>
+                    </ng-template>
+                  </ngx-datatable-column>
+                </ngx-datatable>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/ Custom Checkbox Datatables -->

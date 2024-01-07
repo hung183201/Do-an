@@ -1,0 +1,234 @@
+<div class="row">
+  <div class="col-8">
+    <h4>Thông tin chi tiết hồ sơ quét</h4>
+  </div>
+
+</div>
+<section class="users-view">
+  <div class="row">
+    <div class="col-12">
+      <!-- Card data starts -->
+      <div class="card">
+        <div class="card-content">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-12" *ngFor="let item of listInfoView">
+                <div class="row">
+                  <div class="col-md-3">
+                    <b class="mb-0">{{item.value}}</b>
+                  </div>
+                  <div class="col-md-9">
+                    <p class="mb-0"><span class="{{item.css}}">{{item.data}}</span></p>
+                  </div>
+                </div>
+                <hr class="m-b-t-15">
+                <!-- <div class="row">
+                  <div class='col-12 col-sm-6'>
+                    <div class="form-group">
+                      <label class="form-control-label" style="font-weight: bold;" for="hs.tenHoSo">Tên hồ sơ</label>
+                      <input class="form-control input-md" id="hs.tenHoSo" ngModel [(ngModel)]="hs.tenHoSo"
+                        name="hs.tenHoSo" type="text">
+                    </div>
+                  </div>
+                  <div class='col-12 col-sm-6'>
+                    <div class="form-group">
+                      <label class="form-control-label" style="font-weight: bold;" for="hs.maHoSo">Mã hồ sơ</label>
+                      <input class="form-control input-md" ngModel [(ngModel)]="hs.maHoSo" id="hs.maHoSo"
+                        name="hs.maHoSo" type="text">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class='col-12 col-sm-6'>
+                    <div class="form-group">
+                      <label class="form-control-label" style="font-weight: bold;" for="hs.diaChi">Địa chỉ chủ</label>
+                      <input class="form-control input-md" ngModel [(ngModel)]="hs.diaChi" id="hs.diaChi"
+                        name="hs.diaChi" type="text">
+                    </div>
+                  </div>
+                  <div class='col-12 col-sm-6'>
+                    <div class="form-group">
+                      <label class="form-control-label" style="font-weight: bold;" for="hs.tenLoaiHoSoLuuTru">Loại hồ
+                        sơ</label>
+                      <input class="form-control input-md" ngModel [(ngModel)]="hs.tenLoaiHoSoLuuTru"
+                        id="hs.tenLoaiHoSoLuuTru" name="hs.tenLoaiHoSoLuuTru" type="text">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class='col-12 col-sm-6'>
+                    <div class="form-group">
+                      <label class="form-control-label" style="font-weight: bold;" for="hs.tenDonViHinhThanhPhong">Đơn
+                        vị hình thành phông</label>
+                      <input class="form-control input-md" ngModel [(ngModel)]="hs.tenDonViHinhThanhPhong"
+                        id="hs.tenDonViHinhThanhPhong" name="hs.tenDonViHinhThanhPhong" type="text">
+                    </div>
+                  </div>
+                  <div class='col-12 col-sm-6'>
+                    <div class="form-group">
+                      <label class="form-control-label" style="font-weight: bold;" for="hs.tenDonViLuuTru">Đơn vị lưu
+                        trữ</label>
+                      <input class="form-control input-md" ngModel [(ngModel)]="hs.tenDonViLuuTru"
+                        id="hs.tenDonViLuuTru" name="hs.tenDonViLuuTru" type="text">
+
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class='col-6 col-sm-3'>
+                    <div class="form-group">
+                      <label class="form-control-label" style="font-weight: bold;" for="startdate">Thời gian bắt
+                        đầu</label>
+                      <input class="form-control input-md" ngModel [(ngModel)]="startdate" id="startdate"
+                        name="startdate" type="text">
+                    </div>
+                  </div>
+                  <div class='col-6 col-sm-3'>
+                    <div class="form-group">
+                      <label class="form-control-label" style="font-weight: bold;" for="enddate">Thời gian kết
+                        thúc</label>
+                      <input class="form-control input-md" ngModel [(ngModel)]="enddate" id="enddate" name="enddate"
+                        type="text">
+
+                    </div>
+                  </div>
+                  <div class='col-6 col-sm-3'>
+                    <div class="form-group">
+                      <label class="form-control-label" style="font-weight: bold;" for="hs.soLuong">Số lượng</label>
+                      <input class="form-control input-md" ngModel [(ngModel)]="hs.soLuong" id="hs.soLuong"
+                        name="hs.soLuong" type="text">
+                    </div>
+                  </div>
+                  <div class='col-6 col-sm-3'>
+                    <div class="form-group">
+                      <label class="form-control-label" style="font-weight: bold;" for="hs.ngonNguId">Ngôn ngữ</label>
+                      <input class="form-control input-md" ngModel [(ngModel)]="hs.ngonNguId" id="hs.ngonNguId"
+                        name="hs.ngonNguId" type="text">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-control-label" style="font-weight: bold;" for="hs.ghiChu">Ghi chú</label>
+                  <input class="form-control input-md" ngModel [(ngModel)]="hs.ghiChu" id="hs.ghiChu" name="hs.ghiChu"
+                    type="text">
+
+                </div> -->
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12">
+                <h4>Danh sách tài liệu kèm theo
+                </h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <ngx-datatable class="bootstrap core-bootstrap" [rows]="lstFile" [columnMode]="ColumnMode.force"
+                  [headerHeight]="50" [footerHeight]="50" rowHeight="auto" [scrollbarH]="false">
+                  <ngx-datatable-column name="Tên tài liệu" prop="tenLoaiTaiLieu">
+                    <ng-template ngx-datatable-cell-template let-row="row">
+                      <span class="text-xuong-dong">
+                        {{row.tenLoaiTaiLieu}}
+                      </span>
+                    </ng-template>
+                  </ngx-datatable-column>
+                  <ngx-datatable-column name="Số hiệu" prop="soTaiLieu" [width]="100" [canAutoResize]="false">
+                    <ng-template ngx-datatable-cell-template let-row="row">
+                      <span class="text-xuong-dong">
+                        {{row.soTaiLieu}}
+                      </span>
+                    </ng-template>
+                  </ngx-datatable-column>
+                  <ngx-datatable-column name="Số tờ" prop="soHieuToBanDo" [width]="100" [canAutoResize]="false">
+                    <ng-template ngx-datatable-cell-template let-row="row">
+                      <span class="text-xuong-dong">
+                        {{row.soHieuToBanDo}}
+                      </span>
+                    </ng-template>
+                  </ngx-datatable-column>
+                  <ngx-datatable-column name="Số thửa" prop="soThuTuThua" [width]="100" [canAutoResize]="false">
+                    <ng-template ngx-datatable-cell-template let-row="row">
+                      <span class="text-xuong-dong">
+                        {{row.soThuTuThua}}
+                      </span>
+                    </ng-template>
+                  </ngx-datatable-column>
+                  <ngx-datatable-column name="Diện tích" prop="dienTich" [width]="100" [canAutoResize]="false">
+                    <ng-template ngx-datatable-cell-template let-row="row">
+                      <span class="text-xuong-dong">
+                        {{row.dienTich}}
+                      </span>
+                    </ng-template>
+                  </ngx-datatable-column>
+                  <ngx-datatable-column name="Loại đất" prop="loaiDat" [width]="100" [canAutoResize]="false">
+                    <ng-template ngx-datatable-cell-template let-row="row">
+                      <span class="text-xuong-dong">
+                        {{row.loaiDat}}
+                      </span>
+                    </ng-template>
+                  </ngx-datatable-column>
+                  <ngx-datatable-column name="Hành động" prop="hd" [width]="200" [canAutoResize]="false">
+                    <ng-template ngx-datatable-cell-template let-row="row">
+                      <div *ngIf="row.filePath != null && row.filePath !='' " class="actions-custom">
+                        <i class="ft-eye text-primary cursor-pointer mr-2 icon-larger" ngbTooltip="Xem file"
+                          (click)="viewDetailFile(row.id)"></i>
+                      </div>
+                    </ng-template>
+                  </ngx-datatable-column>
+                </ngx-datatable>
+              </div>
+              <!-- <div class="col-12 col-xl-12 users-module">
+                <div class="table-responsive">
+                  <table class="table mb-0">
+                    <thead>
+                      <tr>
+                        <th>Tên tài liệu</th>
+                        <th>Số hiệu</th>
+                        <th>Số tờ</th>
+                        <th>Số thửa</th>
+                        <th>Diện tích</th>
+                        <th>Loại đất</th>
+                        <th>Hành động</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let row of lstFile">
+                        <td> {{row.tenLoaiTaiLieu}}</td>
+                        <td> {{row.soTaiLieu}}</td>
+                        <td> {{row.soHieuToBanDo}}</td>
+                        <td> {{row.soThuTuThua}}</td>
+                        <td> {{row.dienTich}}</td>
+                        <td> {{row.loaiDat}}</td>
+                        <td> <i class="ft-eye text-primary cursor-pointer" (click)="viewDetailFile(row.id)"
+                            ngbTooltip="Xem file"></i></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div> -->
+            </div>
+            <div class="row">
+              <div class="col-12" style="display: flex;align-items: center;justify-content: center; margin-top: 20px;">
+                <button type="button" (click)="borrowHoSo()" class=" btn btn-success mr-2 "><i
+                    class="ft-check-square mr-1 "></i>Mượn hồ sơ</button>
+                <button type="button" id="btntimkiem" class="btn btn-primary mr-1 mb-1" (click)="viewHoSoFromCadas()">
+                  <i class="ft-plus-circle"></i> Xem thông tin địa chính
+                </button>
+                <button type="button" (click)="backToPreviousPage()" class="btn btn-secondary mr-2">Quay lại</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card data ends -->
+    </div>
+
+  </div>
+</section>

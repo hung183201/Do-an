@@ -1,0 +1,226 @@
+.top-header-area {
+	padding: {
+        top: 10px;
+        bottom: 10px;
+    };
+    .container-fluid {
+        max-width: 100%;
+        padding: {
+            left: 30px;
+            right: 30px;
+        };
+    }
+}
+.top-header-left-content {
+    list-style-type: none;
+	margin-bottom: 0;
+	padding-left: 0;
+    
+	li {
+		display: inline-block;
+		margin-right: 30px;
+        
+		a {
+            display: block;
+			font-size: 15px;
+            padding-left: 22px;
+            position: relative;
+            color: var(--paragraphColor);
+
+			img {
+                left: 0;
+				top: 2px;
+				position: absolute;
+			}
+            &:hover {
+                color: var(--primaryColor);
+            }
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+}
+.top-header-right-content {
+	padding-left: 0;
+	text-align: end;
+	margin-bottom: 0;
+	list-style-type: none;
+
+	li {
+		display: inline-block;
+		margin-right: 30px;
+
+		a {
+			font-size: 15px;
+            color: var(--paragraphColor);
+
+            &:hover {
+                color: var(--primaryColor);
+            }
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	.language {
+		position: relative;
+		padding-left: 20px;
+		position: relative;
+		margin-left: 30px;
+
+		&::before {
+			top: 0;
+			width: 1px;
+			content: "";
+			left: -32px;
+			height: 100%;
+			position: absolute;
+			background-color: rgba(104, 105, 125, 0.2);
+		}
+		.form-select {
+			border: none;
+			cursor: pointer;
+			font-size: 15px;
+            box-shadow: none !important;
+			color: var(--paragraphColor);
+            background: {
+                size: 16px 13px;
+                color: transparent;
+                position: right 0 center;
+            };
+		}
+		img {
+			top: 8px;
+    		left: 1px;
+			font-size: 18px;
+			position: absolute;
+		}
+	}
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .top-header-area {
+        text-align: center;
+
+        .container-fluid {
+            padding: {
+                left: calc(var(--bs-gutter-x) * 0.5);
+                right: calc(var(--bs-gutter-x) * 0.5);
+            };
+        }
+    }
+    .top-header-left-content {
+        li {
+            margin: {
+                left: 8px;
+                right: 8px;
+            };
+            a {
+                font-size: 14px;
+                padding-left: 20px;
+    
+                img {
+                    top: 3px;
+                }
+            }
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    
+    }
+    .top-header-right-content {
+        text-align: center;
+        margin-top: 10px;
+    
+        li {
+            margin: {
+                left: 8px;
+                right: 8px;
+            };
+            a {
+                font-size: 14px;
+            }
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+        .language {
+            padding-left: 13px;
+            margin-left: 8px;
+    
+            &::before {
+                display: none;
+            }
+            .form-select {
+                font-size: 14px;
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {
+
+    .top-header-area {
+        text-align: start;
+
+        .container-fluid {
+            max-width: 540px;
+        }
+    }
+    .top-header-right-content {
+        text-align: end;
+        margin-top: 0;
+    }
+
+}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .top-header-area {
+        .container-fluid {
+            max-width: 720px;
+            padding: {
+                left: calc(var(--bs-gutter-x) * 0.5);
+                right: calc(var(--bs-gutter-x) * 0.5);
+            };
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .top-header-area {
+        .container-fluid {
+            max-width: 960px;
+            padding: {
+                left: calc(var(--bs-gutter-x) * 0.5);
+                right: calc(var(--bs-gutter-x) * 0.5);
+            };
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {
+
+    .top-header-area {
+		.container-fluid {
+			max-width: 1670px;
+		}
+	}
+
+}

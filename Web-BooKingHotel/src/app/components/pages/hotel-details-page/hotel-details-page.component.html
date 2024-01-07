@@ -1,0 +1,361 @@
+<!-- Page Title -->
+<div class="page-title-area ptb-100 bg-1">
+    <div class="container">
+        <div class="page-title-content">
+            <h2>Đặt phòng theo nhu cầu một cách dễ dàng</h2>
+            <p>Nếu bạn sử dụng bất kỳ dịch vụ đặt phòng nào của chúng tôi tại đây, bạn sẽ nhận được tất cả các loại lợi ích từ chúng tôi</p>
+            <form class="banner-form-style">
+                <div class="row align-items-center">
+                    <div class="col-xl-3 col-lg-6 col-sm-5">
+                        <div class="form-group">
+                            <label>Location</label>
+                            <input type="text" class="form-control" placeholder="Where are you going?">
+                            <img src="assets/images/icon/search.svg" alt="search">
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-sm-5">
+                        <div class="form-group">
+                            <label>Check in</label>
+                            <dp-date-picker theme="dp-material" placeholder="Add dates" [config]="datePickerConfig"
+                                required="true"></dp-date-picker>
+                            <img src="assets/images/icon/calendar.svg" alt="calendar">
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-sm-5">
+                        <div class="form-group">
+                            <label>Check out</label>
+                            <dp-date-picker theme="dp-material" placeholder="Add dates" [config]="datePickerConfig"
+                                required="true"></dp-date-picker>
+                            <img src="assets/images/icon/calendar.svg" alt="calendar">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <div class="form-group">
+                            <label>Guests</label>
+                            <input type="text" class="form-control" placeholder="Add guests">
+                            <img src="assets/images/icon/user-check.svg" alt="user-check">
+                        </div>
+                    </div>
+                    <div class="col-lg-1 col-md-112">
+                        <div class="form-group ps-0 pe-0">
+                            <button type="submit" class="src-btn">
+                                <i class="ri-search-line"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Hotel Details -->
+<div class="gallery-area pt-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                <div class="gallery-image">
+                    <img src="assets/images/gallery/gallery-1.jpg" alt="gallery-image">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="row">
+                    <div class="col-lg-6 col-sm-6 col-6">
+                        <div class="gallery-image">
+                            <img src="assets/images/gallery/gallery-2.jpg" alt="gallery-image">
+                        </div>
+                        <div class="gallery-image">
+                            <img src="assets/images/gallery/gallery-3.jpg" alt="gallery-image">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-6 col-6">
+                        <div class="gallery-image">
+                            <img src="assets/images/gallery/gallery-4.jpg" alt="gallery-image">
+                        </div>
+                        <div class="gallery-image">
+                            <img src="assets/images/gallery/gallery-5.jpg" alt="gallery-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="hotel-details-area pb-100" >
+    <div class="container">
+        <div class="hotel-details-tabs" *ngIf="hotel">
+            <ngx-tabset>
+                <ngx-tab tabTitle="Tổng Quan">
+                    <div class="overview-content">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12">
+                                <div class="content">
+                                    <h3>{{hotel.nameHotel}}</h3>
+                                    <p> {{hotel.address}}</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <p>{{hotel.note}}</p>
+                       
+                        
+                    </div>
+                </ngx-tab>
+                
+                <ngx-tab tabTitle="Vị trí">
+                    <div class="location-content">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.3011008712515!2d-77.01397598464975!3d38.8942292795711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b7886c046a9b%3A0xb7ab83b8feebcaf4!2s357%201st%20St%20NW%204th%20Floor%2C%20Washington%2C%20DC%2020001%2C%20USA!5e0!3m2!1sen!2sbd!4v1643177332244!5m2!1sen!2sbd"></iframe>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="location-list">
+                                    <h3>Contact</h3>
+                                    <ul>
+                                        <li>9988 B N. Nut Swamp Road Collierville, TN 48812</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="location-list">
+                                    <h3>Nearby restaurants</h3>
+                                    <ul>
+                                        <li>Food Lab restaurant — 1 min walk</li>
+                                        <li>Grand Thai & Chinese restaurant— 5 min walk</li>
+                                        <li>Zayturi restaurant — 3 min walk</li>
+                                        <li>Santomir restaurant— 10 min walk</li>
+                                        <li>Luckno dhava restaurant — 4 min walk</li>
+                                        <li>kharancho restaurant— 5 min walk</li>
+                                        <li>Coz cizler restaurant — 7 min walk</li>
+                                        <li>Thai chi arabian restaurant— 6 min walk</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="location-list">
+                                    <h3>Nearby attractions</h3>
+                                    <ul>
+                                        <li>California's Great America—3.2 mi</li>
+                                        <li>FlyOver America —2.2 mi</li>
+                                        <li>Crayola Experience Mall of America —4.2 mi</li>
+                                        <li>Nickelodeon Universe Theme Park —3.5 mi</li>
+                                        <li>Discovery Park of America —1.2 mi</li>
+                                        <li>World's Largest Ball of Twine —5.2 mi</li>
+                                        <li>California's Great America Passenger Drop Off Area —3.2 mi</li>
+                                        <li>California's Great America—3.2 mi</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ngx-tab>
+                <ngx-tab tabTitle="Tiện nghi">
+                    <div class="amenities-content">
+                        <h3>Tiện nghi</h3>
+                        <div class="row" >
+                            <div class="col-lg-4 col-md-6" *ngFor="let item of hotel.nameUtility">
+                                <div class="single-amenities">
+                                    <h4><i class="ri-wifi-line"></i> {{item}}</h4>
+                                    <!-- <p>Cras ultricies ligula sed magna dictum porta. Vestibulum ac diam sit amet quam
+                                        vehicula elementum sed sit amet dui.</p> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ngx-tab>
+                <ngx-tab tabTitle="Chính sách">
+                    <div class="policies-content">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="single-policies">
+                                    <h3>Check-in Check-out</h3>
+                                    <p>Thời gian nhận phòng: 14:00
+                                        </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="single-policies">
+                                    <h3>Check-out</h3>
+                                    <p>Thời gian trả phòng: 12:00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-policies">
+                            <h3>Lưu ý khi nhận phòng</h3>
+                            <p>Quý khách vui lòng mang theo CMND hoặc hộ chiếu khi đến nhận phòng tại quầy lễ tân Resort.
+                                Theo quy định của luật Việt Nam một khách nước ngoài + 1 khách Việt Nam phải có giấy đăng ký kết hôn khi sử dụng chung phòng. 
+                                
+                                Resort có thể yêu cầu quý khách cung cấp số thẻ tín dụng hoặc tiền đặt cọc cho các chi phí phát sinh trong thời gian lưu trú. 
+                                
+                                Những chi phí phát sinh trong quá trình lưu trú không được thanh toán trong đặt phòng trực tuyến tại Vietnam Booking. Quý khách vui lòng thanh toán trực tiếp tại quầy lễ tân resort</p>
+                        </div>
+                        <div class="single-policies">
+                            <h3>Chính Sách hủy phòng</h3>
+                            <span>- Mùa thấp điểm:
+
+                                Không tính phí khi hủy phòng trước 7 ngày
+                                
+                                Phạt hủy 100% đêm đầu tiên hoặc 50% tổng booking khi hủy trước 3 ngày
+                                
+                                Phạt hủy 100% đặt phòng khi hủy trong vòng 3 ngày
+                                
+                                - Mùa trung điểm:
+                                
+                                Không tính phí khi hủy phòng trước 14 ngày
+                                
+                                Phạt hủy 100% đêm đầu tiên hoặc 50% tổng booking khi hủy trước 7 ngày
+                                
+                                Phạt hủy 100% đặt phòng khi hủy trong vòng 7 ngày
+                                
+                                - Mùa cao điểm:
+                                
+                                Không tính phí khi hủy phòng trước 30 ngày
+                                
+                                Phạt hủy 100% đêm đầu tiên hoặc 50% tổng booking khi hủy trước 14 ngày
+                                
+                                Phạt hủy 100% đặt phòng khi hủy trong vòng 14 ngày
+                                
+                                - Lễ Tết:
+                                
+                                Không tính phí khi hủy phòng trước 45 ngày
+                                
+                                Phạt hủy 100% đêm đầu tiên hoặc 50% tổng booking khi hủy trước 30 ngày
+                                
+                                Phạt hủy 100% đặt phòng khi hủy trong vòng 30 ngày</span>
+                        </div>
+                        
+                    </div>
+                </ngx-tab>
+            </ngx-tabset>
+        </div>
+    </div>
+</div>
+<div class="hotel-details-area pb-100">
+    <div class="container">
+        <div class="hotel-details-tabs">
+            <div class="rooms-content">
+                <h3>Choose your room</h3>
+                <ul class="rooms-wrap">
+                    <li class="rooms-list">
+                        <div class="row align-items-center">
+                            <div class="col-lg-4 col-md-6">
+                                <img src="assets/images/rooms/room-1.jpg" alt="room-image">
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <h4>Phòng Tiêu chuẩn, Giường đôi</h4>
+                                <ul>
+                                    <li><span>Diện tích :</span>150 sq ft</li>
+                                    <li><span>Beds :</span>1 double</li>
+                                    <li><span>Người lớn:</span>4</li>
+                                    <li><span>Trẻ em :</span>2</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-2 col-md-6">
+                                <ul class="listing">
+                                    <li>Free WiFi</li>
+                                    <li>Free breakfast</li>
+                                    <li>Free self-parking</li>
+                                    <li>Air conditioning</li>
+                                    <li>Cable TV service</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <ul class="limited">
+                                    <li>SAVE 10% TODAY!</li>
+                                    <li>
+                                        <h2><del>$250</del> $225</h2> (Per night)
+                                    </li>
+                                    <li class="green">Limited availability</li>
+                                    <li>
+                                        <a routerLink="/book-now" class="default-btn">
+                                            Book now
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="rooms-list">
+                        <div class="row align-items-center">
+                            <div class="col-lg-4 col-md-6">
+                                <img src="assets/images/rooms/room-2.jpg" alt="room-image">
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <h4>Phòng Tiêu chuẩn, Giường đôi</h4>
+                                <ul>
+                                    <li><span>Diện tích:</span>150 sq ft</li>
+                                    <li><span>Beds :</span>1 double</li>
+                                    <li><span>Người lớn:</span>4</li>
+                                    <li><span>Trẻ em :</span>2</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-2 col-md-6">
+                                <ul class="listing">
+                                    <li>Free WiFi</li>
+                                    <li>Free breakfast</li>
+                                    <li>Free self-parking</li>
+                                    <li>Air conditioning</li>
+                                    <li>Cable TV service</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <ul class="limited">
+                                    <li>SAVE 10% TODAY!</li>
+                                    <li>
+                                        <h2><del>$250</del> $225</h2> (Per night)
+                                    </li>
+                                    <li class="green">Limited availability</li>
+                                    <li>
+                                        <a routerLink="/book-now" class="default-btn">
+                                            Book now
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="rooms-list">
+                        <div class="row align-items-center">
+                            <div class="col-lg-4 col-md-6">
+                                <img src="assets/images/rooms/room-3.jpg" alt="room-image">
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <h4>Phòng Cao cấp, 1 giường cỡ lớn</h4>
+                                <ul>
+                                    <li><span>Diện tích:</span>150 sq ft</li>
+                                    <li><span>Beds :</span>1 double</li>
+                                    <li><span>Người lớn:</span>4</li>
+                                    <li><span>Trẻ em :</span>2</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-2 col-md-6">
+                                <ul class="listing">
+                                    <li>Free WiFi</li>
+                                    <li>Free breakfast</li>
+                                    <li>Free self-parking</li>
+                                    <li>Air conditioning</li>
+                                    <li>Cable TV service</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <ul class="limited">
+                                    <li>SAVE 10% TODAY!</li>
+                                    <li>
+                                        <h2><del>$250</del> $225</h2> (Per night)
+                                    </li>
+                                    <li class="green">Limited availability</li>
+                                    <li>
+                                        <a routerLink="/book-now" class="default-btn">
+                                            Book now
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-subscribe></app-subscribe>

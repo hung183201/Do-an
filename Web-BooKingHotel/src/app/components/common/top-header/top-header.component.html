@@ -1,0 +1,41 @@
+<div
+    class="top-header-area bg-f3f7ff"
+    [ngClass]="{'bg-faf1ed': router.url === '/index-2'}"
+>
+    <div
+        class="container"
+        [ngClass]="{'container-fluid': router.url === '/index-2'}"
+    >
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-sm-6">
+                <ul class="top-header-left-content">
+                    <li>
+                        <a href="tel:+1-719-504-1984">
+                            <img src="assets/images/icon/call.svg" alt="call">
+                            +1 719-504-1984
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-6 col-sm-6">
+                <ul class="top-header-right-content">
+                    <li>
+                        <a routerLink="/login">Login</a>
+                    </li>
+                    <li>
+                        <a routerLink="/register">Register</a>
+                    </li>
+                    <li class="language">
+                        <select class="form-select">
+                            <option selected>Language</option>
+                            <option value="1">English</option>
+                            <option value="2">العربيّة</option>
+                            <option value="3">Deutsch</option>
+                        </select>
+                        <img src="assets/images/icon/world.svg" alt="globe">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

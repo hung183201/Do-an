@@ -17,8 +17,17 @@ export const Full_ROUTES: Routes = [
   },
   {
     path: 'danh-muc',
-    loadChildren: () => import('../../danh-muc/danh-muc-routing.module').then(m => m.DanhMucRoutingModule)
+    loadChildren: () => import('../../pages/danh-muc/danh-muc.module').then(m => m.DanhMucModule)
   },
+  // {
+  //   path: 'danh-muc',
+  //   loadChildren: () => import('../../pages/back-office/back-office.module').then(m => m.BackOfficeModule)
+  // },
+  
+  //   {
+  //     path: 'back-office',
+  //     loadChildren: () => import('../../pages/back-office/back-office.module').then(m => m.BackOfficeModule)
+  //   },
   
  
   

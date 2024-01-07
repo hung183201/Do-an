@@ -1,0 +1,24 @@
+<div class="video-area">
+    <div class="container">
+        <div class="video-box">
+            <img src="assets/images/video-img.jpg" alt="video-image">
+            <button type="button" (click)="ngxSmartModalService.getModal('popupOne').open()" class="video-btn">
+                <i class="ri-play-circle-line"></i>
+            </button>
+            <img src="assets/images/video-shape.png" alt="shape" class="video-shape"> 
+        </div>
+    </div>
+</div>
+
+<!-- Video Popup -->
+<div class="video-popup">
+    <ngx-smart-modal #popupOne [identifier]="'popupOne'">
+        <iframe src="https://www.youtube.com/embed/ODfy2YIKS1M" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </ngx-smart-modal>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>

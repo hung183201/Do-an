@@ -1,0 +1,84 @@
+<div class="navbar-area" stickyClass="sticky-box-shadow" ngStickyNav>
+    <div
+        class="container"
+        [ngClass]="{'container-fluid': router.url === '/index-2'}"
+    >
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" [class.active]="classApplied">
+            <a class="navbar-brand" routerLink="/">
+                <img src="https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/images/logo_nosub.svg" alt="VIETNAM BOOKING">
+                <!-- <img src="assets/images/logo.png" alt="logo"> -->
+            </a>
+            <button class="navbar-toggler" type="button" (click)="toggleClass()">
+                <span class="burger-menu">
+                    <span class="top-bar"></span>
+                    <span class="middle-bar"></span>
+                    <span class="bottom-bar"></span>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a routerLink="/" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/hotels-listing" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                            Hotels
+                        </a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a routerLink="/book-now" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                            Book Now
+                        </a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a routerLink="/about" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                            About Us
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/contact" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav for-responsive">
+                    <li class="nav-item">
+                        <a routerLink="/" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/hotels-listing" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                            Hotels
+                        </a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a routerLink="/book-now" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                            Book Now
+                        </a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a routerLink="/about" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                            About Us
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a routerLink="/contact" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="toggleClass()">
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+                <div class="others-option">
+                    <form class="search-box">
+                        <input type="text" name="Search" placeholder="Search" class="form-control">
+                        <button type="submit" class="search-btn">
+                            <i class="ri-search-line"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>

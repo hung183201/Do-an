@@ -29,6 +29,30 @@ import { TopMenuDropdownDirective } from './directives/topmenu-dropdown.directiv
 import { TopMenuAnchorToggleDirective } from './directives/topmenu-anchor-toggle.directive';
 
 
+
+import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox/checkbox-module';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatTreeModule } from '@angular/material/tree';
+import { MatPaginatorIntl, MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableModule } from '@angular/material/table';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSortModule } from '@angular/material/sort';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatIconModule } from '@angular/material/icon';
+ import { MatPaginator } from '@angular/material/paginator';
+ import { MatTableDataSource } from '@angular/material/table';
+ import { SelectionModel } from '@angular/cdk/collections';
+ import { HttpErrorResponse } from '@angular/common/http';
+import { Observable } from 'rxjs';
+ import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { MatTabsModule } from '@angular/material/tabs';
+import { NgSelectModule } from '@ng-select/ng-select';
+
 @NgModule({
     exports: [
         CommonModule,
@@ -41,6 +65,8 @@ import { TopMenuAnchorToggleDirective } from './directives/topmenu-anchor-toggle
         TopMenuDirective,
         NgbModule,
         TranslateModule,
+        
+
     ],
     imports: [
         RouterModule,
@@ -52,7 +78,10 @@ import { TopMenuAnchorToggleDirective } from './directives/topmenu-anchor-toggle
         ReactiveFormsModule ,
         PerfectScrollbarModule,
         ClickOutsideModule,
-        PipeModule
+        PipeModule,
+
+      
+
     ],
     declarations: [
         FooterComponent,

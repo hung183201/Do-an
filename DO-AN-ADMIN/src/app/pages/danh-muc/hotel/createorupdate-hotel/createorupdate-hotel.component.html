@@ -1,0 +1,60 @@
+<div class="modal-header">
+    <span class="modal-title" *ngIf="showFormAdd"><strong>Thêm mới</strong></span>
+    <span class="modal-title" *ngIf="!showFormAdd"><strong>Chỉnh sửa</strong></span>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"><span
+            aria-hidden="true">&times;</span></button>
+</div>
+
+<div class="modal-body">
+    <form [formGroup]="myForm">
+        <div class="row">
+            <div class="form-group col-md-12">
+                <label for="invalid-state">Tên Khách sạn</label>
+                <input type="text" class="form-control is-invalid" id="invalid-state"
+                    [placeholder]="typeAction != 'viewId'? 'Nhập tên khách sạn ...' : ''"
+                    [ngClass]="{ 'is-invalid': this.errorTenkhachSan }" formControlName="tenkhachsan">
+                <div class="invalid-feedback">
+                    <i class="ft-circle"></i>
+                    <span>{{this.messErrorTenkhachSan}}</span>
+                </div>
+            </div>
+            <div class="form-group col-md-12">
+                <label for="invalid-state">Địa chỉ</label>
+                <input type="text" class="form-control is-invalid" id="invalid-state"
+                    [placeholder]="typeAction != 'viewId'? 'Nhập địa chỉ ...' : ''"
+                    [ngClass]="{ 'is-invalid': this.errorDiachi }" formControlName="diachi">
+                <div class="invalid-feedback">
+                    <i class="ft-circle"></i>
+                    <span>{{this.messErrorDiachi}}</span>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <fieldset class="form-group">
+                    <label>Ghi chú<span class="field-required-asterisk"></span></label>
+                    <textarea name="LydoTextbox" id="LydoTextbox" type="text" class="form-control"
+                        formControlName="note" placeholder="Nhập lý Ghi chú về khách sạn"></textarea>
+                </fieldset>
+            </div>
+            <div class="form-group col-md-12 ">
+                <label for="invalid-state">Loại trạng thái <span class="text-danger">*</span> </label>
+                <ng-select [items]="optionsStatus" placeholder="-Chọn Loại trạng thái-" class=" width-form-select "
+                    bindLabel="name" [(ngModel)]="selectedFilterStatus" formControlName="status"
+                   required>
+                </ng-select>
+                <!-- <div class="mess-error">
+                    <i class="ft-circle text-danger size-icon"></i>
+                    <span class="text-danger size-mess-error">{{this.messErrorInfoTuLieu}}</span>
+                </div> -->
+            </div>
+        </div>
+    </form>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-danger" *ngIf="showFormAdd" (click)="create()">
+            Thêm mới
+        </button>
+        <button type="button" class="btn btn-danger" *ngIf="!showFormAdd" (click)="update()">
+            Cập nhật
+        </button>
+        <button type="button" class="btn btn-secondary" (click)="activeModal.dismiss('Cross click')">Close</button>
+    </div>
+</div>

@@ -1,0 +1,108 @@
+.discover-content {
+    padding-right: 25px;
+
+	h2 {
+		font-size: 35px;
+		margin-bottom: 15px;
+	}
+	h4 {
+		font-size: 16px;
+        margin: {
+            bottom: 10px;
+            top: 20px;
+        };
+	}
+	a {
+        padding-left: 30px;
+        position: relative;
+        display: inline-block;
+		color: var(--primaryColor);
+        font: {
+            weight: 700;
+            size: 24px;
+        };
+		img {
+            transform: translateY(-50%);
+			position: absolute;
+			top: 50%;
+            left: 0;
+		}
+        &:hover {
+            color: var(--secondaryColor);
+        }
+	}
+}
+.discover-image {
+    padding-left: 25px;
+    text-align: center;
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .discover-content {
+        padding-right: 0;
+    
+        h2 {
+            font-size: 23px;
+            margin-bottom: 12px;
+        }
+        h4 {
+            font-size: 14px;
+        }
+        a {
+            padding-left: 30px;
+            font-size: 18px;
+        }
+    }
+    .discover-image {
+        padding-left: 0;
+        margin-top: 25px;
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .discover-content {
+        padding-right: 0;
+    
+        h2 {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+        h4 {
+            font-size: 15px;
+        }
+        a {
+            font-size: 22px;
+        }
+    }
+    .discover-image {
+        padding-left: 0;
+        margin-top: 25px;
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .discover-content {
+        padding-right: 0;
+    }
+    .discover-image {
+        padding-left: 0;
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

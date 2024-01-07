@@ -10,7 +10,7 @@
         "lint": "ng lint",
         "e2e": "ng e2e",
         "postinstall": "ngcc",
-        "mserve": "set NODE_OPTIONS=--max_old_space_size=8192 & ng serve --port 5000"
+        "mserve": "set NODE_OPTIONS=--max_old_space_size=8192 & ng serve --port 4000"
     },
     "private": true,
     "dependencies": {

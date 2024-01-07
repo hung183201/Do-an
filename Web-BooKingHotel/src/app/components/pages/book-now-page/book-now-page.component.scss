@@ -1,0 +1,197 @@
+.book-now-content {
+    margin-bottom: 25px;
+
+	h3 {
+		font-size: 25px;
+		margin-bottom: 25px;
+	}
+	.form-group {
+		margin-bottom: 25px;
+
+		label {
+			margin-bottom: 10px;
+			display: block;
+            font: {
+                size: 15px;
+                weight: 600;
+            };
+		}
+		.form-check {
+			display: inline-block;
+            margin: {
+                right: 20px;
+                bottom: 0;
+            };
+            label {
+                margin-bottom: 0;
+                font-weight: normal;
+            }
+		}
+		.form-check-input {
+			border-radius: 0;
+            box-shadow: none;
+            margin-top: 0.18em;
+
+			&:checked {
+				background-color: var(--primaryColor);
+				border-color: var(--primaryColor);
+				background-image: unset;
+			}
+		}
+        .form-select {
+            height: 60px;
+            cursor: pointer;
+            border-radius: 5px;
+            color: var(--blackColor);
+            font-size: var(--fontSize);
+            background-color: #f9f9f9;
+            border: 1px solid #e5e5e5;
+            box-shadow: unset !important;
+            transition: var(--transition);
+            padding: {
+                left: 20px;
+                right: 20px;
+            };
+            &:focus {
+                border-color: var(--primaryColor);
+        
+                &::placeholder {
+                    color: transparent;
+                }
+            }
+        }
+	}
+	&.pay-info {
+		h3 {
+			margin-bottom: 15px;
+		}
+		p {
+			border-bottom: 1px solid #e5e5e5;
+			padding-bottom: 10px;
+			margin-bottom: 25px;
+		}
+		img {
+			margin-bottom: 25px;
+		}
+	}
+	&.info {
+        margin-top: 45px;
+
+		h3 {
+            margin-bottom: 15px;
+        }
+	}
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .book-now-content {
+        margin-bottom: 10px;
+    
+        h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+    
+            label {
+                font-size: 14px;
+            }
+            .form-check-input {
+                margin-top: 0.22em;
+            }
+            .form-select {
+                height: 50px;
+                font-size: 14px;
+                padding: {
+                    left: 12px;
+                    right: 12px;
+                };
+            }
+        }
+        &.pay-info {
+            h3 {
+                margin-bottom: 12px;
+            }
+            p {
+                padding-bottom: 8px;
+                margin-bottom: 15px;
+            }
+            img {
+                margin-bottom: 20px;
+            }
+        }
+        &.info {
+            margin-top: 25px;
+    
+            h3 {
+                margin-bottom: 12px;
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .book-now-content {
+        margin-bottom: 20px;
+    
+        h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+    
+            label {
+                font-size: 14px;
+            }
+            .form-check-input {
+                margin-top: 0.17em;
+            }
+            .form-select {
+                height: 55px;
+                font-size: 15px;
+                padding: {
+                    left: 15px;
+                    right: 15px;
+                };
+            }
+        }
+        &.pay-info {
+            h3 {
+                margin-bottom: 15px;
+            }
+            p {
+                padding-bottom: 8px;
+                margin-bottom: 20px;
+            }
+            img {
+                margin-bottom: 20px;
+            }
+        }
+        &.info {
+            margin-top: 30px;
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

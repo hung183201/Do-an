@@ -1,0 +1,99 @@
+<!-- Default Features Section -->
+<div
+    class="features-area bg-color"
+    [ngClass]="{'d-none': router.url === '/index-2' || router.url === '/index-3' || router.url === '/about' || router.url === '/cruises'}"
+>
+    <div class="container">
+        <div class="features-bg bg-25283a">
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-sm-6 col-md-4">
+                    <div class="single-features-item">
+                        <i class="flaticon-booking"></i>
+                        <h3>Flexible bookings</h3>
+                        <p>We are always flexible in booking any of our services</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-md-4">
+                    <div class="single-features-item">
+                        <i class="flaticon-deal"></i>
+                        <h3>Incredible deals</h3>
+                        <p>We always give our best price considering the price line members</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-md-4">
+                    <div class="single-features-item">
+                        <i class="flaticon-call-center"></i>
+                        <h3>Travel care</h3>
+                        <p>We are always here for you 24 hours a day, 7 days a week</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Features Section for Home Demo 2 -->
+<div
+    class="features-area pb-100 d-none"
+    [ngClass]="{'d-block': router.url === '/index-2'}"
+>
+    <div class="container">
+        <div class="features-box-bg">
+            <div class="row justify-content-center m-0">
+                <div class="col-lg-4 col-sm-6 p-0">
+                    <div class="single-features-box">
+                        <i class="flaticon-booking"></i>
+                        <h3>Đặt phòng linh hoạt</h3>
+                    <p>Chúng tôi luôn linh hoạt trong việc đặt bất kỳ dịch vụ nào của chúng tôi</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 p-0">
+                    <div class="single-features-box">
+                        <i class="flaticon-deal"></i>
+                        <h3>Giao dịch đáng kinh ngạc</h3>
+                        <p>Chúng tôi luôn đưa ra mức giá tốt nhất </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 p-0">
+                    <div class="single-features-box">
+                        <i class="flaticon-call-center"></i>
+                        <h3>Chăm sóc du lịch</h3>
+                        <p>Chúng tôi luôn ở đây vì bạn 24 giờ một ngày, 7 ngày một tuần</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Features Section for Home Demo 3 & About Page -->
+<div
+    class="features-area pb-75 d-none"
+    [ngClass]="{'d-block': router.url === '/index-3' || router.url === '/about' || router.url === '/cruises'}"
+>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-sm-6">
+                <div class="features-item">
+                    <i class="flaticon-booking"></i>
+                    <h3>Đặt phòng linh hoạt</h3>
+                    <p>Chúng tôi luôn linh hoạt trong việc đặt bất kỳ dịch vụ nào của chúng tôi</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="features-item">
+                    <i class="flaticon-deal"></i>
+                    <h3>Giao dịch đáng kinh ngạc</h3>
+                    <p>Chúng tôi luôn đưa ra mức giá tốt nhất </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="features-item">
+                    <i class="flaticon-call-center"></i>
+                    <h3>Chăm sóc du lịch</h3>
+                    <p>Chúng tôi luôn ở đây vì bạn 24 giờ một ngày, 7 ngày một tuần</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

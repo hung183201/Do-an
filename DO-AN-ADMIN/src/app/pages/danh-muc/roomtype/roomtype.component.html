@@ -1,0 +1,75 @@
+<section id="ngx-datatable-basic">
+    <div class="card">
+        <div class="card-content">
+            <div class="card-body">
+                <div class="row title-box">
+                    <div class="col-6">
+                        <h4>Khách sạn</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <fieldset class="form-group">
+                            <label class="float-left">
+                                <button type="button" class="btn btn-sm btn-success mr-1 mb-1" (click)="create()"><i
+                                        class="fa ft-plus-circle mr-1"></i>Thêm mới</button>
+                            </label>
+                        </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                        <ngx-datatable class="bootstrap core-bootstrap" [columnMode]="tableFormOptions.columnMode"
+                            [headerHeight]="40" [footerHeight]="40" [limit]="tableFormOptions.pagingOption.pageSize"
+                            [externalPaging]="true" rowHeight="auto" [rows]="tableFormOptions.rows"
+                            [columns]="tableColumnsShowOnGrid" [count]="tableFormOptions.pagingOption.totalCount"
+                            [messages]="{emptyMessage: 'Không có dữ liệu để hiển thị'}"
+                            [offset]="tableFormOptions.pagingOption.pageIndex - 1"
+                            [limit]="tableFormOptions.pagingOption.pageSize"
+                            (page)="loadData(searchKeyword, $event.offset + 1)">
+                            <ngx-datatable-column wi>
+                                <ng-template ngx-datatable-header-template>
+                                    <strong>STT</strong>
+                                </ng-template>
+                                <ng-template let-row="row" let-column="column" let-value="value"
+                                    ngx-datatable-cell-template>
+                                    <div>
+                                        {{ row.STT }}
+                                    </div>
+                                </ng-template>
+                            </ngx-datatable-column>
+                            <ngx-datatable-column *ngFor="let column of tableColumnsShowOnGrid" [name]="column.name"
+                                [sortable]="true" [draggable]="true" [prop]="column.prop" [width]="column.width">
+                                <ng-template ngx-datatable-header-template>
+                                    <strong>{{ column.name }}</strong>
+                                </ng-template>
+                                <ng-template let-row="row" let-column="column" let-value="value"
+                                    ngx-datatable-cell-template>
+                                    <div title={{value}} *ngIf="column.prop != 'categoryHotel'" [ngClass]="getCustomClassByColumn(column.name, row.status)">
+                                        {{ value }}
+                                    </div>
+                                    <div title={{value}} *ngIf="column.prop == 'categoryHotel' && row.status == 1 ">
+                                        khách sạn
+                                    </div>
+                                    <div title={{value}} *ngIf="column.prop == 'categoryHotel' && row.status == 0 ">
+                                        Căn hộ
+                                    </div>
+                                </ng-template>
+                            </ngx-datatable-column>
+                            <ngx-datatable-column>
+                                <ng-template ngx-datatable-header-template>
+                                    <strong>Thao tác</strong>
+                                </ng-template>
+                                <ng-template let-row="row" let-name="value" let-rowIndex="rowIndex"
+                                    ngx-datatable-cell-template>
+                                    <i class="ft-edit text-success cursor-pointer mr-2 icon-larger"
+                                    (click)="edit(row.id)"  ngbTooltip="Sửa khách sạn"></i>
+                                    <i class="ft-trash-2 text-warning cursor-pointer mr-2 icon-larger"
+                                        ngbTooltip="Xóa khách sạn" (click)="delete(row, $event)"></i>
+                                </ng-template>
+                            </ngx-datatable-column>
+                        </ngx-datatable>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

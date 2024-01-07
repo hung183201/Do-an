@@ -5,6 +5,7 @@
 
 export const environment = {
   production: false,
+  API_BASE_URL: 'https://localhost:5001',
   // apiUrl: 'http://localhost:8005',
   // authUrl: 'http://localhost:8005',
   // deployUrl: 'http://localhost:4200',

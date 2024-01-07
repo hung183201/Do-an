@@ -1,0 +1,172 @@
+.btn-right {
+    float: right;
+  }
+  
+  .btn-left {
+    float: left;
+  }
+  
+  .form-margin-left-18 {
+    margin-left: 18px;
+  }
+  
+  .form-padding-left-15 {
+    padding-left: 15px;
+  }
+  
+  .form-padding-top-0 {
+    padding-top: 0px;
+  }
+  
+  .width-form-select {
+    width: 100%;
+  }
+  
+  .hideButton {
+    display: none;
+  }
+  
+  .padding-15 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .btn-quay-lai {
+    width: 35%;
+  }
+  
+  .btn-xoa-outside {
+    width: 30%;
+    text-align: center;
+  }
+  
+  .btn-dang-out-side {
+    width: 35%;
+    float: right;
+  }
+  
+  .form-ho-so-cha {
+    display: flex;
+  
+    .form-input-ho-so-cha {
+      width: 100%;
+    }
+  
+    .btn-kiem-tra {
+      width: 220px;
+    }
+  }
+  
+  .form-input-date {
+    display: flex;
+  }
+  
+  .padding-r-5 {
+    padding-right: 5px;
+  }
+  
+  .padding-l-5 {
+    padding-left: 5px;
+  }
+  
+  .css-error {
+    .ng-select-container {
+      border-color: red !important;
+    }
+  }
+  
+  .mess-error {
+    .size-icon {
+      font-size: 0.5rem;
+      margin-right: 2px;
+    }
+  
+    .size-mess-error {
+      font-size: 90%;
+    }
+  }
+  
+  .zxc {
+    border-color: #40C057 !important;
+  }
+  
+  .modal-dialog {
+    max-width: 750px !important;
+  }
+  
+  .icon-larger {
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 5px;
+  }
+  
+  .style-status {
+    width: 150px;
+  }
+  
+  .text-xuong-dong {
+    word-break: break-word;
+  }
+  
+  .my-drop-zone {
+    border: dotted 3px lightgray;
+    background-color: #f5f7fa !important;
+  }
+  
+  .image-upload {
+    input {
+      display: none;
+    }
+  }
+  
+  .hide-btn {
+    border: none;
+    background: none;
+  }
+  
+  .styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-family: inherit;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  
+    thead tr {
+      background-color: #F7F7F8;
+      height: 50px;
+  
+      th {
+        padding-left: 15px;
+  
+        b {
+          font-size: 15px;
+        }
+      }
+    }
+  
+    td {
+      padding: 12px 15px;
+    }
+  
+    tbody tr {
+      border-bottom: 2px solid #009879;
+  
+    }
+  
+    .active-row {
+      .color {
+        font-weight: bold;
+        color: #009879;
+      }
+    }
+  }
+  
+  .nv-file-over {
+    border: dotted 3px red;
+  }
+  
+  /* Default class applied to drop zones on over */
+  .another-file-over-class {
+    border: dotted 3px green;
+  }
+  

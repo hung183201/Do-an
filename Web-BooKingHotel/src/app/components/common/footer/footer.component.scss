@@ -1,0 +1,231 @@
+.footer-area {
+    background-color: #25283a;
+    padding-top: 100px;
+}
+.single-footer-widget {
+	margin-bottom: 25px;
+
+	.logo {
+        display: inline-block;
+		margin-bottom: 15px;
+	}
+	h3 {
+		color: var(--whiteColor);
+		margin-bottom: 20px;
+		font-size: 20px;
+	}
+    p {
+        color: #b9baca;
+    }
+	.social-link {
+		padding-left: 0;
+		list-style-type: none;
+        margin: {
+            bottom: 0;
+            top: 20px;
+        };
+		li {
+			display: inline-block;
+			margin-right: 10px;
+
+			a {
+				width: 40px;
+				height: 40px;
+                font-size: 20px;
+				line-height: 40px;
+				text-align: center;
+				border-radius: 50px;
+				display: inline-block;
+                color: var(--whiteColor);
+				background-color: rgba(104, 105, 125, 0.3);
+
+				&:hover {
+					background-color: var(--primaryColor);
+					transform: translateY(-2px);
+				}
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+	.use-link {
+		padding-left: 0;
+		margin-bottom: 0;
+		list-style-type: none;
+
+		li {
+			margin-bottom: 15px;
+
+			a {
+				color: #b9baca;
+                
+				&:hover {
+					color: var(--primaryColor);
+				}
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.address-link {
+		padding-left: 0;
+		margin-bottom: 0;
+		list-style-type: none;
+
+		li {
+			color: #b9baca;
+			position: relative;
+			margin-bottom: 15px;
+
+			span {
+				color: var(--whiteColor);
+			}
+			a {
+				color: #b9baca;
+                margin-left: 2px;
+
+				&:hover {
+					color: var(--primaryColor);
+				}
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+.copyright-area {
+	border-top: 1px solid rgba(104, 105, 125, 0.3);
+	text-align: center;
+    margin-top: 75px;
+    padding: {
+        top: 20px;
+        bottom: 20px;
+    };
+	p {
+		color: #b9baca;
+
+		a {
+			color: var(--whiteColor);
+			font-weight: 600;
+		}
+		span {
+			color: var(--whiteColor);
+		}
+	}
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .footer-area {
+        padding-top: 60px;
+    }
+    .single-footer-widget {
+        h3 {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        p {
+            color: #b9baca;
+        }
+        .social-link {
+            margin-top: 15px;
+
+            li {
+                a {
+                    width: 35px;
+                    height: 35px;
+                    font-size: 17px;
+                    line-height: 35px;
+                }
+            }
+        }
+        .use-link {
+            li {
+                margin-bottom: 12px;
+            }
+        }
+        .address-link {
+            li {
+                margin-bottom: 12px;
+            }
+        }
+        &.pe-5 {
+            padding-right: 0 !important;
+        }
+    }
+    .copyright-area {
+        margin-top: 35px;
+        padding: {
+            top: 15px;
+            bottom: 15px;
+        };
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .footer-area {
+        padding-top: 80px;
+    }
+    .single-footer-widget {
+        h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .social-link {
+            margin-top: 15px;
+
+            li {
+                a {
+                    width: 38px;
+                    height: 38px;
+                    font-size: 18px;
+                    line-height: 38px;
+                }
+            }
+        }
+        .use-link {
+            li {
+                margin-bottom: 12px;
+            }
+        }
+        .address-link {
+            li {
+                margin-bottom: 12px;
+            }
+        }
+        &.pe-5 {
+            padding-right: 0 !important;
+        }
+    }
+    .copyright-area {
+        margin-top: 55px;
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .single-footer-widget {
+        &.pe-5 {
+            padding-right: 0 !important;
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

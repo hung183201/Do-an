@@ -1,0 +1,62 @@
+<!-- Page Title -->
+<div class="page-title-area ptb-100 bg-4">
+    <div class="container">
+        <div class="page-title-content">
+            <h2>Đặt phòng theo nhu cầu một cách dễ dàng</h2>
+            <p>Nếu bạn sử dụng bất kỳ dịch vụ đặt phòng nào của chúng tôi tại đây, bạn sẽ nhận được tất cả các loại lợi ích từ chúng tôi</p>
+            <form class="banner-form-style">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="form-group">
+                            <label>Location</label>
+                            <input type="text" class="form-control" placeholder="Where are you going?">
+                            <img src="assets/images/icon/search.svg" alt="search">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="form-group">
+                            <label>Check in</label>
+                            <dp-date-picker theme="dp-material" placeholder="Add dates" [config]="datePickerConfig" required="true"></dp-date-picker>
+                            <img src="assets/images/icon/calendar.svg" alt="calendar">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="form-group">
+                            <label>Check out</label>
+                            <dp-date-picker theme="dp-material" placeholder="Add dates" [config]="datePickerConfig" required="true"></dp-date-picker>
+                            <img src="assets/images/icon/calendar.svg" alt="calendar">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <div class="form-group">
+                            <label>Guests</label>
+                            <input type="text" class="form-control" placeholder="Add guests">
+                            <img src="assets/images/icon/user-check.svg" alt="user-check">
+                        </div>
+                    </div>
+                    <div class="col-lg-1 col-md-112">
+                        <div class="form-group ps-0 pe-0">
+                            <button type="submit" class="src-btn">
+                                <i class="ri-search-line"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<app-featured-cruise></app-featured-cruise>
+
+<app-features></app-features>
+
+<app-popular-cruise></app-popular-cruise>
+
+<div class="pt-100">
+    <app-feedback></app-feedback>
+</div>
+
+<app-popular-destinations></app-popular-destinations>
+
+<app-subscribe></app-subscribe>

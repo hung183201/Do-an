@@ -1,0 +1,44 @@
+<div class="why-choose-us-area pb-100">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-12">
+                <div
+                    class="why-choose-us-image"
+                    [ngClass]="{'d-none': router.url === '/index-2'}"
+                >
+                    <img src="assets/images/why-choose-us.png" alt="why-choose-us-image">
+                </div>
+                <div
+                    class="why-choose-us-image-two d-none"
+                    [ngClass]="{'d-block': router.url === '/index-2'}"
+                >
+                    <img src="assets/images/why-choose-us2.jpg" alt="why-choose-us-image">
+					<img src="assets/images/customer-shape.png" alt="shape" class="customer-shape">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="why-choose-us-content">
+                    <h2>Why do our customers love us?</h2>
+                    <p>Donec rutrum congue leo eget malesuada. Pellentesque in ipsum id orci porta dapibus. Vivamus suscipit tortor eget felis porttitor volutpat. Quisque velit nisi, pretium ut laci nia in, elementum id enim. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Sed porttitor lectus nibh.</p>
+                    <ul class="features-list">
+                        <li>
+                            <span>1</span>
+                            <h3>Price match guarantee</h3>
+                            <p>Donec rutrum congue leo eget malesuada. Pellentesque in ipsum id orci porta dapibus. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
+                        </li>
+                        <li>
+                            <span>2</span>
+                            <h3>No fee on credit and debit card transactions</h3>
+                            <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Sed porttitor lectus nibh.</p>
+                        </li>
+                        <li>
+                            <span>3</span>
+                            <h3>Exclusive deals</h3>
+                            <p>Vivamus suscipit tortor eget felis porttitor volutpat. Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
